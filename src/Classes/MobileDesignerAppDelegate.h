@@ -2,9 +2,6 @@
 //  MobileDesignerAppDelegate.h
 //  MobileDesigner
 //
-//  Created by Alex Churchill on 12/2/10.
-//  Copyright 2010 Stanford University. All rights reserved.
-//
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
