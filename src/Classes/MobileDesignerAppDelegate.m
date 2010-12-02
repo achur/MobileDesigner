@@ -14,6 +14,18 @@
 #pragma mark -
 #pragma mark Application lifecycle
 
+
+- (IBAction)createNewProject:(UIButton*)sender {
+	UITableViewController *tabl = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
+	UINavigationController *navcon = [[UINavigationController alloc] init];
+	[navcon pushViewController:tabl animated:NO];
+	[window addSubview:navcon.view];
+}
+
+- (IBAction)loadExistingProject:(UIButton*)sender {
+	NSLog(@"hello");
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
     // Override point for customization after application launch.

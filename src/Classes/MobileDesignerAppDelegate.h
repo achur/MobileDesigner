@@ -24,6 +24,8 @@
 
 - (NSString *)applicationDocumentsDirectory;
 - (void)saveContext;
+- (IBAction)createNewProject:(UIButton*)sender;
+- (IBAction)loadExistingProject:(UIButton*)sender;
 
 @end
 
