@@ -4,6 +4,7 @@
 //
 
 #import "MobileDesignerAppDelegate.h"
+#import "NewProjectViewController.h"
 
 
 @implementation MobileDesignerAppDelegate
@@ -14,11 +15,21 @@
 #pragma mark -
 #pragma mark Application lifecycle
 
+- (BOOL)iPad
+{
+	return (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad);
+}
 
 - (IBAction)createNewProject:(UIButton*)sender {
-	UITableViewController *tabl = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
+	NewProjectViewController *newproj;
+	if(self.iPad) {
+		newproj = [[NewProjectViewController alloc] initWithNibName:@"NewProjectViewController-iPad" bundle:nil];
+	} else {
+		newproj = [[NewProjectViewController alloc] initWithNibName:@"NewProjectViewController" bundle:nil];
+	}
+	newproj.title = @"Create a new project";
 	UINavigationController *navcon = [[UINavigationController alloc] init];
-	[navcon pushViewController:tabl animated:NO];
+	[navcon pushViewController:newproj animated:NO];
 	[window addSubview:navcon.view];
 }
 

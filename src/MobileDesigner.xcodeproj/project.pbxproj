@@ -19,6 +19,9 @@
 		379A5C3712A857EA007CC256 /* Shape.m in Sources */ = {isa = PBXBuildFile; fileRef = 379A5C3312A857EA007CC256 /* Shape.m */; };
 		379A5C3812A857EA007CC256 /* Slide.m in Sources */ = {isa = PBXBuildFile; fileRef = 379A5C3512A857EA007CC256 /* Slide.m */; };
 		379A5C7512A86224007CC256 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 379A5C7412A86224007CC256 /* MainWindow-iPad.xib */; };
+		379A5CA912A86B29007CC256 /* NewProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 379A5CA712A86B29007CC256 /* NewProjectViewController.m */; };
+		379A5CAA12A86B29007CC256 /* NewProjectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 379A5CA812A86B29007CC256 /* NewProjectViewController.xib */; };
+		379A5CB112A86B59007CC256 /* NewProjectViewController-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 379A5CAF12A86B59007CC256 /* NewProjectViewController-iPad.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,10 @@
 		379A5C3412A857EA007CC256 /* Slide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Slide.h; path = ../Slide.h; sourceTree = "<group>"; };
 		379A5C3512A857EA007CC256 /* Slide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Slide.m; path = ../Slide.m; sourceTree = "<group>"; };
 		379A5C7412A86224007CC256 /* MainWindow-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "MainWindow-iPad.xib"; path = "Resources-iPad/MainWindow-iPad.xib"; sourceTree = "<group>"; };
+		379A5CA612A86B29007CC256 /* NewProjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewProjectViewController.h; sourceTree = "<group>"; };
+		379A5CA712A86B29007CC256 /* NewProjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewProjectViewController.m; sourceTree = "<group>"; };
+		379A5CA812A86B29007CC256 /* NewProjectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = NewProjectViewController.xib; path = Classes/NewProjectViewController.xib; sourceTree = "<group>"; };
+		379A5CAF12A86B59007CC256 /* NewProjectViewController-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "NewProjectViewController-iPad.xib"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* MobileDesigner-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MobileDesigner-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +76,8 @@
 				379A5C3512A857EA007CC256 /* Slide.m */,
 				1D3623240D0F684500981E51 /* MobileDesignerAppDelegate.h */,
 				1D3623250D0F684500981E51 /* MobileDesignerAppDelegate.m */,
+				379A5CA612A86B29007CC256 /* NewProjectViewController.h */,
+				379A5CA712A86B29007CC256 /* NewProjectViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -107,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				379A5C0D12A8548D007CC256 /* MobileDesigner.xcdatamodel */,
+				379A5CA812A86B29007CC256 /* NewProjectViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* MobileDesigner-Info.plist */,
 			);
@@ -127,6 +137,7 @@
 		379A5C7312A86223007CC256 /* Resources-iPad */ = {
 			isa = PBXGroup;
 			children = (
+				379A5CAF12A86B59007CC256 /* NewProjectViewController-iPad.xib */,
 				379A5C7412A86224007CC256 /* MainWindow-iPad.xib */,
 			);
 			name = "Resources-iPad";
@@ -183,6 +194,8 @@
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				379A5C7512A86224007CC256 /* MainWindow-iPad.xib in Resources */,
+				379A5CAA12A86B29007CC256 /* NewProjectViewController.xib in Resources */,
+				379A5CB112A86B59007CC256 /* NewProjectViewController-iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +212,7 @@
 				379A5C3612A857EA007CC256 /* Project.m in Sources */,
 				379A5C3712A857EA007CC256 /* Shape.m in Sources */,
 				379A5C3812A857EA007CC256 /* Slide.m in Sources */,
+				379A5CA912A86B29007CC256 /* NewProjectViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

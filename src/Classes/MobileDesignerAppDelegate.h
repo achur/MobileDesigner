@@ -16,6 +16,8 @@
     NSPersistentStoreCoordinator *persistentStoreCoordinator_;
 }
 
+@property (readonly) BOOL iPad;
+
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
 @property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
