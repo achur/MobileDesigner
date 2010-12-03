@@ -27,14 +27,25 @@
 	} else {
 		newproj = [[NewProjectViewController alloc] initWithNibName:@"NewProjectViewController" bundle:nil];
 	}
+	newproj.delegate = self;
 	newproj.title = @"Create a new project";
-	UINavigationController *navcon = [[UINavigationController alloc] init];
+	UINavigationController* navcon = [[UINavigationController alloc] init];
 	[navcon pushViewController:newproj animated:NO];
 	[window addSubview:navcon.view];
 }
 
 - (IBAction)loadExistingProject:(UIButton*)sender {
 	NSLog(@"hello");
+}
+
+- (void)shouldCreateProject:(NSString*)name withWidth:(int)width height:(int)height andTexture:(UIImage*)tex
+{
+	NSLog(@"create a project here");
+}
+
+- (void)handleCancel
+{
+	NSLog(@"just pop the view off here");
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    

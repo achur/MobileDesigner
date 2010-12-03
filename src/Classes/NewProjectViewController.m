@@ -8,7 +8,7 @@
 #define MAPZOOMFACTOR 0.003
 
 #import "NewProjectViewController.h"
-
+#import "MobileDesignerUtilities.h"
 
 @implementation NewProjectViewController
 
@@ -19,6 +19,7 @@
 @synthesize okButton;
 @synthesize cancelButton;
 @synthesize textureAttachedLabel;
+@synthesize delegate; 
 
 
 /*
@@ -72,12 +73,35 @@
 
 -(IBAction)okPressed:(UIButton*)sender
 {
-	NSLog(@"Ok Pressed");
+	if([projectTitleField.text length] <= 0) {
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Whoops" message:@"Please enter a title!" 
+												   delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+		[[alert autorelease] show];
+		return;
+	}
+	if([widthField.text length] <= 0) {
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Whoops" message:@"Please enter a width!" 
+													   delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+		[[alert autorelease] show];
+		return;
+	}
+	if([heightField.text length] <= 0) {
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Whoops" message:@"Please enter a height!" 
+												   delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+		[[alert autorelease] show];
+		return;
+	}
+	int inputwidth = [widthField.text intValue];
+	int inputheight = [heightField.text intValue];
+    UIImage* im = [MobileDesignerUtilities screencapture:mapView];
+	[delegate shouldCreateProject:projectTitleField.text withWidth:inputwidth height:inputheight andTexture:im];
+	[self.navigationController.view removeFromSuperview];
 }
 
 - (IBAction)cancelPressed:(UIButton*)sender
 {
-	NSLog(@"Cancel Pressed");	
+	[self.navigationController.view removeFromSuperview];
+	[delegate handleCancel];
 }
 
 
