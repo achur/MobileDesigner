@@ -3,6 +3,10 @@
 //  MobileDesigner
 //
 
+// The amount to which we want to zoom so the map view automatically
+// sizes to an "Average" project
+#define MAPZOOMFACTOR 0.003
+
 #import "NewProjectViewController.h"
 
 
@@ -14,6 +18,7 @@
 @synthesize mapItButton;
 @synthesize okButton;
 @synthesize cancelButton;
+@synthesize textureAttachedLabel;
 
 
 /*
@@ -30,15 +35,8 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-	mapView=[[MKMapView alloc] initWithFrame:self.view.frame];
-	//mapView.showsUserLocation=TRUE;
-	mapView.delegate=self;
-	
-	CLLocationManager *locationManager=[[CLLocationManager alloc] init];
-	locationManager.delegate=self;
-	locationManager.desiredAccuracy=kCLLocationAccuracyNearestTenMeters;
-	
-	[locationManager startUpdatingLocation];
+	mappingLocation = NO;
+	hasCenteredMap = NO;
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
@@ -63,6 +61,15 @@
 	return YES;
 }
 
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+	if(textField == heightField || textField == widthField) {
+		mappingLocation = NO;
+		[textureAttachedLabel setHidden:YES];
+	}
+	return YES;
+}
+
 -(IBAction)okPressed:(UIButton*)sender
 {
 	NSLog(@"Ok Pressed");
@@ -76,11 +83,28 @@
 
 - (IBAction)mapItButtonPressed:(UIButton*)sender
 {
-	UIViewController *viewController = [[UIViewController alloc] init];
+	if(!mapView) {
+		mapView=[[MKMapView alloc] initWithFrame:self.view.frame];
+		mapView.delegate=self;
+	}
 	
+	if(!hasCenteredMap) {
+		CLLocationManager *locationManager=[[CLLocationManager alloc] init];
+		locationManager.delegate=self;
+		locationManager.desiredAccuracy=kCLLocationAccuracyNearestTenMeters;
+	
+		[locationManager startUpdatingLocation];
+	
+		hasCenteredMap = YES;
+	}
+	
+	
+	UIViewController *viewController = [[[UIViewController alloc] init] autorelease];
 	viewController.view = mapView;
 	[self.navigationController pushViewController:viewController animated:YES];
-	 
+	
+	mappingLocation = YES;
+	[textureAttachedLabel setHidden:NO];
 }
 
 
@@ -90,14 +114,23 @@
 	
 	MKCoordinateRegion region;
 	region.center=location;
-	//Set Zoom level using Span
+	
+	// Zoom in sufficiently for average project
 	MKCoordinateSpan span;
-	span.latitudeDelta=.005;
-	span.longitudeDelta=.005;
+	span.latitudeDelta = MAPZOOMFACTOR;
+	span.longitudeDelta = MAPZOOMFACTOR;
 	region.span=span;
 	
 	[mapView setRegion:region animated:TRUE];
 	
+}
+
+- (void)mapView:(MKMapView *)mv regionDidChangeAnimated:(BOOL)animated
+{
+	double mwidth = mapView.region.span.longitudeDelta;
+	double mheight = mapView.region.span.latitudeDelta;
+	widthField.text = [NSString stringWithFormat:@"%d", (int)(mwidth * 1000000)];
+	heightField.text = [NSString stringWithFormat:@"%d", (int)(mheight * 1000000)];
 }
 
 
