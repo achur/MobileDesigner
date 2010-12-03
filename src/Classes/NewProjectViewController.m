@@ -15,6 +15,7 @@
 @synthesize okButton;
 @synthesize cancelButton;
 
+
 /*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -29,6 +30,15 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	mapView=[[MKMapView alloc] initWithFrame:self.view.frame];
+	//mapView.showsUserLocation=TRUE;
+	mapView.delegate=self;
+	
+	CLLocationManager *locationManager=[[CLLocationManager alloc] init];
+	locationManager.delegate=self;
+	locationManager.desiredAccuracy=kCLLocationAccuracyNearestTenMeters;
+	
+	[locationManager startUpdatingLocation];
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
@@ -52,6 +62,46 @@
 	}
 	return YES;
 }
+
+-(IBAction)okPressed:(UIButton*)sender
+{
+	NSLog(@"Ok Pressed");
+}
+
+- (IBAction)cancelPressed:(UIButton*)sender
+{
+	NSLog(@"Cancel Pressed");	
+}
+
+
+- (IBAction)mapItButtonPressed:(UIButton*)sender
+{
+	UIViewController *viewController = [[UIViewController alloc] init];
+	
+	viewController.view = mapView;
+	[self.navigationController pushViewController:viewController animated:YES];
+	 
+}
+
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation{
+	location=newLocation.coordinate;
+	//One location is obtained.. just zoom to that location
+	
+	MKCoordinateRegion region;
+	region.center=location;
+	//Set Zoom level using Span
+	MKCoordinateSpan span;
+	span.latitudeDelta=.005;
+	span.longitudeDelta=.005;
+	region.span=span;
+	
+	[mapView setRegion:region animated:TRUE];
+	
+}
+
+
+
 
 /*
 // Override to allow orientations other than the default portrait orientation.

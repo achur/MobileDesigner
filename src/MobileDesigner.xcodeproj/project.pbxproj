@@ -22,6 +22,8 @@
 		379A5CA912A86B29007CC256 /* NewProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 379A5CA712A86B29007CC256 /* NewProjectViewController.m */; };
 		379A5CAA12A86B29007CC256 /* NewProjectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 379A5CA812A86B29007CC256 /* NewProjectViewController.xib */; };
 		379A5CB112A86B59007CC256 /* NewProjectViewController-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 379A5CAF12A86B59007CC256 /* NewProjectViewController-iPad.xib */; };
+		9F941D3F12A8A43300E2EACE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F941D3E12A8A43300E2EACE /* MapKit.framework */; };
+		9F941DD312A8BD8500E2EACE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F941DD212A8BD8500E2EACE /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		379A5CA812A86B29007CC256 /* NewProjectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = NewProjectViewController.xib; path = Classes/NewProjectViewController.xib; sourceTree = "<group>"; };
 		379A5CAF12A86B59007CC256 /* NewProjectViewController-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "NewProjectViewController-iPad.xib"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* MobileDesigner-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MobileDesigner-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		9F941D3E12A8A43300E2EACE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		9F941DD212A8BD8500E2EACE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
 				28D801B40F44B63D00FB423F /* CoreData.framework in Frameworks */,
+				9F941D3F12A8A43300E2EACE /* MapKit.framework in Frameworks */,
+				9F941DD312A8BD8500E2EACE /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,10 +132,12 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9F941DD212A8BD8500E2EACE /* CoreLocation.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
 				28D801B30F44B63D00FB423F /* CoreData.framework */,
+				9F941D3E12A8A43300E2EACE /* MapKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -261,7 +269,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = iphoneos3.2;
+				SDKROOT = iphoneos4.1;
 			};
 			name = Debug;
 		};
@@ -275,7 +283,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
-				SDKROOT = iphoneos3.2;
+				SDKROOT = iphoneos4.1;
 			};
 			name = Release;
 		};

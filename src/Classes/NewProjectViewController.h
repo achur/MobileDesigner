@@ -4,15 +4,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-
-@interface NewProjectViewController : UIViewController <UITextFieldDelegate> {
+@interface NewProjectViewController : UIViewController <UITextFieldDelegate, MKMapViewDelegate, CLLocationManagerDelegate> {
 	UITextField* projectTitleField;
 	UITextField* widthField;
 	UITextField* heightField;
 	UIButton* mapItButton;
 	UIButton* okButton;
 	UIButton* cancelButton;
+	MKMapView *mapView;
+	CLLocationCoordinate2D location;
 }
 
 @property (retain) IBOutlet UITextField *projectTitleField;
