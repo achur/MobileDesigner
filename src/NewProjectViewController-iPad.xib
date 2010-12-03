@@ -60,7 +60,7 @@
 								<int key="NSID">2</int>
 							</object>
 						</object>
-						<object class="NSFont" key="IBUIFont" id="755761276">
+						<object class="NSFont" key="IBUIFont" id="868169227">
 							<string key="NSName">Helvetica</string>
 							<double key="NSSize">18</double>
 							<int key="NSfFlags">16</int>
@@ -171,7 +171,7 @@
 							<bytes key="NSWhite">MAA</bytes>
 							<reference key="NSCustomColorSpace" ref="806339842"/>
 						</object>
-						<reference key="IBUIFont" ref="755761276"/>
+						<reference key="IBUIFont" ref="868169227"/>
 						<bool key="IBUIAdjustsFontSizeToFit">YES</bool>
 						<float key="IBUIMinimumFontSize">17</float>
 						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
@@ -211,7 +211,7 @@
 							<bytes key="NSWhite">MAA</bytes>
 							<reference key="NSCustomColorSpace" ref="806339842"/>
 						</object>
-						<reference key="IBUIFont" ref="755761276"/>
+						<reference key="IBUIFont" ref="868169227"/>
 						<bool key="IBUIAdjustsFontSizeToFit">YES</bool>
 						<float key="IBUIMinimumFontSize">17</float>
 						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
@@ -359,6 +359,33 @@
 						<reference key="destination" ref="841351856"/>
 					</object>
 					<int key="connectionID">25</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">mapItButtonPressed:</string>
+						<reference key="source" ref="373373448"/>
+						<reference key="destination" ref="841351856"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">26</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">cancelPressed:</string>
+						<reference key="source" ref="959532902"/>
+						<reference key="destination" ref="841351856"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">27</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">okPressed:</string>
+						<reference key="source" ref="858581984"/>
+						<reference key="destination" ref="841351856"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">28</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -556,7 +583,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">25</int>
+			<int key="maxID">28</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
