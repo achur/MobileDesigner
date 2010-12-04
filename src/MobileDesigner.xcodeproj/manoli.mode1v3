@@ -274,7 +274,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>5</integer>
+									<integer>3</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -332,7 +332,7 @@
 												<key>_historyCapacity</key>
 												<integer>0</integer>
 												<key>bookmark</key>
-												<string>9F745AD412AA196F003D4F75</string>
+												<string>9F745D9812AA49C7003D4F75</string>
 												<key>history</key>
 												<array>
 													<string>9F941CED12A8A3E500E2EACE</string>
@@ -345,14 +345,11 @@
 													<string>9F647E8E12A9C9D20008B2DB</string>
 													<string>9F647EAB12A9D3300008B2DB</string>
 													<string>9F7459E712A9FD0C003D4F75</string>
-													<string>9F745A1F12AA0127003D4F75</string>
-													<string>9F745A2212AA0127003D4F75</string>
 													<string>9F745A2412AA0127003D4F75</string>
 													<string>9F745A3812AA0241003D4F75</string>
 													<string>9F745A4A12AA0F3D003D4F75</string>
 													<string>9F745A4B12AA0F3D003D4F75</string>
 													<string>9F745A5712AA118D003D4F75</string>
-													<string>9F745A7C12AA157C003D4F75</string>
 													<string>9F745A7D12AA157C003D4F75</string>
 													<string>9F745A7E12AA157C003D4F75</string>
 													<string>9F745A7F12AA157C003D4F75</string>
@@ -360,7 +357,10 @@
 													<string>9F745A8112AA157C003D4F75</string>
 													<string>9F745A8212AA157C003D4F75</string>
 													<string>9F745A8912AA15C1003D4F75</string>
-													<string>9F745AAE12AA17B5003D4F75</string>
+													<string>9F745C4912AA2CB4003D4F75</string>
+													<string>9F745C5412AA2CEA003D4F75</string>
+													<string>9F745C5512AA2CEA003D4F75</string>
+													<string>9F745D7412AA47A6003D4F75</string>
 												</array>
 											</dict>
 											<key>SplitCount</key>
@@ -387,7 +387,7 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20306471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>EditorViewController.m</string>
+										<string>EditorView.h</string>
 										<key>PBXSplitModuleInNavigatorKey</key>
 										<dict>
 											<key>Split0</key>
@@ -395,11 +395,11 @@
 												<key>PBXProjectModuleGUID</key>
 												<string>1CE0B20406471E060097A5F4</string>
 												<key>PBXProjectModuleLabel</key>
-												<string>EditorViewController.m</string>
+												<string>EditorView.h</string>
 												<key>_historyCapacity</key>
 												<integer>0</integer>
 												<key>bookmark</key>
-												<string>9F745AD512AA196F003D4F75</string>
+												<string>9F745D9912AA49C7003D4F75</string>
 												<key>history</key>
 												<array>
 													<string>9F941CED12A8A3E500E2EACE</string>
@@ -421,13 +421,13 @@
 													<string>9F7459B912A9FB34003D4F75</string>
 													<string>9F7459BA12A9FB34003D4F75</string>
 													<string>9F7459BB12A9FB34003D4F75</string>
-													<string>9F745AC712AA18E2003D4F75</string>
 													<string>9F745AC812AA18E2003D4F75</string>
 													<string>9F745AC912AA18E2003D4F75</string>
 													<string>9F745ACA12AA18E2003D4F75</string>
 													<string>9F745ACB12AA18E2003D4F75</string>
 													<string>9F745ACC12AA18E2003D4F75</string>
-													<string>9F745ACD12AA18E2003D4F75</string>
+													<string>9F745B3A12AA20F5003D4F75</string>
+													<string>9F745B3B12AA20F5003D4F75</string>
 												</array>
 											</dict>
 											<key>SplitCount</key>
@@ -633,6 +633,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>9F745D7712AA47A9003D4F75</string>
 		<string>9F74595612A9E949003D4F75</string>
 		<string>9F74595712A9E949003D4F75</string>
 		<string>1CD10A99069EF8BA00B06720</string>
@@ -733,7 +734,7 @@
 			<key>WindowToolGUID</key>
 			<string>9F941C3212A8949500E2EACE</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
@@ -1273,8 +1274,8 @@
 			<true/>
 			<key>TableOfContents</key>
 			<array>
-				<string>9F647EC812A9D4470008B2DB</string>
-				<string>9F647EC912A9D4470008B2DB</string>
+				<string>9F745D7712AA47A9003D4F75</string>
+				<string>9F745D7812AA47A9003D4F75</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
 				<string>1CA1AED706398EBD00589147</string>
 			</array>
@@ -1283,7 +1284,7 @@
 			<key>WindowString</key>
 			<string>1301 367 744 409 1280 -400 1920 1200 </string>
 			<key>WindowToolGUID</key>
-			<string>9F647EC812A9D4470008B2DB</string>
+			<string>9F745D7712AA47A9003D4F75</string>
 			<key>WindowToolIsVisible</key>
 			<false/>
 		</dict>

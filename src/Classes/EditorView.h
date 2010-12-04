@@ -22,7 +22,7 @@
 	double top;
 	double bottom;
 	
-	
+	BOOL hasDrawn;
 }
 
 - (void)update;
