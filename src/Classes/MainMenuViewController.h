@@ -13,6 +13,7 @@
 
 
 @property (readonly) BOOL iPad;
+
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
 - (IBAction)createNewProject:(UIButton*)sender;

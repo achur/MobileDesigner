@@ -99,9 +99,9 @@
 	}
 	int inputwidth = [widthField.text intValue];
 	int inputheight = [heightField.text intValue];
-    NSData* im = [MobileDesignerUtilities screencaptureData:mapView];
+    NSData* im = [MobileDesignerUtilities screencaptureData:mapView];	
+	[self.navigationController popViewControllerAnimated:NO];
 	[delegate shouldCreateProject:projectTitleField.text withWidth:inputwidth height:inputheight andTexture:im];	
-	[self.navigationController popViewControllerAnimated:NO]; // go immediately to project
 }
 
 - (IBAction)cancelPressed:(UIButton*)sender

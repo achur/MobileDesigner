@@ -6,6 +6,7 @@
 #import "MainMenuViewController.h"
 #import "NewProjectViewController.h"
 #import "ProjectsTableViewController.h"
+#import "ProjectMenuViewController.h"
 
 @implementation MainMenuViewController
 
@@ -40,7 +41,8 @@
 
 - (void)openProject:(Project*) project
 {
-	NSLog(@"Opening a project...");
+	ProjectMenuViewController* pmvc = [[[ProjectMenuViewController alloc] initWithProject:project inManagedObjectContext:managedObjectContext] autorelease];	
+	[self.navigationController pushViewController:pmvc animated:NO];
 }
 
 - (void)shouldCreateProject:(NSString*)name withWidth:(int)width height:(int)height andTexture:(NSData*)tex

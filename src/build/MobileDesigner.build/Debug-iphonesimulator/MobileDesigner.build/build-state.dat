@@ -1,7 +1,7 @@
 TMobileDesigner
 v7
 r0
-t313106745.319242
+t313119921.642714
 cCheck dependencies
 cProcessInfoPlistFile /Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app/Info.plist MobileDesigner-Info.plist
 cCompileXIB /Users/manoli/Desktop/MobileDesigner/src/MainWindow.xib
@@ -10,6 +10,8 @@ cCompileXIB /Users/manoli/Desktop/MobileDesigner/src/Classes/NewProjectViewContr
 cCompileXIB /Users/manoli/Desktop/MobileDesigner/src/NewProjectViewController-iPad.xib
 cCompileXIB /Users/manoli/Desktop/MobileDesigner/src/Classes/MainMenuViewController.xib
 cCompileXIB /Users/manoli/Desktop/MobileDesigner/src/MainMenuViewController-iPad.xib
+cCompileXIB /Users/manoli/Desktop/MobileDesigner/src/Classes/ProjectMenu.xib
+cCompileXIB /Users/manoli/Desktop/MobileDesigner/src/ProjectMenu-iPad.xib
 cProcessPCH /var/folders/eE/eEOJ6PNBEP4Rg2q6InCM0++++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/MobileDesigner_Prefix-bbrmstmijyflhxejblgszrfmbsrm/MobileDesigner_Prefix.pch.gch MobileDesigner_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
 cDataModelCompile /Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app/MobileDesigner.mom /Users/manoli/Desktop/MobileDesigner/src/MobileDesigner.xcdatamodeld/MobileDesigner.xcdatamodel
 cDataModelVersionCompile /Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app/MobileDesigner.momd /Users/manoli/Desktop/MobileDesigner/src/MobileDesigner.xcdatamodeld
@@ -23,6 +25,7 @@ cCompileC build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/
 cCompileC build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/CoreDataTableViewController.o /Users/manoli/Desktop/MobileDesigner/src/CoreDataTableViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/ProjectsTableViewController.o /Users/manoli/Desktop/MobileDesigner/src/Classes/ProjectsTableViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/MainMenuViewController.o /Users/manoli/Desktop/MobileDesigner/src/Classes/MainMenuViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/ProjectMenuViewController.o /Users/manoli/Desktop/MobileDesigner/src/Classes/ProjectMenuViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
 cLd /Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app/MobileDesigner normal i386
 cGenerateDSYMFile /Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app.dSYM /Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app/MobileDesigner
 cTouch /Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app
@@ -131,19 +134,20 @@ i"Slide.h"
 i"Project.h"
 
 N/Users/manoli/Desktop/MobileDesigner/src/Classes/MainMenuViewController.h
-c000000004CF94BB00000000000000292
-t1291406256
-s658
+c000000004CF99B550000000000000293
+t1291426645
+s659
 i<UIKit/UIKit.h>
 i"ProjectRoutingDelegates.h"
 
 N/Users/manoli/Desktop/MobileDesigner/src/Classes/MainMenuViewController.m
-c000000004CF969360000000000000AEC
-t1291413814
-s2796
+c000000004CF99B8A0000000000000BCE
+t1291426698
+s3022
 i"MainMenuViewController.h"
 i"NewProjectViewController.h"
 i"ProjectsTableViewController.h"
+i"ProjectMenuViewController.h"
 
 N/Users/manoli/Desktop/MobileDesigner/src/Classes/MainMenuViewController.xib
 c000000004CF94BF70000000000005CDA
@@ -187,9 +191,9 @@ i<CoreLocation/CoreLocation.h>
 i"ProjectRoutingDelegates.h"
 
 N/Users/manoli/Desktop/MobileDesigner/src/Classes/NewProjectViewController.m
-c000000004CF969B7000000000000177A
-t1291413943
-s6010
+c000000004CF99D2D000000000000175E
+t1291427117
+s5982
 i"NewProjectViewController.h"
 i"MobileDesignerUtilities.h"
 i"Project.h"
@@ -198,6 +202,37 @@ N/Users/manoli/Desktop/MobileDesigner/src/Classes/NewProjectViewController.xib
 c000000004CF95B44000000000000A867
 t1291410244
 s43111
+
+N/Users/manoli/Desktop/MobileDesigner/src/Classes/ProjectMenu.h
+c000000004CF99971000000000000021D
+t1291426161
+s541
+i<UIKit/UIKit.h>
+i"Project.h"
+
+N/Users/manoli/Desktop/MobileDesigner/src/Classes/ProjectMenu.m
+c000000004CF999810000000000000864
+t1291426177
+s2148
+i"ProjectMenu.h"
+
+N/Users/manoli/Desktop/MobileDesigner/src/Classes/ProjectMenu.xib
+c000000004CF99A210000000000006536
+t1291426337
+s25910
+
+N/Users/manoli/Desktop/MobileDesigner/src/Classes/ProjectMenuViewController.h
+c000000004CF99BAD0000000000000297
+t1291426733
+s663
+i<UIKit/UIKit.h>
+i"Project.h"
+
+N/Users/manoli/Desktop/MobileDesigner/src/Classes/ProjectMenuViewController.m
+c000000004CF99BA400000000000008A2
+t1291426724
+s2210
+i"ProjectMenu.h"
 
 N/Users/manoli/Desktop/MobileDesigner/src/Classes/ProjectRoutingDelegates.h
 c000000004CF9440100000000000001A7
@@ -280,6 +315,23 @@ t1291402567
 s1120
 i<CoreData/CoreData.h>
 
+N/Users/manoli/Desktop/MobileDesigner/src/ProjectMenu-iPad.h
+c000000004CF991DA00000000000000EE
+t1291424218
+s238
+i<UIKit/UIKit.h>
+
+N/Users/manoli/Desktop/MobileDesigner/src/ProjectMenu-iPad.m
+c000000004CF991DA0000000000000521
+t1291424218
+s1313
+i"ProjectMenu-iPad.h"
+
+N/Users/manoli/Desktop/MobileDesigner/src/ProjectMenu-iPad.xib
+c000000004CF99A6E0000000000006577
+t1291426414
+s25975
+
 N/Users/manoli/Desktop/MobileDesigner/src/Resources-iPad/MainWindow-iPad.xib
 c000000004CF94C230000000000004787
 t1291406371
@@ -298,11 +350,11 @@ s333
 i<CoreData/CoreData.h>
 
 N/Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app
-t1291413945
-s442
+t1291427121
+s510
 
 N/Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app.dSYM
-t1291413945
+t1291427121
 s102
 
 N/Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app/Info.plist
@@ -326,8 +378,8 @@ t1291412581
 s991
 
 N/Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app/MobileDesigner
-t1291413945
-s74520
+t1291427121
+s77344
 
 N/Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app/MobileDesigner.mom
 t1291413606
@@ -349,21 +401,29 @@ N/Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesi
 t1291412580
 s8
 
+N/Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app/ProjectMenu-iPad.nib
+t1291426645
+s2036
+
+N/Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app/ProjectMenu.nib
+t1291426645
+s2008
+
 N/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/CoreDataTableViewController.o
 t1291412583
 s79852
 
 N/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/MainMenuViewController.o
-t1291413815
-s52688
+t1291426735
+s53264
 
 N/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/MobileDesigner.LinkFileList
-c000000004CF9646400000000000005E5
-t1291412580
-s1509
+c000000004CF99B550000000000000684
+t1291426645
+s1668
 
 N/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/MobileDesignerAppDelegate.o
-t1291413568
+t1291426646
 s60700
 
 N/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/MobileDesignerUtilities.o
@@ -371,12 +431,24 @@ t1291412583
 s12508
 
 N/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/NewProjectViewController.o
-t1291413945
+t1291427121
 s71696
 
 N/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/Project.o
 t1291413687
 s17796
+
+N/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/ProjectMenu-iPad.o
+t2
+s0
+
+N/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/ProjectMenu.o
+t2
+s0
+
+N/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/ProjectMenuViewController.o
+t1291426735
+s46060
 
 N/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/ProjectsTableViewController.o
 t1291413945
@@ -411,7 +483,7 @@ s974
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies313106744#313106745#0(0"0(0#1#0"8606492224#0"0#
+lSLF07#2@18"Check dependencies313119921#313119921#0(0"0(0#1#0"8612506528#0"0#
 
 CCompileC build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/CoreDataTableViewController.o /Users/manoli/Desktop/MobileDesigner/src/CoreDataTableViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s313105383.367429
@@ -427,8 +499,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@78"Compile /Users/manoli/Desktop/MobileDesigner/src/CoreDataTableViewController.m313105383#313105383#0(0"0(0#0#70"/Users/manoli/Desktop/MobileDesigner/src/CoreDataTableViewController.m8604917024#2163"    cd /Users/manoli/Desktop/MobileDesigner/src    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -iquote /Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-generated-files.hmap -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-own-target-headers.hmap -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-all-target-headers.hmap -iquote /Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-project-headers.hmap -F/Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator -I/Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/include -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/DerivedSources/i386 -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/DerivedSources -include /var/folders/eE/eEOJ6PNBEP4Rg2q6InCM0++++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/MobileDesigner_Prefix-bbrmstmijyflhxejblgszrfmbsrm/MobileDesigner_Prefix.pch -c /Users/manoli/Desktop/MobileDesigner/src/CoreDataTableViewController.m -o /Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/CoreDataTableViewController.o0#
 
 CCompileC build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/MainMenuViewController.o /Users/manoli/Desktop/MobileDesigner/src/Classes/MainMenuViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s313106615.175358
-e313106615.359356
+s313119535.284425
+e313119535.401038
 r1
 xCompileC
 xbuild/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/MainMenuViewController.o
@@ -437,11 +509,11 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@81"Compile /Users/manoli/Desktop/MobileDesigner/src/Classes/MainMenuViewController.m313106615#313106615#0(0"0(0#0#73"/Users/manoli/Desktop/MobileDesigner/src/Classes/MainMenuViewController.m8618563360#2161"    cd /Users/manoli/Desktop/MobileDesigner/src    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -iquote /Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-generated-files.hmap -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-own-target-headers.hmap -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-all-target-headers.hmap -iquote /Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-project-headers.hmap -F/Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator -I/Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/include -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/DerivedSources/i386 -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/DerivedSources -include /var/folders/eE/eEOJ6PNBEP4Rg2q6InCM0++++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/MobileDesigner_Prefix-bbrmstmijyflhxejblgszrfmbsrm/MobileDesigner_Prefix.pch -c /Users/manoli/Desktop/MobileDesigner/src/Classes/MainMenuViewController.m -o /Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/MainMenuViewController.o0#
+lSLF07#2@81"Compile /Users/manoli/Desktop/MobileDesigner/src/Classes/MainMenuViewController.m313119535#313119535#0(0"0(0#0#73"/Users/manoli/Desktop/MobileDesigner/src/Classes/MainMenuViewController.m8604817344#2161"    cd /Users/manoli/Desktop/MobileDesigner/src    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -iquote /Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-generated-files.hmap -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-own-target-headers.hmap -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-all-target-headers.hmap -iquote /Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-project-headers.hmap -F/Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator -I/Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/include -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/DerivedSources/i386 -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/DerivedSources -include /var/folders/eE/eEOJ6PNBEP4Rg2q6InCM0++++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/MobileDesigner_Prefix-bbrmstmijyflhxejblgszrfmbsrm/MobileDesigner_Prefix.pch -c /Users/manoli/Desktop/MobileDesigner/src/Classes/MainMenuViewController.m -o /Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/MainMenuViewController.o0#
 
 CCompileC build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/MobileDesignerAppDelegate.o /Users/manoli/Desktop/MobileDesigner/src/Classes/MobileDesignerAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s313106367.951357
-e313106368.086498
+s313119445.749025
+e313119446.010320
 r1
 xCompileC
 xbuild/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/MobileDesignerAppDelegate.o
@@ -450,7 +522,7 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@84"Compile /Users/manoli/Desktop/MobileDesigner/src/Classes/MobileDesignerAppDelegate.m313106367#313106368#0(0"0(0#0#76"/Users/manoli/Desktop/MobileDesigner/src/Classes/MobileDesignerAppDelegate.m8615488480#2167"    cd /Users/manoli/Desktop/MobileDesigner/src    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -iquote /Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-generated-files.hmap -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-own-target-headers.hmap -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-all-target-headers.hmap -iquote /Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-project-headers.hmap -F/Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator -I/Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/include -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/DerivedSources/i386 -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/DerivedSources -include /var/folders/eE/eEOJ6PNBEP4Rg2q6InCM0++++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/MobileDesigner_Prefix-bbrmstmijyflhxejblgszrfmbsrm/MobileDesigner_Prefix.pch -c /Users/manoli/Desktop/MobileDesigner/src/Classes/MobileDesignerAppDelegate.m -o /Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/MobileDesignerAppDelegate.o0#
+lSLF07#2@84"Compile /Users/manoli/Desktop/MobileDesigner/src/Classes/MobileDesignerAppDelegate.m313119445#313119446#0(0"0(0#0#76"/Users/manoli/Desktop/MobileDesigner/src/Classes/MobileDesignerAppDelegate.m8615436480#2167"    cd /Users/manoli/Desktop/MobileDesigner/src    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -iquote /Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-generated-files.hmap -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-own-target-headers.hmap -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-all-target-headers.hmap -iquote /Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-project-headers.hmap -F/Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator -I/Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/include -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/DerivedSources/i386 -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/DerivedSources -include /var/folders/eE/eEOJ6PNBEP4Rg2q6InCM0++++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/MobileDesigner_Prefix-bbrmstmijyflhxejblgszrfmbsrm/MobileDesigner_Prefix.pch -c /Users/manoli/Desktop/MobileDesigner/src/Classes/MobileDesignerAppDelegate.m -o /Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/MobileDesignerAppDelegate.o0#
 
 CCompileC build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/MobileDesignerUtilities.o /Users/manoli/Desktop/MobileDesigner/src/Classes/MobileDesignerUtilities.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s313105383.268311
@@ -466,8 +538,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@82"Compile /Users/manoli/Desktop/MobileDesigner/src/Classes/MobileDesignerUtilities.m313105383#313105383#0(0"0(0#0#74"/Users/manoli/Desktop/MobileDesigner/src/Classes/MobileDesignerUtilities.m8603211712#2163"    cd /Users/manoli/Desktop/MobileDesigner/src    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -iquote /Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-generated-files.hmap -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-own-target-headers.hmap -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-all-target-headers.hmap -iquote /Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-project-headers.hmap -F/Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator -I/Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/include -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/DerivedSources/i386 -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/DerivedSources -include /var/folders/eE/eEOJ6PNBEP4Rg2q6InCM0++++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/MobileDesigner_Prefix-bbrmstmijyflhxejblgszrfmbsrm/MobileDesigner_Prefix.pch -c /Users/manoli/Desktop/MobileDesigner/src/Classes/MobileDesignerUtilities.m -o /Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/MobileDesignerUtilities.o0#
 
 CCompileC build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/NewProjectViewController.o /Users/manoli/Desktop/MobileDesigner/src/Classes/NewProjectViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s313106744.978506
-e313106745.245428
+s313119921.455879
+e313119921.566856
 r1
 xCompileC
 xbuild/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/NewProjectViewController.o
@@ -476,7 +548,7 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@83"Compile /Users/manoli/Desktop/MobileDesigner/src/Classes/NewProjectViewController.m313106744#313106745#0(0"0(0#0#75"/Users/manoli/Desktop/MobileDesigner/src/Classes/NewProjectViewController.m8618790400#2165"    cd /Users/manoli/Desktop/MobileDesigner/src    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -iquote /Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-generated-files.hmap -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-own-target-headers.hmap -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-all-target-headers.hmap -iquote /Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-project-headers.hmap -F/Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator -I/Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/include -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/DerivedSources/i386 -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/DerivedSources -include /var/folders/eE/eEOJ6PNBEP4Rg2q6InCM0++++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/MobileDesigner_Prefix-bbrmstmijyflhxejblgszrfmbsrm/MobileDesigner_Prefix.pch -c /Users/manoli/Desktop/MobileDesigner/src/Classes/NewProjectViewController.m -o /Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/NewProjectViewController.o0#
+lSLF07#2@83"Compile /Users/manoli/Desktop/MobileDesigner/src/Classes/NewProjectViewController.m313119921#313119921#0(0"0(0#0#75"/Users/manoli/Desktop/MobileDesigner/src/Classes/NewProjectViewController.m8619293504#2165"    cd /Users/manoli/Desktop/MobileDesigner/src    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -iquote /Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-generated-files.hmap -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-own-target-headers.hmap -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-all-target-headers.hmap -iquote /Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-project-headers.hmap -F/Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator -I/Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/include -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/DerivedSources/i386 -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/DerivedSources -include /var/folders/eE/eEOJ6PNBEP4Rg2q6InCM0++++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/MobileDesigner_Prefix-bbrmstmijyflhxejblgszrfmbsrm/MobileDesigner_Prefix.pch -c /Users/manoli/Desktop/MobileDesigner/src/Classes/NewProjectViewController.m -o /Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/NewProjectViewController.o0#
 
 CCompileC build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/Project.o /Users/manoli/Desktop/MobileDesigner/src/Classes/../Project.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s313106486.995320
@@ -490,6 +562,25 @@ xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@69"Compile /Users/manoli/Desktop/MobileDesigner/src/Classes/../Project.m313106486#313106487#0(0"0(0#0#61"/Users/manoli/Desktop/MobileDesigner/src/Classes/../Project.m8619098464#2134"    cd /Users/manoli/Desktop/MobileDesigner/src    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -iquote /Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-generated-files.hmap -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-own-target-headers.hmap -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-all-target-headers.hmap -iquote /Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-project-headers.hmap -F/Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator -I/Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/include -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/DerivedSources/i386 -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/DerivedSources -include /var/folders/eE/eEOJ6PNBEP4Rg2q6InCM0++++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/MobileDesigner_Prefix-bbrmstmijyflhxejblgszrfmbsrm/MobileDesigner_Prefix.pch -c /Users/manoli/Desktop/MobileDesigner/src/Classes/../Project.m -o /Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/Project.o0#
+
+CCompileC build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/ProjectMenu-iPad.o /Users/manoli/Desktop/MobileDesigner/src/ProjectMenu-iPad.m normal i386 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/ProjectMenu.o /Users/manoli/Desktop/MobileDesigner/src/Classes/ProjectMenu.m normal i386 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/ProjectMenuViewController.o /Users/manoli/Desktop/MobileDesigner/src/Classes/ProjectMenuViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s313119535.285654
+e313119535.392727
+r1
+xCompileC
+xbuild/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/ProjectMenuViewController.o
+x/Users/manoli/Desktop/MobileDesigner/src/Classes/ProjectMenuViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@84"Compile /Users/manoli/Desktop/MobileDesigner/src/Classes/ProjectMenuViewController.m313119535#313119535#0(0"0(0#0#76"/Users/manoli/Desktop/MobileDesigner/src/Classes/ProjectMenuViewController.m8602355424#2167"    cd /Users/manoli/Desktop/MobileDesigner/src    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -iquote /Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-generated-files.hmap -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-own-target-headers.hmap -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-all-target-headers.hmap -iquote /Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-project-headers.hmap -F/Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator -I/Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/include -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/DerivedSources/i386 -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/DerivedSources -include /var/folders/eE/eEOJ6PNBEP4Rg2q6InCM0++++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/MobileDesigner_Prefix-bbrmstmijyflhxejblgszrfmbsrm/MobileDesigner_Prefix.pch -c /Users/manoli/Desktop/MobileDesigner/src/Classes/ProjectMenuViewController.m -o /Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/ProjectMenuViewController.o0#
 
 CCompileC build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/ProjectsTableViewController.o /Users/manoli/Desktop/MobileDesigner/src/Classes/ProjectsTableViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s313106745.059665
@@ -561,6 +652,15 @@ x/Users/manoli/Desktop/MobileDesigner/src/Classes/NewProjectViewController.xib
 o2010-12-03 13:43:01.465 Interface Builder Cocoa Touch Tool[65171:1903] CFPreferences: user home directory at file://localhost/Users/manoli/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
 lSLF07#2@47"CompileXIB Classes/NewProjectViewController.xib313105381#313105381#0(241"2010-12-03 13:43:01.465 Interface Builder Cocoa Touch Tool[65171:1903] CFPreferences: user home directory at file://localhost/Users/manoli/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.0(0#0#77"/Users/manoli/Desktop/MobileDesigner/src/Classes/NewProjectViewController.xib28429423624978548#619"    cd /Users/manoli/Desktop/MobileDesigner/src    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app/NewProjectViewController.nib /Users/manoli/Desktop/MobileDesigner/src/Classes/NewProjectViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk0#
 
+CCompileXIB /Users/manoli/Desktop/MobileDesigner/src/Classes/ProjectMenu.xib
+s313119445.136752
+e313119445.715543
+r1
+xCompileXIB
+x/Users/manoli/Desktop/MobileDesigner/src/Classes/ProjectMenu.xib
+o2010-12-03 17:37:25.569 Interface Builder Cocoa Touch Tool[66281:1903] CFPreferences: user home directory at file://localhost/Users/manoli/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
+lSLF07#2@34"CompileXIB Classes/ProjectMenu.xib313119445#313119445#0(241"2010-12-03 17:37:25.569 Interface Builder Cocoa Touch Tool[66281:1903] CFPreferences: user home directory at file://localhost/Users/manoli/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.0(0#0#64"/Users/manoli/Desktop/MobileDesigner/src/Classes/ProjectMenu.xib8615853504#593"    cd /Users/manoli/Desktop/MobileDesigner/src    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app/ProjectMenu.nib /Users/manoli/Desktop/MobileDesigner/src/Classes/ProjectMenu.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk0#
+
 CCompileXIB /Users/manoli/Desktop/MobileDesigner/src/MainMenuViewController-iPad.xib
 s313105381.794906
 e313105382.264365
@@ -587,6 +687,15 @@ xCompileXIB
 x/Users/manoli/Desktop/MobileDesigner/src/NewProjectViewController-iPad.xib
 o2010-12-03 13:43:01.501 Interface Builder Cocoa Touch Tool[65172:1903] CFPreferences: user home directory at file://localhost/Users/manoli/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
 lSLF07#2@44"CompileXIB NewProjectViewController-iPad.xib313105381#313105381#0(241"2010-12-03 13:43:01.501 Interface Builder Cocoa Touch Tool[65172:1903] CFPreferences: user home directory at file://localhost/Users/manoli/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.0(0#0#74"/Users/manoli/Desktop/MobileDesigner/src/NewProjectViewController-iPad.xib8602636320#621"    cd /Users/manoli/Desktop/MobileDesigner/src    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app/NewProjectViewController-iPad.nib /Users/manoli/Desktop/MobileDesigner/src/NewProjectViewController-iPad.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk0#
+
+CCompileXIB /Users/manoli/Desktop/MobileDesigner/src/ProjectMenu-iPad.xib
+s313119445.137841
+e313119445.748573
+r1
+xCompileXIB
+x/Users/manoli/Desktop/MobileDesigner/src/ProjectMenu-iPad.xib
+o2010-12-03 17:37:25.598 Interface Builder Cocoa Touch Tool[66282:1903] CFPreferences: user home directory at file://localhost/Users/manoli/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
+lSLF07#2@31"CompileXIB ProjectMenu-iPad.xib313119445#313119445#0(241"2010-12-03 17:37:25.598 Interface Builder Cocoa Touch Tool[66282:1903] CFPreferences: user home directory at file://localhost/Users/manoli/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.0(0#0#61"/Users/manoli/Desktop/MobileDesigner/src/ProjectMenu-iPad.xib8615797440#595"    cd /Users/manoli/Desktop/MobileDesigner/src    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app/ProjectMenu-iPad.nib /Users/manoli/Desktop/MobileDesigner/src/ProjectMenu-iPad.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk0#
 
 CCompileXIB /Users/manoli/Desktop/MobileDesigner/src/Resources-iPad/MainWindow-iPad.xib
 s313105380.645911
@@ -625,23 +734,23 @@ x/Users/manoli/Desktop/MobileDesigner/src/MobileDesigner.xcdatamodeld
 lSLF07#2@118"DataModelVersionCompile build/Debug-iphonesimulator/MobileDesigner.app/MobileDesigner.momd MobileDesigner.xcdatamodeld313106406#313106406#0(0"0(0#0#68"/Users/manoli/Desktop/MobileDesigner/src/MobileDesigner.xcdatamodeld8615063360#413"    cd /Users/manoli/Desktop/MobileDesigner/src    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/momc -XD_MOMC_TARGET_VERSION=10.5 /Users/manoli/Desktop/MobileDesigner/src/MobileDesigner.xcdatamodeld /Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app/MobileDesigner.momd0#
 
 CGenerateDSYMFile /Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app.dSYM /Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app/MobileDesigner
-s313106745.288628
-e313106745.316032
+s313119921.602313
+e313119921.635412
 r1
 xGenerateDSYMFile
 x/Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app.dSYM
 x/Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app/MobileDesigner
-lSLF07#2@130"GenerateDSYMFile build/Debug-iphonesimulator/MobileDesigner.app.dSYM build/Debug-iphonesimulator/MobileDesigner.app/MobileDesigner313106745#313106745#0(0"0(0#0#102"/Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app/MobileDesigner8618368800#410"    cd /Users/manoli/Desktop/MobileDesigner/src    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app/MobileDesigner -o /Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app.dSYM0#
+lSLF07#2@130"GenerateDSYMFile build/Debug-iphonesimulator/MobileDesigner.app.dSYM build/Debug-iphonesimulator/MobileDesigner.app/MobileDesigner313119921#313119921#0(0"0(0#0#102"/Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app/MobileDesigner8600197312#410"    cd /Users/manoli/Desktop/MobileDesigner/src    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app/MobileDesigner -o /Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app.dSYM0#
 
 CLd /Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app/MobileDesigner normal i386
-s313106745.254926
-e313106745.288503
+s313119921.566952
+e313119921.602214
 r1
 xLd
 x/Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app/MobileDesigner
 xnormal
 xi386
-lSLF07#2@107"Link /Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app/MobileDesigner313106745#313106745#0(0"0(0#0#0"8618595296#1029"    cd /Users/manoli/Desktop/MobileDesigner/src    setenv MACOSX_DEPLOYMENT_TARGET 10.5    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -L/Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator -F/Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator -filelist /Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/MobileDesigner.LinkFileList -mmacosx-version-min=10.5 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -framework CoreData -framework MapKit -framework CoreLocation -framework QuartzCore -o /Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app/MobileDesigner0#
+lSLF07#2@107"Link /Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app/MobileDesigner313119921#313119921#0(0"0(0#0#0"8614608832#1029"    cd /Users/manoli/Desktop/MobileDesigner/src    setenv MACOSX_DEPLOYMENT_TARGET 10.5    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -L/Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator -F/Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator -filelist /Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/Objects-normal/i386/MobileDesigner.LinkFileList -mmacosx-version-min=10.5 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -framework CoreData -framework MapKit -framework CoreLocation -framework QuartzCore -o /Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app/MobileDesigner0#
 
 CProcessInfoPlistFile /Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app/Info.plist MobileDesigner-Info.plist
 s313105380.630240
@@ -666,10 +775,10 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@36"Precompile MobileDesigner_Prefix.pch313105382#313105383#0(0"0(0#0#66"/Users/manoli/Desktop/MobileDesigner/src/MobileDesigner_Prefix.pch8604981888#2000"    cd /Users/manoli/Desktop/MobileDesigner/src    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -iquote /Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-generated-files.hmap -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-own-target-headers.hmap -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-all-target-headers.hmap -iquote /Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/MobileDesigner-project-headers.hmap -F/Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator -I/Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/include -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/DerivedSources/i386 -I/Users/manoli/Desktop/MobileDesigner/src/build/MobileDesigner.build/Debug-iphonesimulator/MobileDesigner.build/DerivedSources -c /Users/manoli/Desktop/MobileDesigner/src/MobileDesigner_Prefix.pch -o /var/folders/eE/eEOJ6PNBEP4Rg2q6InCM0++++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/MobileDesigner_Prefix-bbrmstmijyflhxejblgszrfmbsrm/MobileDesigner_Prefix.pch.gch0#
 
 CTouch /Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app
-s313106745.316125
-e313106745.319200
+s313119921.635501
+e313119921.642663
 r1
 xTouch
 x/Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app
-lSLF07#2@93"Touch /Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app313106745#313106745#0(0"0(0#0#0"8618232896#289"    cd /Users/manoli/Desktop/MobileDesigner/src    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app0#
+lSLF07#2@93"Touch /Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app313119921#313119921#0(0"0(0#0#0"8607864544#289"    cd /Users/manoli/Desktop/MobileDesigner/src    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/manoli/Desktop/MobileDesigner/src/build/Debug-iphonesimulator/MobileDesigner.app0#
 

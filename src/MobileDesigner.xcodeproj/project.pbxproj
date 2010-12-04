@@ -23,7 +23,7 @@
 		379A5CB112A86B59007CC256 /* NewProjectViewController-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 379A5CAF12A86B59007CC256 /* NewProjectViewController-iPad.xib */; };
 		9F647E1D12A99E730008B2DB /* MobileDesigner.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 379A5C0D12A8548D007CC256 /* MobileDesigner.xcdatamodel */; };
 		9F647E5912A99FBE0008B2DB /* MobileDesigner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9F647E5812A99FBE0008B2DB /* MobileDesigner.xcdatamodeld */; };
-		9F647E7A12A9C9410008B2DB /* ProjectMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F647E7812A9C9410008B2DB /* ProjectMenu.m */; };
+		9F647E7A12A9C9410008B2DB /* ProjectMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F647E7812A9C9410008B2DB /* ProjectMenuViewController.m */; };
 		9F647E7B12A9C9410008B2DB /* ProjectMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F647E7912A9C9410008B2DB /* ProjectMenu.xib */; };
 		9F647E8012A9C95A0008B2DB /* ProjectMenu-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F647E7E12A9C95A0008B2DB /* ProjectMenu-iPad.xib */; };
 		9F941D3F12A8A43300E2EACE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F941D3E12A8A43300E2EACE /* MapKit.framework */; };
@@ -61,8 +61,8 @@
 		379A5CA812A86B29007CC256 /* NewProjectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = NewProjectViewController.xib; path = Classes/NewProjectViewController.xib; sourceTree = "<group>"; };
 		379A5CAF12A86B59007CC256 /* NewProjectViewController-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "NewProjectViewController-iPad.xib"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* MobileDesigner-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MobileDesigner-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		9F647E7712A9C9410008B2DB /* ProjectMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectMenu.h; sourceTree = "<group>"; };
-		9F647E7812A9C9410008B2DB /* ProjectMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectMenu.m; sourceTree = "<group>"; };
+		9F647E7712A9C9410008B2DB /* ProjectMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectMenuViewController.h; sourceTree = "<group>"; };
+		9F647E7812A9C9410008B2DB /* ProjectMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectMenuViewController.m; sourceTree = "<group>"; };
 		9F647E7912A9C9410008B2DB /* ProjectMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ProjectMenu.xib; path = Classes/ProjectMenu.xib; sourceTree = "<group>"; };
 		9F647E7E12A9C95A0008B2DB /* ProjectMenu-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "ProjectMenu-iPad.xib"; sourceTree = "<group>"; };
 		9F941D3E12A8A43300E2EACE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -112,8 +112,8 @@
 				379A5CA712A86B29007CC256 /* NewProjectViewController.m */,
 				379A5C3012A857EA007CC256 /* Project.h */,
 				379A5C3112A857EA007CC256 /* Project.m */,
-				9F647E7712A9C9410008B2DB /* ProjectMenu.h */,
-				9F647E7812A9C9410008B2DB /* ProjectMenu.m */,
+				9F647E7712A9C9410008B2DB /* ProjectMenuViewController.h */,
+				9F647E7812A9C9410008B2DB /* ProjectMenuViewController.m */,
 				9FBA3AC012A97AA000F56D56 /* ProjectRoutingDelegates.h */,
 				9FBA3A1112A970DF00F56D56 /* ProjectsTableViewController.h */,
 				9FBA3A1212A970DF00F56D56 /* ProjectsTableViewController.m */,
@@ -274,7 +274,7 @@
 				9FBA3AF512A97F6B00F56D56 /* MainMenuViewController.m in Sources */,
 				9F647E1D12A99E730008B2DB /* MobileDesigner.xcdatamodel in Sources */,
 				9F647E5912A99FBE0008B2DB /* MobileDesigner.xcdatamodeld in Sources */,
-				9F647E7A12A9C9410008B2DB /* ProjectMenu.m in Sources */,
+				9F647E7A12A9C9410008B2DB /* ProjectMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
