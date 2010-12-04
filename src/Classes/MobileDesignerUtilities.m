@@ -13,6 +13,25 @@
 @implementation MobileDesignerUtilities
 
 
++ (NSData *)screencaptureData:(UIView *)view {
+	
+	CGRect screenRect = [[UIScreen mainScreen] bounds];
+	
+	UIGraphicsBeginImageContext(screenRect.size);
+	
+	CGContextRef ctx = UIGraphicsGetCurrentContext();
+	[[UIColor blackColor] set];
+	CGContextFillRect(ctx, screenRect);
+	
+	[view.layer renderInContext:ctx];
+	
+	UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+	
+	UIGraphicsEndImageContext();
+	
+	return UIImagePNGRepresentation(newImage);
+}
+
 + (UIImage *)screencapture:(UIView *)view {
 	
 	CGRect screenRect = [[UIScreen mainScreen] bounds];

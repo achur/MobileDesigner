@@ -9,6 +9,7 @@
 
 #import "NewProjectViewController.h"
 #import "MobileDesignerUtilities.h"
+#import "Project.h"
 
 @implementation NewProjectViewController
 
@@ -74,33 +75,38 @@
 -(IBAction)okPressed:(UIButton*)sender
 {
 	if([projectTitleField.text length] <= 0) {
-		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Whoops" message:@"Please enter a title!" 
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Whoops" message:@"Please enter a title" 
 												   delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+		[[alert autorelease] show];
+		return;
+	} else if([Project searchByName:projectTitleField.text inManagedObjectContext:[delegate managedObjectContext]]) {
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Whoops" message:@"That title is already taken.  Please select again." 
+													   delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
 		[[alert autorelease] show];
 		return;
 	}
 	if([widthField.text length] <= 0) {
-		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Whoops" message:@"Please enter a width!" 
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Whoops" message:@"Please enter a width" 
 													   delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
 		[[alert autorelease] show];
 		return;
 	}
 	if([heightField.text length] <= 0) {
-	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Whoops" message:@"Please enter a height!" 
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Whoops" message:@"Please enter a height" 
 												   delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
 		[[alert autorelease] show];
 		return;
 	}
 	int inputwidth = [widthField.text intValue];
 	int inputheight = [heightField.text intValue];
-    UIImage* im = [MobileDesignerUtilities screencapture:mapView];
-	[delegate shouldCreateProject:projectTitleField.text withWidth:inputwidth height:inputheight andTexture:im];
-	[self.navigationController.view removeFromSuperview];
+    NSData* im = [MobileDesignerUtilities screencaptureData:mapView];
+	[delegate shouldCreateProject:projectTitleField.text withWidth:inputwidth height:inputheight andTexture:im];	
+	[self.navigationController popViewControllerAnimated:NO]; // go immediately to project
 }
 
 - (IBAction)cancelPressed:(UIButton*)sender
 {
-	[self.navigationController.view removeFromSuperview];
+	[self.navigationController popViewControllerAnimated:YES];
 	[delegate handleCancel];
 }
 

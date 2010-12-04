@@ -4,7 +4,7 @@
 //
 
 #import "MobileDesignerAppDelegate.h"
-#import "NewProjectViewController.h"
+#import "MainMenuViewController.h"
 
 
 @implementation MobileDesignerAppDelegate
@@ -12,46 +12,26 @@
 @synthesize window;
 
 
-#pragma mark -
-#pragma mark Application lifecycle
-
 - (BOOL)iPad
 {
 	return (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad);
 }
 
-- (IBAction)createNewProject:(UIButton*)sender {
-	NewProjectViewController *newproj;
-	if(self.iPad) {
-		newproj = [[NewProjectViewController alloc] initWithNibName:@"NewProjectViewController-iPad" bundle:nil];
-	} else {
-		newproj = [[NewProjectViewController alloc] initWithNibName:@"NewProjectViewController" bundle:nil];
-	}
-	newproj.delegate = self;
-	newproj.title = @"Create a new project";
-	UINavigationController* navcon = [[UINavigationController alloc] init];
-	[navcon pushViewController:newproj animated:NO];
+#pragma mark -
+#pragma mark Application lifecycle
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+	
+	NSManagedObjectContext* context = self.managedObjectContext;
+	
+	MainMenuViewController *mmvc;
+	if(self.iPad) mmvc = [[MainMenuViewController alloc] initWithNibName:@"MainMenuViewController-iPad" bundle:[NSBundle mainBundle]];
+	else mmvc = [[MainMenuViewController alloc] initWithNibName:@"MainMenuViewController" bundle:[NSBundle mainBundle]];
+	mmvc.managedObjectContext = context;
+	UINavigationController *navcon = [[UINavigationController alloc] init];
+	[navcon pushViewController:mmvc animated:NO];
 	[window addSubview:navcon.view];
-}
-
-- (IBAction)loadExistingProject:(UIButton*)sender {
-	NSLog(@"hello");
-}
-
-- (void)shouldCreateProject:(NSString*)name withWidth:(int)width height:(int)height andTexture:(UIImage*)tex
-{
-	NSLog(@"create a project here");
-}
-
-- (void)handleCancel
-{
-	NSLog(@"just pop the view off here");
-}
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-    
-    // Override point for customization after application launch.
-    
+	
     [window makeKeyAndVisible];
     
     return YES;

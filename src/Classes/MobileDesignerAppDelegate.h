@@ -5,9 +5,8 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
-#import "NewProjectViewController.h"
 
-@interface MobileDesignerAppDelegate : NSObject <UIApplicationDelegate, ProjectCreatorDelegate> {
+@interface MobileDesignerAppDelegate : NSObject <UIApplicationDelegate> {
     
     UIWindow *window;
     
@@ -27,11 +26,6 @@
 
 - (NSString *)applicationDocumentsDirectory;
 - (void)saveContext;
-- (IBAction)createNewProject:(UIButton*)sender;
-- (IBAction)loadExistingProject:(UIButton*)sender;
-
-- (void)shouldCreateProject:(NSString*)name withWidth:(int)width height:(int)height andTexture:(UIImage*)tex;
-- (void)handleCancel;
 
 @end
 

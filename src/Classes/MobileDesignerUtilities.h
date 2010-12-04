@@ -13,5 +13,6 @@
 }
 
 + (UIImage *)screencapture:(UIView *)view;
++ (NSData *)screencaptureData:(UIView *)view;
 
 @end

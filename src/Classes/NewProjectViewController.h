@@ -6,13 +6,7 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
-
-@protocol ProjectCreatorDelegate<NSObject>
-
-- (void)shouldCreateProject:(NSString*)name withWidth:(int)width height:(int)height andTexture:(UIImage*)tex;
-- (void)handleCancel;
-
-@end
+#import "ProjectRoutingDelegates.h"
 
 
 @interface NewProjectViewController : UIViewController <UITextFieldDelegate, MKMapViewDelegate, CLLocationManagerDelegate> {

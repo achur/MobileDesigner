@@ -20,6 +20,9 @@
 @property (nonatomic, retain) NSSet* shapes;
 @property (nonatomic, retain) NSSet* slides;
 
++ (Project *)projectWithName:(NSString *)name width:(int)width height:(int)height texture:(NSData*)tex inManagedObjectContext:(NSManagedObjectContext *)context;
++ (Project *)searchByName:(NSString *)name inManagedObjectContext:(NSManagedObjectContext *)context;
+
 @end
 
 
