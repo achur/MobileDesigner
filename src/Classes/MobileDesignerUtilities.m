@@ -2,9 +2,6 @@
 //  MobileDesignerUtilities.m
 //  MobileDesigner
 //
-//  Created by Manoli Liodakis on 12/2/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
-//
 
 #import "MobileDesignerUtilities.h"
 #import <QuartzCore/QuartzCore.h>

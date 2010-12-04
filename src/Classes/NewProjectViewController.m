@@ -72,6 +72,12 @@
 	return YES;
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+	[textField resignFirstResponder];
+	return YES;
+}
+
 -(IBAction)okPressed:(UIButton*)sender
 {
 	if([projectTitleField.text length] <= 0) {
@@ -119,7 +125,7 @@
 	}
 	
 	if(!hasCenteredMap) {
-		CLLocationManager *locationManager=[[CLLocationManager alloc] init];
+		locationManager=[[CLLocationManager alloc] init];
 		locationManager.delegate=self;
 		locationManager.desiredAccuracy=kCLLocationAccuracyNearestTenMeters;
 	
@@ -159,8 +165,8 @@
 {
 	double mwidth = mapView.region.span.longitudeDelta;
 	double mheight = mapView.region.span.latitudeDelta;
-	widthField.text = [NSString stringWithFormat:@"%d", (int)(mwidth * 1000000)];
-	heightField.text = [NSString stringWithFormat:@"%d", (int)(mheight * 1000000)];
+	widthField.text = [NSString stringWithFormat:@"%d", (int)(mwidth * 300000)];
+	heightField.text = [NSString stringWithFormat:@"%d", (int)(mheight * 300000)];
 }
 
 
@@ -189,6 +195,7 @@
 
 
 - (void)dealloc {
+	if(locationManager) locationManager.delegate = nil;
     [super dealloc];
 }
 

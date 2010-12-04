@@ -22,6 +22,7 @@
 	BOOL mappingLocation;
 	BOOL hasCenteredMap;
 	id <ProjectCreatorDelegate> delegate;
+	CLLocationManager *locationManager;
 }
 
 @property (retain) IBOutlet UITextField *projectTitleField;

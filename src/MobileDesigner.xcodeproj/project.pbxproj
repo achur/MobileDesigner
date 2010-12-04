@@ -26,6 +26,10 @@
 		9F647E7A12A9C9410008B2DB /* ProjectMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F647E7812A9C9410008B2DB /* ProjectMenuViewController.m */; };
 		9F647E7B12A9C9410008B2DB /* ProjectMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F647E7912A9C9410008B2DB /* ProjectMenu.xib */; };
 		9F647E8012A9C95A0008B2DB /* ProjectMenu-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F647E7E12A9C95A0008B2DB /* ProjectMenu-iPad.xib */; };
+		9F74597812A9EB53003D4F75 /* EditorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F74597712A9EB53003D4F75 /* EditorView.m */; };
+		9F74598A12A9F371003D4F75 /* EditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F74598812A9F371003D4F75 /* EditorViewController.m */; };
+		9F74598B12A9F371003D4F75 /* EditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F74598912A9F371003D4F75 /* EditorViewController.xib */; };
+		9F74599812A9F69E003D4F75 /* EditorViewController-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F74599612A9F69E003D4F75 /* EditorViewController-iPad.xib */; };
 		9F941D3F12A8A43300E2EACE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F941D3E12A8A43300E2EACE /* MapKit.framework */; };
 		9F941DD312A8BD8500E2EACE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F941DD212A8BD8500E2EACE /* CoreLocation.framework */; };
 		9F941E6412A8CEAC00E2EACE /* MobileDesignerUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F941E6312A8CEAC00E2EACE /* MobileDesignerUtilities.m */; };
@@ -65,6 +69,12 @@
 		9F647E7812A9C9410008B2DB /* ProjectMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectMenuViewController.m; sourceTree = "<group>"; };
 		9F647E7912A9C9410008B2DB /* ProjectMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ProjectMenu.xib; path = Classes/ProjectMenu.xib; sourceTree = "<group>"; };
 		9F647E7E12A9C95A0008B2DB /* ProjectMenu-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "ProjectMenu-iPad.xib"; sourceTree = "<group>"; };
+		9F74597612A9EB53003D4F75 /* EditorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorView.h; sourceTree = "<group>"; };
+		9F74597712A9EB53003D4F75 /* EditorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditorView.m; sourceTree = "<group>"; };
+		9F74598712A9F371003D4F75 /* EditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorViewController.h; sourceTree = "<group>"; };
+		9F74598812A9F371003D4F75 /* EditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditorViewController.m; sourceTree = "<group>"; };
+		9F74598912A9F371003D4F75 /* EditorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = EditorViewController.xib; path = Classes/EditorViewController.xib; sourceTree = "<group>"; };
+		9F74599612A9F69E003D4F75 /* EditorViewController-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "EditorViewController-iPad.xib"; sourceTree = "<group>"; };
 		9F941D3E12A8A43300E2EACE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9F941DD212A8BD8500E2EACE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		9F941E6212A8CEAC00E2EACE /* MobileDesignerUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobileDesignerUtilities.h; sourceTree = "<group>"; };
@@ -102,6 +112,10 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9F74597612A9EB53003D4F75 /* EditorView.h */,
+				9F74597712A9EB53003D4F75 /* EditorView.m */,
+				9F74598712A9F371003D4F75 /* EditorViewController.h */,
+				9F74598812A9F371003D4F75 /* EditorViewController.m */,
 				9FBA3AF212A97F6B00F56D56 /* MainMenuViewController.h */,
 				9FBA3AF312A97F6B00F56D56 /* MainMenuViewController.m */,
 				1D3623240D0F684500981E51 /* MobileDesignerAppDelegate.h */,
@@ -162,6 +176,7 @@
 			children = (
 				9F647E5812A99FBE0008B2DB /* MobileDesigner.xcdatamodeld */,
 				379A5CA812A86B29007CC256 /* NewProjectViewController.xib */,
+				9F74598912A9F371003D4F75 /* EditorViewController.xib */,
 				9F647E7912A9C9410008B2DB /* ProjectMenu.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				9FBA3AF412A97F6B00F56D56 /* MainMenuViewController.xib */,
@@ -191,6 +206,7 @@
 				379A5C7412A86224007CC256 /* MainWindow-iPad.xib */,
 				9FBA3B0512A97FA900F56D56 /* MainMenuViewController-iPad.xib */,
 				9F647E7E12A9C95A0008B2DB /* ProjectMenu-iPad.xib */,
+				9F74599612A9F69E003D4F75 /* EditorViewController-iPad.xib */,
 			);
 			name = "Resources-iPad";
 			sourceTree = "<group>";
@@ -252,6 +268,8 @@
 				9FBA3B0712A97FA900F56D56 /* MainMenuViewController-iPad.xib in Resources */,
 				9F647E7B12A9C9410008B2DB /* ProjectMenu.xib in Resources */,
 				9F647E8012A9C95A0008B2DB /* ProjectMenu-iPad.xib in Resources */,
+				9F74598B12A9F371003D4F75 /* EditorViewController.xib in Resources */,
+				9F74599812A9F69E003D4F75 /* EditorViewController-iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +293,8 @@
 				9F647E1D12A99E730008B2DB /* MobileDesigner.xcdatamodel in Sources */,
 				9F647E5912A99FBE0008B2DB /* MobileDesigner.xcdatamodeld in Sources */,
 				9F647E7A12A9C9410008B2DB /* ProjectMenuViewController.m in Sources */,
+				9F74597812A9EB53003D4F75 /* EditorView.m in Sources */,
+				9F74598A12A9F371003D4F75 /* EditorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
