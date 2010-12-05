@@ -21,6 +21,7 @@
 
 - (IBAction)editorView:(UIButton*)sender;
 - (IBAction)previewView:(UIButton*)sender;
+- (IBAction)editSlidesView:(UIButton*)sender;
 - (IBAction)playlistView:(UIButton*)sender;
 - (IBAction)deleteProject:(UIButton*)sender;
 

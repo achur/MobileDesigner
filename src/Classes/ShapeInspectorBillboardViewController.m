@@ -75,13 +75,28 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-	BOOL valid;
+	NSRange index = [textField.text rangeOfString:@"."]; 
+	if (index.location != NSNotFound){
+		int len = textField.text.length;
+		index.location = index.location+1;
+		index.length = len - index.location;
+		index = [textField.text rangeOfString:@"." options:NSLiteralSearch range:index];
+		if(index.location != NSNotFound){
+			UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Whoops" message:@"You can only have one decimal!" 
+														   delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+			[[alert autorelease] show];
+			return NO;
+		}
+		
+	}
 	NSCharacterSet *decimal = [NSCharacterSet characterSetWithCharactersInString: @".123456789"];
 	NSCharacterSet *inStringSet = [NSCharacterSet characterSetWithCharactersInString:textField.text];
-	valid = [decimal isSupersetOfSet:inStringSet];
-	if (!valid) {
+	if (![decimal isSupersetOfSet:inStringSet]) {
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Whoops" message:@"You can only include numbers and decimals!" 
+													   delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+		[[alert autorelease] show];
 		return NO;
-    }
+	}
 	[textField resignFirstResponder];
 	return YES;
 }

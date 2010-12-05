@@ -92,12 +92,18 @@
     switch(indexPath.section) {
 		case SHAPETYPELEVEL:
 			cell.textLabel.text = @"Level";
+			cell.imageView.image = [UIImage imageNamed:@"level.png"];
+			cell.imageView.contentMode = UIViewContentModeScaleAspectFill;
 			break;
 		case SHAPETYPEWALL:
 			cell.textLabel.text = @"Wall";
+			cell.imageView.image = [UIImage imageNamed:@"line.png"];
+			cell.imageView.contentMode = UIViewContentModeScaleAspectFill;
 			break;
 		case SHAPETYPEBILLBOARD:
 			cell.textLabel.text = @"Billboard";
+			cell.imageView.image = [UIImage imageNamed:@"billboard.png"];
+			cell.imageView.contentMode = UIViewContentModeScaleAspectFill;
 	}
 	
     return cell;

@@ -97,14 +97,15 @@ enum {
 	[pinchgr release];
 	
 	
+	int numShapes = [project.shapes count];
+	
 	// set to be the number of shapes
-	textures = malloc(2 * sizeof(GLuint));
+	textures = malloc(numShapes * sizeof(GLuint));
 	
 	// store our shapes in a constant-order array
 	// this is because we need to bind textures to the shapes
 	// and want to only load the textures into graphical
 	// memory once, as doing so is a costly operation
-	int numShapes = [project.shapes count];
 	shapes = malloc(numShapes * sizeof(Shape *));
 	int cur = 0;
 	for(Shape *shp in project.shapes) {
