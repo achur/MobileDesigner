@@ -5,6 +5,8 @@
 
 #import "ProjectMenuViewController.h"
 #import "EditorViewController.h"
+#import "PreviewViewController.h"
+#import "EAGLView.h"
 
 
 @implementation ProjectMenuViewController
@@ -25,6 +27,9 @@
 
 - (IBAction)previewView:(UIButton*)sender
 {
+	PreviewViewController *pvc = [[PreviewViewController alloc] initWithNibName:@"PreviewViewController" bundle:nil];
+	[self.navigationController pushViewController:pvc animated:YES];
+	[pvc startAnimation];
 	NSLog(@"Show a 3D preview");
 }
 

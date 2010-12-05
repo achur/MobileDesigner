@@ -43,7 +43,7 @@
 - (BOOL)hitTextAtX:(double)xval Y:(double)yval
 {
 	return (([self.tlx doubleValue] < xval && xval < [self.brx doubleValue]) || ([self.brx doubleValue] < xval && xval < [self.tlx doubleValue])) &&
-			(([self.tly doubleValue] < yval && yval < [self.bry doubleValue]) || ([self.tly doubleValue] < yval && yval < [self.tly doubleValue]));
+			(([self.tly doubleValue] < yval && yval < [self.bry doubleValue]) || ([self.bry doubleValue] < yval && yval < [self.tly doubleValue]));
 }
 
 

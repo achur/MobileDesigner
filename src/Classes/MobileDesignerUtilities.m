@@ -13,6 +13,8 @@
 + (UIImage *)screencapture:(UIView *)view {
 	
 	CGRect screenRect = [[UIScreen mainScreen] bounds];
+	screenRect.origin.y = 64; // padding for the navigation controller
+	screenRect.size.height -= 64;
 	
 	UIGraphicsBeginImageContext(screenRect.size);
 	

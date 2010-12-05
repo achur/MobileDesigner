@@ -31,14 +31,24 @@
 
 - (IBAction)selectTexturePressed:(UIButton*)sender
 {
-	OnlineTextureSelectorViewController *otsvc = [[OnlineTextureSelectorViewController alloc] initWithDelegate];
+	OnlineTextureSelectorViewController *otsvc = [[OnlineTextureSelectorViewController alloc] initWithDelegate:self];
 	[self.navigationController pushViewController:otsvc animated:YES];
+}
+
+- (void)imageSelected:(UIImage *)img
+{
+	self.shape.hasTexture = [NSNumber numberWithBool:YES];
+	self.shape.texture = UIImagePNGRepresentation(img);
+	[self.textureSelectedLabel setHidden:NO];
+	[self.removeTextureButton setHidden:NO];
 }
 
 - (IBAction)removeTexturePressed:(UIButton*)sender
 {
 	self.shape.hasTexture = [NSNumber numberWithBool:NO];
 	self.shape.texture = nil;
+	[self.textureSelectedLabel setHidden:YES];
+	[self.removeTextureButton setHidden:YES];
 }
 
 - (IBAction)deleteShapePressed:(UIButton*)sender

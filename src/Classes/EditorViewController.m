@@ -6,6 +6,8 @@
 #import "EditorViewController.h"
 #import "MobileDesignerUtilities.h"
 #import "ShapeInspectorBillboardViewController.h"
+#import "ShapeInspectorLevelViewController.h"
+#import "ShapeInspectorWallViewController.h"
 
 @implementation EditorViewController
 
@@ -44,12 +46,14 @@
 }
 */
 
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	if(!selectedShape){
+		self.inspectButton.enabled = NO;
+	}
 }
-*/
 
 /*
 // Override to allow orientations other than the default portrait orientation.
@@ -110,9 +114,17 @@
 {
 	if(self.selectedShape != nil) {
 		if([self.selectedShape.type intValue] == SHAPETYPELEVEL) {
-			
+			ShapeInspectorLevelViewController* silvc;
+			silvc = [[ShapeInspectorLevelViewController alloc] initWithShape:self.selectedShape];
+			silvc.title = @"Inspector";
+			silvc.delegate = self;
+			[self.navigationController pushViewController:silvc animated:YES];
 		} else if ([self.selectedShape.type intValue] == SHAPETYPEWALL) {
-			
+			ShapeInspectorWallViewController* siwvc;
+			siwvc = [[ShapeInspectorWallViewController alloc] initWithShape:self.selectedShape];
+			siwvc.title = @"Inspector";
+			siwvc.delegate = self;
+			[self.navigationController pushViewController:siwvc animated:YES];	
 		} else if ([self.selectedShape.type intValue] == SHAPETYPEBILLBOARD) {
 			ShapeInspectorBillboardViewController* sibvc;
 			sibvc = [[ShapeInspectorBillboardViewController alloc] initWithShape:self.selectedShape];

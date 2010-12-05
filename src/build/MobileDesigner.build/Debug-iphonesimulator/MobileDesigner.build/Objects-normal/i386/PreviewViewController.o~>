@@ -1,0 +1,217 @@
+/Users/manoli/Desktop/MobileDesigner/src/Classes/PreviewViewController.m: In function '-[PreviewViewController drawFrame]':
+/Users/manoli/Desktop/MobileDesigner/src/Classes/PreviewViewController.m:189: error: invalid operands to binary * (have 'float' and 'float (*)(float)')
+/Users/manoli/Desktop/MobileDesigner/src/Classes/PreviewViewController.m:189: error: expected ',' or ';' before 'static'
+/Users/manoli/Desktop/MobileDesigner/src/Classes/PreviewViewController.m:215: error: 'floorVertices' undeclared (first use in this function)
+/Users/manoli/Desktop/MobileDesigner/src/Classes/PreviewViewController.m:215: error: (Each undeclared identifier is reported only once
+/Users/manoli/Desktop/MobileDesigner/src/Classes/PreviewViewController.m:215: error: for each function it appears in.)
+/Users/manoli/Desktop/MobileDesigner/src/Classes/PreviewViewController.m:186: warning: unused variable 'size'
+/Users/manoli/Desktop/MobileDesigner/src/Classes/PreviewViewController.m:185: warning: unused variable 'fieldOfView'
+/Users/manoli/Desktop/MobileDesigner/src/Classes/PreviewViewController.m:185: warning: unused variable 'zFar'
+{standard input}:867:non-relocatable subtraction expression, "L_OBJC_IVAR_$_PreviewViewController.animating$non_lazy_ptr" minus "L00000000009$pb"
+{standard input}:867:symbol: "L_OBJC_IVAR_$_PreviewViewController.animating$non_lazy_ptr" can't be undefined in a subtraction expression
+{standard input}:859:non-relocatable subtraction expression, "L_OBJC_IVAR_$_PreviewViewController.animationTimer$non_lazy_ptr" minus "L00000000009$pb"
+{standard input}:859:symbol: "L_OBJC_IVAR_$_PreviewViewController.animationTimer$non_lazy_ptr" can't be undefined in a subtraction expression
+{standard input}:852:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_23" minus "L00000000009$pb"
+{standard input}:852:symbol: "L_OBJC_SELECTOR_REFERENCES_23" can't be undefined in a subtraction expression
+{standard input}:846:non-relocatable subtraction expression, "L_OBJC_IVAR_$_PreviewViewController.animationTimer$non_lazy_ptr" minus "L00000000009$pb"
+{standard input}:846:symbol: "L_OBJC_IVAR_$_PreviewViewController.animationTimer$non_lazy_ptr" can't be undefined in a subtraction expression
+{standard input}:837:non-relocatable subtraction expression, "L_OBJC_IVAR_$_PreviewViewController.displayLink$non_lazy_ptr" minus "L00000000009$pb"
+{standard input}:837:symbol: "L_OBJC_IVAR_$_PreviewViewController.displayLink$non_lazy_ptr" can't be undefined in a subtraction expression
+{standard input}:830:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_23" minus "L00000000009$pb"
+{standard input}:830:symbol: "L_OBJC_SELECTOR_REFERENCES_23" can't be undefined in a subtraction expression
+{standard input}:825:non-relocatable subtraction expression, "L_OBJC_IVAR_$_PreviewViewController.displayLink$non_lazy_ptr" minus "L00000000009$pb"
+{standard input}:825:symbol: "L_OBJC_IVAR_$_PreviewViewController.displayLink$non_lazy_ptr" can't be undefined in a subtraction expression
+{standard input}:816:non-relocatable subtraction expression, "L_OBJC_IVAR_$_PreviewViewController.displayLinkSupported$non_lazy_ptr" minus "L00000000009$pb"
+{standard input}:816:symbol: "L_OBJC_IVAR_$_PreviewViewController.displayLinkSupported$non_lazy_ptr" can't be undefined in a subtraction expression
+{standard input}:807:non-relocatable subtraction expression, "L_OBJC_IVAR_$_PreviewViewController.animating$non_lazy_ptr" minus "L00000000009$pb"
+{standard input}:807:symbol: "L_OBJC_IVAR_$_PreviewViewController.animating$non_lazy_ptr" can't be undefined in a subtraction expression
+{standard input}:776:non-relocatable subtraction expression, "L_OBJC_IVAR_$_PreviewViewController.animating$non_lazy_ptr" minus "L00000000008$pb"
+{standard input}:776:symbol: "L_OBJC_IVAR_$_PreviewViewController.animating$non_lazy_ptr" can't be undefined in a subtraction expression
+{standard input}:761:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_22" minus "L00000000008$pb"
+{standard input}:761:symbol: "L_OBJC_SELECTOR_REFERENCES_22" can't be undefined in a subtraction expression
+{standard input}:758:non-relocatable subtraction expression, "LC8" minus "L00000000008$pb"
+{standard input}:758:symbol: "LC8" can't be undefined in a subtraction expression
+{standard input}:752:non-relocatable subtraction expression, "L_OBJC_IVAR_$_PreviewViewController.animationFrameInterval$non_lazy_ptr" minus "L00000000008$pb"
+{standard input}:752:symbol: "L_OBJC_IVAR_$_PreviewViewController.animationFrameInterval$non_lazy_ptr" can't be undefined in a subtraction expression
+{standard input}:747:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_17" minus "L00000000008$pb"
+{standard input}:747:symbol: "L_OBJC_SELECTOR_REFERENCES_17" can't be undefined in a subtraction expression
+{standard input}:744:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_4" minus "L00000000008$pb"
+{standard input}:744:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_4" can't be undefined in a subtraction expression
+{standard input}:739:non-relocatable subtraction expression, "L_OBJC_IVAR_$_PreviewViewController.animationTimer$non_lazy_ptr" minus "L00000000008$pb"
+{standard input}:739:symbol: "L_OBJC_IVAR_$_PreviewViewController.animationTimer$non_lazy_ptr" can't be undefined in a subtraction expression
+{standard input}:728:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_21" minus "L00000000008$pb"
+{standard input}:728:symbol: "L_OBJC_SELECTOR_REFERENCES_21" can't be undefined in a subtraction expression
+{standard input}:722:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_20" minus "L00000000008$pb"
+{standard input}:722:symbol: "L_OBJC_SELECTOR_REFERENCES_20" can't be undefined in a subtraction expression
+{standard input}:719:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_3" minus "L00000000008$pb"
+{standard input}:719:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_3" can't be undefined in a subtraction expression
+{standard input}:716:non-relocatable subtraction expression, "L_NSDefaultRunLoopMode$non_lazy_ptr" minus "L00000000008$pb"
+{standard input}:716:symbol: "L_NSDefaultRunLoopMode$non_lazy_ptr" can't be undefined in a subtraction expression
+{standard input}:711:non-relocatable subtraction expression, "L_OBJC_IVAR_$_PreviewViewController.displayLink$non_lazy_ptr" minus "L00000000008$pb"
+{standard input}:711:symbol: "L_OBJC_IVAR_$_PreviewViewController.displayLink$non_lazy_ptr" can't be undefined in a subtraction expression
+{standard input}:703:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_19" minus "L00000000008$pb"
+{standard input}:703:symbol: "L_OBJC_SELECTOR_REFERENCES_19" can't be undefined in a subtraction expression
+{standard input}:698:non-relocatable subtraction expression, "L_OBJC_IVAR_$_PreviewViewController.animationFrameInterval$non_lazy_ptr" minus "L00000000008$pb"
+{standard input}:698:symbol: "L_OBJC_IVAR_$_PreviewViewController.animationFrameInterval$non_lazy_ptr" can't be undefined in a subtraction expression
+{standard input}:692:non-relocatable subtraction expression, "L_OBJC_IVAR_$_PreviewViewController.displayLink$non_lazy_ptr" minus "L00000000008$pb"
+{standard input}:692:symbol: "L_OBJC_IVAR_$_PreviewViewController.displayLink$non_lazy_ptr" can't be undefined in a subtraction expression
+{standard input}:682:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_18" minus "L00000000008$pb"
+{standard input}:682:symbol: "L_OBJC_SELECTOR_REFERENCES_18" can't be undefined in a subtraction expression
+{standard input}:679:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_17" minus "L00000000008$pb"
+{standard input}:679:symbol: "L_OBJC_SELECTOR_REFERENCES_17" can't be undefined in a subtraction expression
+{standard input}:670:non-relocatable subtraction expression, "L_OBJC_IVAR_$_PreviewViewController.displayLink$non_lazy_ptr" minus "L00000000008$pb"
+{standard input}:670:symbol: "L_OBJC_IVAR_$_PreviewViewController.displayLink$non_lazy_ptr" can't be undefined in a subtraction expression
+{standard input}:661:non-relocatable subtraction expression, "L_OBJC_IVAR_$_PreviewViewController.displayLinkSupported$non_lazy_ptr" minus "L00000000008$pb"
+{standard input}:661:symbol: "L_OBJC_IVAR_$_PreviewViewController.displayLinkSupported$non_lazy_ptr" can't be undefined in a subtraction expression
+{standard input}:652:non-relocatable subtraction expression, "L_OBJC_IVAR_$_PreviewViewController.animating$non_lazy_ptr" minus "L00000000008$pb"
+{standard input}:652:symbol: "L_OBJC_IVAR_$_PreviewViewController.animating$non_lazy_ptr" can't be undefined in a subtraction expression
+{standard input}:608:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_12" minus "L00000000007$pb"
+{standard input}:608:symbol: "L_OBJC_SELECTOR_REFERENCES_12" can't be undefined in a subtraction expression
+{standard input}:601:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_14" minus "L00000000007$pb"
+{standard input}:601:symbol: "L_OBJC_SELECTOR_REFERENCES_14" can't be undefined in a subtraction expression
+{standard input}:592:non-relocatable subtraction expression, "L_OBJC_IVAR_$_PreviewViewController.animating$non_lazy_ptr" minus "L00000000007$pb"
+{standard input}:592:symbol: "L_OBJC_IVAR_$_PreviewViewController.animating$non_lazy_ptr" can't be undefined in a subtraction expression
+{standard input}:583:non-relocatable subtraction expression, "L_OBJC_IVAR_$_PreviewViewController.animationFrameInterval$non_lazy_ptr" minus "L00000000007$pb"
+{standard input}:583:symbol: "L_OBJC_IVAR_$_PreviewViewController.animationFrameInterval$non_lazy_ptr" can't be undefined in a subtraction expression
+{standard input}:554:non-relocatable subtraction expression, "L_OBJC_IVAR_$_PreviewViewController.animationFrameInterval$non_lazy_ptr" minus "L00000000006$pb"
+{standard input}:554:symbol: "L_OBJC_IVAR_$_PreviewViewController.animationFrameInterval$non_lazy_ptr" can't be undefined in a subtraction expression
+{standard input}:527:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_3" minus "L00000000005$pb"
+{standard input}:527:symbol: "L_OBJC_SELECTOR_REFERENCES_3" can't be undefined in a subtraction expression
+{standard input}:518:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_2" minus "L00000000005$pb"
+{standard input}:518:symbol: "L_OBJC_SELECTOR_REFERENCES_2" can't be undefined in a subtraction expression
+{standard input}:515:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_0" minus "L00000000005$pb"
+{standard input}:515:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_0" can't be undefined in a subtraction expression
+{standard input}:507:non-relocatable subtraction expression, "L_OBJC_IVAR_$_PreviewViewController.context$non_lazy_ptr" minus "L00000000005$pb"
+{standard input}:507:symbol: "L_OBJC_IVAR_$_PreviewViewController.context$non_lazy_ptr" can't be undefined in a subtraction expression
+{standard input}:500:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_10" minus "L00000000005$pb"
+{standard input}:500:symbol: "L_OBJC_SELECTOR_REFERENCES_10" can't be undefined in a subtraction expression
+{standard input}:497:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_0" minus "L00000000005$pb"
+{standard input}:497:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_0" can't be undefined in a subtraction expression
+{standard input}:490:non-relocatable subtraction expression, "L_OBJC_IVAR_$_PreviewViewController.program$non_lazy_ptr" minus "L00000000005$pb"
+{standard input}:490:symbol: "L_OBJC_IVAR_$_PreviewViewController.program$non_lazy_ptr" can't be undefined in a subtraction expression
+{standard input}:481:non-relocatable subtraction expression, "L_OBJC_IVAR_$_PreviewViewController.program$non_lazy_ptr" minus "L00000000005$pb"
+{standard input}:481:symbol: "L_OBJC_IVAR_$_PreviewViewController.program$non_lazy_ptr" can't be undefined in a subtraction expression
+{standard input}:472:non-relocatable subtraction expression, "L_OBJC_IVAR_$_PreviewViewController.program$non_lazy_ptr" minus "L00000000005$pb"
+{standard input}:472:symbol: "L_OBJC_IVAR_$_PreviewViewController.program$non_lazy_ptr" can't be undefined in a subtraction expression
+{standard input}:465:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_16" minus "L00000000005$pb"
+{standard input}:465:symbol: "L_OBJC_SELECTOR_REFERENCES_16" can't be undefined in a subtraction expression
+{standard input}:461:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_SUP_REFS_$_2" minus "L00000000005$pb"
+{standard input}:461:symbol: "L_OBJC_CLASSLIST_SUP_REFS_$_2" can't be undefined in a subtraction expression
+{standard input}:431:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_15" minus "L00000000004$pb"
+{standard input}:431:symbol: "L_OBJC_SELECTOR_REFERENCES_15" can't be undefined in a subtraction expression
+{standard input}:426:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_SUP_REFS_$_2" minus "L00000000004$pb"
+{standard input}:426:symbol: "L_OBJC_CLASSLIST_SUP_REFS_$_2" can't be undefined in a subtraction expression
+{standard input}:418:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_14" minus "L00000000004$pb"
+{standard input}:418:symbol: "L_OBJC_SELECTOR_REFERENCES_14" can't be undefined in a subtraction expression
+{standard input}:387:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_13" minus "L00000000003$pb"
+{standard input}:387:symbol: "L_OBJC_SELECTOR_REFERENCES_13" can't be undefined in a subtraction expression
+{standard input}:382:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_SUP_REFS_$_2" minus "L00000000003$pb"
+{standard input}:382:symbol: "L_OBJC_CLASSLIST_SUP_REFS_$_2" can't be undefined in a subtraction expression
+{standard input}:374:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_12" minus "L00000000003$pb"
+{standard input}:374:symbol: "L_OBJC_SELECTOR_REFERENCES_12" can't be undefined in a subtraction expression
+{standard input}:344:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_11" minus "L00000000002$pb"
+{standard input}:344:symbol: "L_OBJC_SELECTOR_REFERENCES_11" can't be undefined in a subtraction expression
+{standard input}:340:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_SUP_REFS_$_2" minus "L00000000002$pb"
+{standard input}:340:symbol: "L_OBJC_CLASSLIST_SUP_REFS_$_2" can't be undefined in a subtraction expression
+{standard input}:332:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_4" minus "L00000000002$pb"
+{standard input}:332:symbol: "L_OBJC_SELECTOR_REFERENCES_4" can't be undefined in a subtraction expression
+{standard input}:326:non-relocatable subtraction expression, "L_OBJC_IVAR_$_PreviewViewController.context$non_lazy_ptr" minus "L00000000002$pb"
+{standard input}:326:symbol: "L_OBJC_IVAR_$_PreviewViewController.context$non_lazy_ptr" can't be undefined in a subtraction expression
+{standard input}:317:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_2" minus "L00000000002$pb"
+{standard input}:317:symbol: "L_OBJC_SELECTOR_REFERENCES_2" can't be undefined in a subtraction expression
+{standard input}:314:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_0" minus "L00000000002$pb"
+{standard input}:314:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_0" can't be undefined in a subtraction expression
+{standard input}:306:non-relocatable subtraction expression, "L_OBJC_IVAR_$_PreviewViewController.context$non_lazy_ptr" minus "L00000000002$pb"
+{standard input}:306:symbol: "L_OBJC_IVAR_$_PreviewViewController.context$non_lazy_ptr" can't be undefined in a subtraction expression
+{standard input}:299:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_10" minus "L00000000002$pb"
+{standard input}:299:symbol: "L_OBJC_SELECTOR_REFERENCES_10" can't be undefined in a subtraction expression
+{standard input}:296:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_0" minus "L00000000002$pb"
+{standard input}:296:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_0" can't be undefined in a subtraction expression
+{standard input}:289:non-relocatable subtraction expression, "L_OBJC_IVAR_$_PreviewViewController.program$non_lazy_ptr" minus "L00000000002$pb"
+{standard input}:289:symbol: "L_OBJC_IVAR_$_PreviewViewController.program$non_lazy_ptr" can't be undefined in a subtraction expression
+{standard input}:280:non-relocatable subtraction expression, "L_OBJC_IVAR_$_PreviewViewController.program$non_lazy_ptr" minus "L00000000002$pb"
+{standard input}:280:symbol: "L_OBJC_IVAR_$_PreviewViewController.program$non_lazy_ptr" can't be undefined in a subtraction expression
+{standard input}:271:non-relocatable subtraction expression, "L_OBJC_IVAR_$_PreviewViewController.program$non_lazy_ptr" minus "L00000000002$pb"
+{standard input}:271:symbol: "L_OBJC_IVAR_$_PreviewViewController.program$non_lazy_ptr" can't be undefined in a subtraction expression
+{standard input}:242:non-relocatable subtraction expression, "L_OBJC_IVAR_$_PreviewViewController.displayLinkSupported$non_lazy_ptr" minus "L00000000001$pb"
+{standard input}:242:symbol: "L_OBJC_IVAR_$_PreviewViewController.displayLinkSupported$non_lazy_ptr" can't be undefined in a subtraction expression
+{standard input}:230:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_8" minus "L00000000001$pb"
+{standard input}:230:symbol: "L_OBJC_SELECTOR_REFERENCES_8" can't be undefined in a subtraction expression
+{standard input}:222:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_7" minus "L00000000001$pb"
+{standard input}:222:symbol: "L_OBJC_SELECTOR_REFERENCES_7" can't be undefined in a subtraction expression
+{standard input}:216:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_6" minus "L00000000001$pb"
+{standard input}:216:symbol: "L_OBJC_SELECTOR_REFERENCES_6" can't be undefined in a subtraction expression
+{standard input}:213:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_1" minus "L00000000001$pb"
+{standard input}:213:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_1" can't be undefined in a subtraction expression
+{standard input}:204:non-relocatable subtraction expression, "L_OBJC_IVAR_$_PreviewViewController.animationTimer$non_lazy_ptr" minus "L00000000001$pb"
+{standard input}:204:symbol: "L_OBJC_IVAR_$_PreviewViewController.animationTimer$non_lazy_ptr" can't be undefined in a subtraction expression
+{standard input}:197:non-relocatable subtraction expression, "L_OBJC_IVAR_$_PreviewViewController.displayLink$non_lazy_ptr" minus "L00000000001$pb"
+{standard input}:197:symbol: "L_OBJC_IVAR_$_PreviewViewController.displayLink$non_lazy_ptr" can't be undefined in a subtraction expression
+{standard input}:190:non-relocatable subtraction expression, "L_OBJC_IVAR_$_PreviewViewController.animationFrameInterval$non_lazy_ptr" minus "L00000000001$pb"
+{standard input}:190:symbol: "L_OBJC_IVAR_$_PreviewViewController.animationFrameInterval$non_lazy_ptr" can't be undefined in a subtraction expression
+{standard input}:183:non-relocatable subtraction expression, "L_OBJC_IVAR_$_PreviewViewController.displayLinkSupported$non_lazy_ptr" minus "L00000000001$pb"
+{standard input}:183:symbol: "L_OBJC_IVAR_$_PreviewViewController.displayLinkSupported$non_lazy_ptr" can't be undefined in a subtraction expression
+{standard input}:176:non-relocatable subtraction expression, "L_OBJC_IVAR_$_PreviewViewController.animating$non_lazy_ptr" minus "L00000000001$pb"
+{standard input}:176:symbol: "L_OBJC_IVAR_$_PreviewViewController.animating$non_lazy_ptr" can't be undefined in a subtraction expression
+{standard input}:169:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_5" minus "L00000000001$pb"
+{standard input}:169:symbol: "L_OBJC_SELECTOR_REFERENCES_5" can't be undefined in a subtraction expression
+{standard input}:163:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_9" minus "L00000000001$pb"
+{standard input}:163:symbol: "L_OBJC_SELECTOR_REFERENCES_9" can't be undefined in a subtraction expression
+{standard input}:155:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_3" minus "L00000000001$pb"
+{standard input}:155:symbol: "L_OBJC_SELECTOR_REFERENCES_3" can't be undefined in a subtraction expression
+{standard input}:150:non-relocatable subtraction expression, "L_OBJC_IVAR_$_PreviewViewController.context$non_lazy_ptr" minus "L00000000001$pb"
+{standard input}:150:symbol: "L_OBJC_IVAR_$_PreviewViewController.context$non_lazy_ptr" can't be undefined in a subtraction expression
+{standard input}:143:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_9" minus "L00000000001$pb"
+{standard input}:143:symbol: "L_OBJC_SELECTOR_REFERENCES_9" can't be undefined in a subtraction expression
+{standard input}:136:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_4" minus "L00000000001$pb"
+{standard input}:136:symbol: "L_OBJC_SELECTOR_REFERENCES_4" can't be undefined in a subtraction expression
+{standard input}:127:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_3" minus "L00000000001$pb"
+{standard input}:127:symbol: "L_OBJC_SELECTOR_REFERENCES_3" can't be undefined in a subtraction expression
+{standard input}:111:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_2" minus "L00000000001$pb"
+{standard input}:111:symbol: "L_OBJC_SELECTOR_REFERENCES_2" can't be undefined in a subtraction expression
+{standard input}:108:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_0" minus "L00000000001$pb"
+{standard input}:108:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_0" can't be undefined in a subtraction expression
+{standard input}:91:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_1" minus "L00000000001$pb"
+{standard input}:91:symbol: "L_OBJC_SELECTOR_REFERENCES_1" can't be undefined in a subtraction expression
+{standard input}:85:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_0" minus "L00000000001$pb"
+{standard input}:85:symbol: "L_OBJC_SELECTOR_REFERENCES_0" can't be undefined in a subtraction expression
+{standard input}:82:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_0" minus "L00000000001$pb"
+{standard input}:82:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_0" can't be undefined in a subtraction expression
+{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_REFERENCES_$_0
+{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_0
+{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_1
+{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_2
+{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_3
+{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_4
+{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_9
+{standard input}:unknown:Undefined local symbol L_OBJC_IVAR_$_PreviewViewController.context$non_lazy_ptr
+{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_5
+{standard input}:unknown:Undefined local symbol L_OBJC_IVAR_$_PreviewViewController.animating$non_lazy_ptr
+{standard input}:unknown:Undefined local symbol L_OBJC_IVAR_$_PreviewViewController.displayLinkSupported$non_lazy_ptr
+{standard input}:unknown:Undefined local symbol L_OBJC_IVAR_$_PreviewViewController.animationFrameInterval$non_lazy_ptr
+{standard input}:unknown:Undefined local symbol L_OBJC_IVAR_$_PreviewViewController.displayLink$non_lazy_ptr
+{standard input}:unknown:Undefined local symbol L_OBJC_IVAR_$_PreviewViewController.animationTimer$non_lazy_ptr
+{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_REFERENCES_$_1
+{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_6
+{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_7
+{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_8
+{standard input}:unknown:Undefined local symbol L_OBJC_IVAR_$_PreviewViewController.program$non_lazy_ptr
+{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_10
+{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_SUP_REFS_$_2
+{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_11
+{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_12
+{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_13
+{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_14
+{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_15
+{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_16
+{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_17
+{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_18
+{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_19
+{standard input}:unknown:Undefined local symbol L_NSDefaultRunLoopMode$non_lazy_ptr
+{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_REFERENCES_$_3
+{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_20
+{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_21
+{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_REFERENCES_$_4
+{standard input}:unknown:Undefined local symbol LC8
+{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_22
+{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_23

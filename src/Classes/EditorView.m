@@ -102,6 +102,10 @@
 
 - (void)pan:(UIPanGestureRecognizer *)gesture
 {
+	int knobSize = (int) 15.0 * (right - left) / self.bounds.size.width; // good estimate for about 15 pixel knob.
+	CGPoint point = [gesture locationInView:self];
+	double xWorldCoords = left + point.x * (right - left) / self.bounds.size.width;
+	double yWorldCoords = top + point.y * (bottom - top) / self.bounds.size.height;
 	if(gesture.state == UIGestureRecognizerStateBegan) {
 		if([delegate selectedShape]) {
 			Shape *cur = [delegate selectedShape];
@@ -109,30 +113,27 @@
 			double tly = [cur.tly doubleValue];
 			double brx = [cur.brx doubleValue];
 			double bry = [cur.bry doubleValue];
-			CGPoint point = [gesture locationInView:self];
-			double xWorldCoords = left + point.x * (right - left) / self.bounds.size.width;
-			double yWorldCoords = top + point.y * (bottom - top) / self.bounds.size.height;
 			if([cur hitTextAtX:xWorldCoords Y:yWorldCoords]) {
 				selectedKnob = 6;
 			}
 			switch([cur.type intValue]) {
 				case SHAPETYPELEVEL:
-					if((brx - 14 < xWorldCoords && brx + 14 > xWorldCoords) && (tly - 14 < yWorldCoords && tly + 14 > yWorldCoords)) {
+					if((brx - knobSize < xWorldCoords && brx + knobSize > xWorldCoords) && (tly - knobSize < yWorldCoords && tly + knobSize > yWorldCoords)) {
 						selectedKnob = 1;
 					}
-					if((tlx - 14 < xWorldCoords && tlx + 14 > xWorldCoords) && (bry - 14 < yWorldCoords && bry + 14 > yWorldCoords)) {
+					if((tlx - knobSize < xWorldCoords && tlx + knobSize > xWorldCoords) && (bry - knobSize < yWorldCoords && bry + knobSize > yWorldCoords)) {
 						selectedKnob = 2;
 					}
 				case SHAPETYPEWALL:
-					if((tlx - 14 < xWorldCoords && tlx + 14 > xWorldCoords) && (tly - 14 < yWorldCoords && tly + 14 > yWorldCoords)) {
+					if((tlx - knobSize < xWorldCoords && tlx + knobSize > xWorldCoords) && (tly - knobSize < yWorldCoords && tly + knobSize > yWorldCoords)) {
 						selectedKnob = 3;
 					}
-					if((brx - 14 < xWorldCoords && brx + 14 > xWorldCoords) && (bry - 14 < yWorldCoords && bry + 14 > yWorldCoords)) {
+					if((brx - knobSize < xWorldCoords && brx + knobSize > xWorldCoords) && (bry - knobSize < yWorldCoords && bry + knobSize > yWorldCoords)) {
 						selectedKnob = 4;
 					}
 					break;
 				case SHAPETYPEBILLBOARD:
-					if((brx - 14 < xWorldCoords && brx + 14 > xWorldCoords) && ((tly + bry)/2 - 14 < yWorldCoords && (tly + bry)/2 + 14 > yWorldCoords)) {
+					if((brx - knobSize < xWorldCoords && brx + knobSize > xWorldCoords) && ((tly + bry)/2 - knobSize < yWorldCoords && (tly + bry)/2 + knobSize > yWorldCoords)) {
 						selectedKnob = 5;
 					}
 					break;
@@ -188,9 +189,6 @@
 			if(modified) [self setNeedsDisplay];
 			
 		} else if([gesture numberOfTouches] == 1) {
-			CGPoint point = [gesture locationInView:self];
-			double xWorldCoords = left + point.x * (right - left) / self.bounds.size.width;
-			double yWorldCoords = top + point.y * (bottom - top) / self.bounds.size.height;
 			
 			if([delegate selectedShape]) {
 				Shape *cur = [delegate selectedShape];
@@ -329,7 +327,7 @@
 			break;
 			
 		case SHAPETYPEBILLBOARD:			
-			CGContextFillRect(context, CGRectMake(brx, (tly + bry)/2 - 7 - 7, 14, 14));
+			CGContextFillRect(context, CGRectMake(brx, (tly + bry)/2 - 7, 14, 14));
 			break;
 	}
 }
@@ -359,13 +357,13 @@
 	UIGraphicsPushContext(context);
 	
 	// draw shape textures a bit heavier
-	CGContextSetAlpha(context, 0.6f);
+	CGContextSetAlpha(context, 0.5f);
 	for(Shape *curshape in [delegate project].shapes) {
 		[self drawShape:curshape inRect:rect inCGContext:context];
 	}
 	
 	// draw selected shape on top and with 1 alpha
-	CGContextSetAlpha(context, 1.f);
+	CGContextSetAlpha(context, 0.8f);
 	if([delegate selectedShape]) {
 		[self drawSelectedShape:[delegate selectedShape] inRect:rect inCGContext:context];
 	}

@@ -73,6 +73,19 @@
 }
 
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+	BOOL valid;
+	NSCharacterSet *decimal = [NSCharacterSet characterSetWithCharactersInString: @".123456789"];
+	NSCharacterSet *inStringSet = [NSCharacterSet characterSetWithCharactersInString:textField.text];
+	valid = [decimal isSupersetOfSet:inStringSet];
+	if (!valid) {
+		return NO;
+    }
+	[textField resignFirstResponder];
+	return YES;
+}
+
 /*
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

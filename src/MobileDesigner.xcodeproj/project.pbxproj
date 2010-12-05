@@ -53,6 +53,11 @@
 		9FBA3AF512A97F6B00F56D56 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBA3AF312A97F6B00F56D56 /* MainMenuViewController.m */; };
 		9FBA3AF612A97F6B00F56D56 /* MainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FBA3AF412A97F6B00F56D56 /* MainMenuViewController.xib */; };
 		9FBA3B0712A97FA900F56D56 /* MainMenuViewController-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FBA3B0512A97FA900F56D56 /* MainMenuViewController-iPad.xib */; };
+		9FE377A312AB6BAB000C2CDF /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FE377A212AB6BAB000C2CDF /* OpenGLES.framework */; };
+		9FE377ED12AB6CF1000C2CDF /* EAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FE377E912AB6CF1000C2CDF /* EAGLView.m */; };
+		9FE377EE12AB6CF1000C2CDF /* PreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FE377EB12AB6CF1000C2CDF /* PreviewViewController.m */; };
+		9FE377EF12AB6CF1000C2CDF /* PreviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FE377EC12AB6CF1000C2CDF /* PreviewViewController.xib */; };
+		9FE3788712AB798F000C2CDF /* gluLookAt.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FE3788612AB798F000C2CDF /* gluLookAt.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -123,6 +128,14 @@
 		9FBA3AF312A97F6B00F56D56 /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
 		9FBA3AF412A97F6B00F56D56 /* MainMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainMenuViewController.xib; path = Classes/MainMenuViewController.xib; sourceTree = "<group>"; };
 		9FBA3B0512A97FA900F56D56 /* MainMenuViewController-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "MainMenuViewController-iPad.xib"; sourceTree = "<group>"; };
+		9FE377A212AB6BAB000C2CDF /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		9FE377E812AB6CF1000C2CDF /* EAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAGLView.h; sourceTree = "<group>"; };
+		9FE377E912AB6CF1000C2CDF /* EAGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAGLView.m; sourceTree = "<group>"; };
+		9FE377EA12AB6CF1000C2CDF /* PreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreviewViewController.h; sourceTree = "<group>"; };
+		9FE377EB12AB6CF1000C2CDF /* PreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreviewViewController.m; sourceTree = "<group>"; };
+		9FE377EC12AB6CF1000C2CDF /* PreviewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreviewViewController.xib; sourceTree = "<group>"; };
+		9FE3788512AB798F000C2CDF /* gluLookAt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gluLookAt.h; path = Classes/gluLookAt.h; sourceTree = "<group>"; };
+		9FE3788612AB798F000C2CDF /* gluLookAt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = gluLookAt.m; path = Classes/gluLookAt.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +150,7 @@
 				9F941D3F12A8A43300E2EACE /* MapKit.framework in Frameworks */,
 				9F941DD312A8BD8500E2EACE /* CoreLocation.framework in Frameworks */,
 				9F941E8412A8D00200E2EACE /* QuartzCore.framework in Frameworks */,
+				9FE377A312AB6BAB000C2CDF /* OpenGLES.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +160,11 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9FE377E812AB6CF1000C2CDF /* EAGLView.h */,
+				9FE377E912AB6CF1000C2CDF /* EAGLView.m */,
+				9FE377EA12AB6CF1000C2CDF /* PreviewViewController.h */,
+				9FE377EB12AB6CF1000C2CDF /* PreviewViewController.m */,
+				9FE377EC12AB6CF1000C2CDF /* PreviewViewController.xib */,
 				9F74606B12AB1642003D4F75 /* OnlineTextureSelectorViewController.h */,
 				9F74606C12AB1642003D4F75 /* OnlineTextureSelectorViewController.m */,
 				9F745F7712AAF327003D4F75 /* ShapeInspectorBillboardViewController.h */,
@@ -209,6 +228,8 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				9FE3788512AB798F000C2CDF /* gluLookAt.h */,
+				9FE3788612AB798F000C2CDF /* gluLookAt.m */,
 				9FBA3A0C12A970AB00F56D56 /* CoreDataTableViewController.h */,
 				9FBA3A0D12A970AB00F56D56 /* CoreDataTableViewController.m */,
 				32CA4F630368D1EE00C91783 /* MobileDesigner_Prefix.pch */,
@@ -238,6 +259,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9FE377A212AB6BAB000C2CDF /* OpenGLES.framework */,
 				9F941E8312A8D00200E2EACE /* QuartzCore.framework */,
 				9F941DD212A8BD8500E2EACE /* CoreLocation.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
@@ -332,6 +354,7 @@
 				9F745F9912AB0113003D4F75 /* ShapeInspectorWallViewController-iPad.xib in Resources */,
 				9F74606F12AB1642003D4F75 /* OnlineTextureSelectorViewController.xib in Resources */,
 				9F74607412AB1651003D4F75 /* OnlineTextureSelectorViewController-iPad.xib in Resources */,
+				9FE377EF12AB6CF1000C2CDF /* PreviewViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +386,9 @@
 				9F745F8412AAF377003D4F75 /* ShapeInspectorWallViewController.m in Sources */,
 				9F745F8812AAF387003D4F75 /* ShapeInspectorViewController.m in Sources */,
 				9F74606E12AB1642003D4F75 /* OnlineTextureSelectorViewController.m in Sources */,
+				9FE377ED12AB6CF1000C2CDF /* EAGLView.m in Sources */,
+				9FE377EE12AB6CF1000C2CDF /* PreviewViewController.m in Sources */,
+				9FE3788712AB798F000C2CDF /* gluLookAt.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +401,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -392,6 +422,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = MobileDesigner_Prefix.pch;
 				INFOPLIST_FILE = "MobileDesigner-Info.plist";

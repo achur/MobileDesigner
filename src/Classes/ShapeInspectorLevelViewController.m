@@ -2,39 +2,92 @@
 //  ShapeInspectorLevelViewController.m
 //  MobileDesigner
 //
-//  Created by Manoli Liodakis on 12/4/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
-//
+
 
 #import "ShapeInspectorLevelViewController.h"
-
+#import "Shape.h"
 
 @implementation ShapeInspectorLevelViewController
 
+
+@synthesize baseTextField;
+@synthesize heightTextField;
+@synthesize rectWidth;
+@synthesize rectHeight;
+@synthesize topLeftX;
+@synthesize topLeftY;
+
 /*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
-        // Custom initialization
-    }
-    return self;
-}
-*/
+ - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+ if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
+ // Custom initialization
+ }
+ return self;
+ }
+ */
 
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+- (BOOL)iPad
+{
+	return (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad);
+}
+
+- (id)initWithShape:(Shape *)shp
+{
+	NSString *nibname = @"";
+	if([self iPad]) nibname = @"ShapeInspectorLevelViewController-iPad";
+	else nibname = @"ShapeInspectorLevelViewController";
+	if ((self = [super initWithNibName:nibname bundle:nil shape:shp])) {
+	}
+	return self;
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+	[super viewWillDisappear:animated];
+	double tlx = [topLeftX.text doubleValue];
+	double tly = [topLeftY.text doubleValue];
+	double base = [baseTextField.text doubleValue];
+	double height = [heightTextField.text doubleValue];
+	double recW = [rectWidth.text doubleValue];
+	double recH = [rectHeight.text doubleValue];
+	self.shape.tlx = [NSNumber numberWithDouble:tlx];
+	self.shape.tly = [NSNumber numberWithDouble:tly];
+	self.shape.brx = [NSNumber numberWithDouble:(tlx + recW)];
+	self.shape.bry = [NSNumber numberWithDouble:(tly + recH)];
+	self.shape.tlz = [NSNumber numberWithDouble:(base + height)];
+	self.shape.brz = [NSNumber numberWithDouble:base];
+}
+
 - (void)viewDidLoad {
-    [super viewDidLoad];
+	[super viewDidLoad];
+	double h1 = [self.shape.brz doubleValue];
+	double h2 = [self.shape.tlz doubleValue];
+	double tlx = [self.shape.tlx doubleValue];
+	double tly = [self.shape.tly doubleValue];
+	double brx = [self.shape.brx doubleValue];
+	double bry = [self.shape.bry doubleValue];
+	double smallX = tlx < brx ? tlx : brx;
+	double largeX = tlx < brx ? brx: tlx;
+	double smallY = tly < bry ? tly : bry;
+	double largeY = tly < bry ? bry : tly;
+	double recW = largeX - smallX;
+	double recH = largeY - smallY;
+	baseTextField.text = [NSString stringWithFormat:@"%.2f", h1 < h2 ? h1 : h2];
+	heightTextField.text = [NSString stringWithFormat:@"%.2f", h1 < h2 ? h2 - h1 : h1 - h2];
+	topLeftX.text = [NSString stringWithFormat:@"%.2f", smallX];
+	topLeftY.text = [NSString stringWithFormat:@"%.2f", smallY];
+	rectWidth.text = [NSString stringWithFormat:@"%.2f", recW];
+	rectHeight.text = [NSString stringWithFormat:@"%.2f", recH];
 }
-*/
 
 /*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
+ // Override to allow orientations other than the default portrait orientation.
+ - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+ // Return YES for supported orientations
+ return (interfaceOrientation == UIInterfaceOrientationPortrait);
+ }
+ */
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
@@ -53,6 +106,5 @@
 - (void)dealloc {
     [super dealloc];
 }
-
 
 @end

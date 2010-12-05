@@ -7,7 +7,7 @@
 #import "ShapeInspectorViewController.h"
 
 
-@interface ShapeInspectorBillboardViewController : ShapeInspectorViewController {
+@interface ShapeInspectorBillboardViewController : ShapeInspectorViewController <UITextFieldDelegate>{
 	UITextField* baseTextField;
 	UITextField* heightTextField;
 	UITextField* centerXTextField;

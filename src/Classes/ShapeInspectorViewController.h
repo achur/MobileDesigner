@@ -5,6 +5,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Shape.h"
+#import "OnlineTextureSelectorViewController.h"
 
 @protocol ShapeInspectorDelegate
 
@@ -13,7 +14,7 @@
 @end
 
 
-@interface ShapeInspectorViewController : UIViewController {
+@interface ShapeInspectorViewController : UIViewController <TextureSelectorDelegate> {
 	UISlider* redSlider;
 	UISlider* greenSlider;
 	UISlider* blueSlider;
@@ -34,6 +35,8 @@
 @property (nonatomic, retain) id <ShapeInspectorDelegate> delegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil shape:(Shape*)shp;
+
+- (void)imageSelected:(UIImage *)img;
 
 - (IBAction)selectTexturePressed:(UIButton*)sender;
 - (IBAction)removeTexturePressed:(UIButton*)sender;

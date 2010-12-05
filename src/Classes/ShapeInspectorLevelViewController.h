@@ -7,10 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ShapeInspectorViewController.h"
 
-
-@interface ShapeInspectorLevelViewController : UIViewController {
-
+@interface ShapeInspectorLevelViewController : ShapeInspectorViewController {
+	UITextField* baseTextField;
+	UITextField* heightTextField;
+	UITextField* rectWidth;
+	UITextField* rectHeight;
+	UITextField* topLeftX;
+	UITextField* topLeftY;
 }
+
+@property (retain) IBOutlet	UITextField* baseTextField;
+@property (retain) IBOutlet	UITextField* heightTextField;
+@property (retain) IBOutlet	UITextField* rectWidth;
+@property (retain) IBOutlet	UITextField* rectHeight;
+@property (retain) IBOutlet	UITextField* topLeftX;
+@property (retain) IBOutlet	UITextField* topLeftY;
+
+- (id)initWithShape:(Shape *)shp;
+
 
 @end
