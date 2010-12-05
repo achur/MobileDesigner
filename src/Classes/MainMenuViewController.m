@@ -26,7 +26,7 @@
 		newproj = [[NewProjectViewController alloc] initWithNibName:@"NewProjectViewController" bundle:nil];
 	}
 	newproj.delegate = self;
-	newproj.title = @"Create a new project";
+	newproj.title = @"Create a New Project";
 	[newproj autorelease];
 	[self.navigationController pushViewController:newproj animated:YES];
 }

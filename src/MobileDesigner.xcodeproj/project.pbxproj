@@ -21,6 +21,11 @@
 		379A5CA912A86B29007CC256 /* NewProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 379A5CA712A86B29007CC256 /* NewProjectViewController.m */; };
 		379A5CAA12A86B29007CC256 /* NewProjectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 379A5CA812A86B29007CC256 /* NewProjectViewController.xib */; };
 		379A5CB112A86B59007CC256 /* NewProjectViewController-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 379A5CAF12A86B59007CC256 /* NewProjectViewController-iPad.xib */; };
+		9F167C5812ABAB0300CF704A /* grass.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9F167C5712ABAB0300CF704A /* grass.jpg */; };
+		9F167CB812ABED1700CF704A /* globe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9F167CB712ABED1700CF704A /* globe.jpg */; };
+		9F167CBA12ABEDF000CF704A /* panorama.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9F167CB912ABEDF000CF704A /* panorama.jpg */; };
+		9F167CC612ABF21200CF704A /* panorama2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9F167CC512ABF21200CF704A /* panorama2.jpg */; };
+		9F167D0312AC04D000CF704A /* panorama3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9F167D0212AC04D000CF704A /* panorama3.jpg */; };
 		9F647E1D12A99E730008B2DB /* MobileDesigner.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 379A5C0D12A8548D007CC256 /* MobileDesigner.xcdatamodel */; };
 		9F647E5912A99FBE0008B2DB /* MobileDesigner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9F647E5812A99FBE0008B2DB /* MobileDesigner.xcdatamodeld */; };
 		9F647E7A12A9C9410008B2DB /* ProjectMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F647E7812A9C9410008B2DB /* ProjectMenuViewController.m */; };
@@ -84,6 +89,11 @@
 		379A5CA812A86B29007CC256 /* NewProjectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = NewProjectViewController.xib; path = Classes/NewProjectViewController.xib; sourceTree = "<group>"; };
 		379A5CAF12A86B59007CC256 /* NewProjectViewController-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "NewProjectViewController-iPad.xib"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* MobileDesigner-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MobileDesigner-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		9F167C5712ABAB0300CF704A /* grass.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = grass.jpg; sourceTree = "<group>"; };
+		9F167CB712ABED1700CF704A /* globe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = globe.jpg; sourceTree = "<group>"; };
+		9F167CB912ABEDF000CF704A /* panorama.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = panorama.jpg; sourceTree = "<group>"; };
+		9F167CC512ABF21200CF704A /* panorama2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = panorama2.jpg; sourceTree = "<group>"; };
+		9F167D0212AC04D000CF704A /* panorama3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = panorama3.jpg; sourceTree = "<group>"; };
 		9F647E7712A9C9410008B2DB /* ProjectMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectMenuViewController.h; sourceTree = "<group>"; };
 		9F647E7812A9C9410008B2DB /* ProjectMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectMenuViewController.m; sourceTree = "<group>"; };
 		9F647E7912A9C9410008B2DB /* ProjectMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ProjectMenu.xib; path = Classes/ProjectMenu.xib; sourceTree = "<group>"; };
@@ -215,6 +225,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				9F167CAF12ABEA8200CF704A /* Images */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -241,6 +252,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9F167C5712ABAB0300CF704A /* grass.jpg */,
 				9F647E5812A99FBE0008B2DB /* MobileDesigner.xcdatamodeld */,
 				379A5CA812A86B29007CC256 /* NewProjectViewController.xib */,
 				9F74606D12AB1642003D4F75 /* OnlineTextureSelectorViewController.xib */,
@@ -285,6 +297,17 @@
 				9F74599612A9F69E003D4F75 /* EditorViewController-iPad.xib */,
 			);
 			name = "Resources-iPad";
+			sourceTree = "<group>";
+		};
+		9F167CAF12ABEA8200CF704A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				9F167D0212AC04D000CF704A /* panorama3.jpg */,
+				9F167CC512ABF21200CF704A /* panorama2.jpg */,
+				9F167CB912ABEDF000CF704A /* panorama.jpg */,
+				9F167CB712ABED1700CF704A /* globe.jpg */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,6 +378,11 @@
 				9F74606F12AB1642003D4F75 /* OnlineTextureSelectorViewController.xib in Resources */,
 				9F74607412AB1651003D4F75 /* OnlineTextureSelectorViewController-iPad.xib in Resources */,
 				9FE377EF12AB6CF1000C2CDF /* PreviewViewController.xib in Resources */,
+				9F167C5812ABAB0300CF704A /* grass.jpg in Resources */,
+				9F167CB812ABED1700CF704A /* globe.jpg in Resources */,
+				9F167CBA12ABEDF000CF704A /* panorama.jpg in Resources */,
+				9F167CC612ABF21200CF704A /* panorama2.jpg in Resources */,
+				9F167D0312AC04D000CF704A /* panorama3.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

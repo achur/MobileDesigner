@@ -30,7 +30,7 @@
 	if ((self == [super initWithNibName:nibname bundle:nil])) {
 		self.managedObjectContext = ctx;
 		self.project = proj;	
-		self.title = [@"Edit " stringByAppendingString:project.name];
+		self.title = [@"2-D Edit: " stringByAppendingString:project.name];
 		selectedShape = nil;
 	}
 	return self;

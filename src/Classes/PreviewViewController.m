@@ -2,14 +2,21 @@
 //  PreviewViewController.m
 //  Preview
 //
-//  Created by Manoli Liodakis on 12/4/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//  Thanks to the UMBC CS course CMSC 491 lecture 19 slides
+//  for explaining some OpenGL stuff and for doing the frutsam
+//  math.
 //
+
+#define TURNSPEEDX 0.07
+#define TURNSPEEDY 0.04
+#define MOVESPEED 0.03
+#define ZOOMSPEED 0.5
 
 #import <QuartzCore/QuartzCore.h>
 
 #import "PreviewViewController.h"
 #import "EAGLView.h"
+#import "gluLookAt.h"
 
 // Uniform index.
 enum {
@@ -37,6 +44,18 @@ enum {
 
 @synthesize animating, context;
 
+
+
+ // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
+ - (id)initWithProject:(Project *)proj {
+ if ((self = [super initWithNibName:@"PreviewViewController" bundle:nil])) {
+	 project = proj;
+ }
+ return self;
+ }
+ 
+
+
 - (void)viewDidLoad
 {
     EAGLContext *aContext = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES1];
@@ -57,6 +76,42 @@ enum {
     animationFrameInterval = 1;
     displayLink = nil;
     animationTimer = nil;
+	
+	hasRun = NO;
+	
+	posX = 0;
+	posY = 0;
+	theta = -45.f;
+	phi = 0.f;
+	heightAboveGround = 6.f;
+	
+	UIGestureRecognizer *pangr = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
+	[self.view addGestureRecognizer:pangr];
+	[pangr release];
+	UITapGestureRecognizer *tapgr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
+	tapgr.numberOfTapsRequired = 2;
+	[self.view addGestureRecognizer:tapgr];
+	[tapgr release];
+	UIGestureRecognizer *pinchgr = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinch:)];
+	[self.view addGestureRecognizer:pinchgr];
+	[pinchgr release];
+	
+	
+	// set to be the number of shapes
+	textures = malloc(2 * sizeof(GLuint));
+	
+	// store our shapes in a constant-order array
+	// this is because we need to bind textures to the shapes
+	// and want to only load the textures into graphical
+	// memory once, as doing so is a costly operation
+	int numShapes = [project.shapes count];
+	shapes = malloc(numShapes * sizeof(Shape *));
+	int cur = 0;
+	for(Shape *shp in project.shapes) {
+		shapes[cur] = shp;
+		cur++;
+	}
+	shapeCount = cur;
     
     // Use of CADisplayLink requires iOS version 3.1 or greater.
 	// The NSTimer object is used as fallback when it isn't available.
@@ -70,6 +125,7 @@ enum {
 {
     if (program)
     {
+		free(textures);
         glDeleteProgram(program);
         program = 0;
     }
@@ -177,47 +233,270 @@ enum {
     }
 }
 
+
+float d_sin(float degrees) {
+	return sin(3.1415926535f * (degrees / 180.0f));
+}
+
+float d_cos(float degrees) {
+	return cos(3.1415926535f * (degrees / 180.0f));
+}
+
+float d_atan(float tanval) {
+	return (atan(tanval)/3.1415926535) * 180.0f;
+}
+
+
+- (void)pan:(UIPanGestureRecognizer *)gesture
+{
+	if ((gesture.state == UIGestureRecognizerStateChanged) ||
+		(gesture.state == UIGestureRecognizerStateEnded)) {
+		double xVal = (double)[gesture translationInView:self.view].x;
+		double yVal = (double)[gesture translationInView:self.view].y;
+		if([gesture numberOfTouches] == 1) {
+			NSLog(@"Translation by (%f, %f)", xVal, yVal);
+			theta += xVal * TURNSPEEDX;
+			phi += yVal * TURNSPEEDX;
+			if(theta > 360) theta -= 360;
+			if(theta < 0) theta += 360;
+			if(phi < -60) phi = -60;
+			if(phi > 60) phi = 60;
+		} else if([gesture numberOfTouches] == 2) {
+			posX += d_cos(theta) * d_cos(phi) * yVal * MOVESPEED * heightAboveGround;
+			posY -= d_sin(theta) * d_cos(phi) * yVal * MOVESPEED * heightAboveGround;
+			posX += d_cos(theta + 90.f) * d_cos(phi) * xVal * MOVESPEED * heightAboveGround;
+			posY -= d_sin(theta + 90.f) * d_cos(phi) * xVal * MOVESPEED * heightAboveGround;
+		}
+		CGPoint p;
+		p.x = 0; p.y= 0;
+		[gesture setTranslation:p inView:self.view];
+	}
+}
+
+- (void)tap:(UITapGestureRecognizer *)gesture
+{
+	if ((gesture.state == UIGestureRecognizerStateChanged) ||
+		(gesture.state == UIGestureRecognizerStateEnded)) {
+		NSLog(@"double tap");
+	}
+}
+
+- (void)pinch:(UIPinchGestureRecognizer *)gesture
+{
+	if ((gesture.state == UIGestureRecognizerStateChanged) ||
+		(gesture.state == UIGestureRecognizerStateEnded)) {
+		heightAboveGround /= gesture.scale;
+		if(heightAboveGround < 2) heightAboveGround = 2;
+		gesture.scale = 1;
+	}
+}
+
+- (void)drawQuad:(GLfloat*)vertices red:(float)r green:(float)g blue:(float)b
+{
+	glColor4f(r, g, b, 1.0);
+	glVertexPointer(3, GL_FLOAT, 0, vertices);
+    glDrawArrays(GL_TRIANGLE_FAN, 0, 4);
+}
+
+- (void)drawQuad:(GLfloat*)vertices red:(float)r green:(float)g blue:(float)b withTexture:(UIImage*)tex
+{
+	
+}
+
+- (void)loadFloorTexture {
+	if([project.hasTexture boolValue]) {
+		CGImageRef textureImage = [UIImage imageWithData:project.floorTexture].CGImage;
+		if (textureImage == nil) {
+			NSLog(@"Failed to load texture image");
+			return;
+		}
+		GLubyte *textureData = (GLubyte *)malloc(256 * 256 * 4);
+		CGContextRef textureContext = CGBitmapContextCreate(
+										   textureData,
+										   256,
+										   256,
+										   8, 256 * 4,
+										   CGImageGetColorSpace(textureImage),
+										   kCGImageAlphaPremultipliedLast);
+		CGContextDrawImage(textureContext,
+                       CGRectMake(0.0, 0.0, (float)256, (float)256),
+                       textureImage);
+		CGContextRelease(textureContext);
+		glGenTextures(1, &floorTexture[0]);
+		glBindTexture(GL_TEXTURE_2D, floorTexture[0]);
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, 256, 256, 0, GL_RGBA, GL_UNSIGNED_BYTE, textureData);
+		free(textureData);
+	}
+}
+
+- (void)loadShapeTexture:(int)index
+{
+	if([shapes[index].hasTexture boolValue]) {
+		CGImageRef textureImage = [UIImage imageWithData:shapes[index].texture].CGImage;
+//	[UIImage imageNamed:@"checkerplate.png"].CGImage;
+		if (textureImage == nil) {
+			NSLog(@"Failed to load texture image");
+			return;
+		}
+		GLubyte *textureData = (GLubyte *)malloc(256 * 256 * 4);
+		CGContextRef textureContext = CGBitmapContextCreate(
+                                                        textureData,
+                                                        256,
+                                                        256,
+                                                        8, 256 * 4,
+                                                        CGImageGetColorSpace(textureImage),
+                                                        kCGImageAlphaPremultipliedLast);
+		CGContextDrawImage(textureContext,
+                       CGRectMake(0.0, 0.0, (float)256, (float)256),
+                       textureImage);
+		CGContextRelease(textureContext);
+		glGenTextures(1, &textures[index]);
+		glBindTexture(GL_TEXTURE_2D, textures[index]);
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, 256, 256, 0, GL_RGBA, GL_UNSIGNED_BYTE, textureData);
+		free(textureData);
+	}
+}
+
+- (void)loadTextures {
+	[self loadFloorTexture];
+	
+	for(int i = 0; i < shapeCount; ++i) {
+		[self loadShapeTexture:i];
+	}
+}
+
+- (void)drawFloor {
+	if([project.hasTexture boolValue]) {
+		GLfloat floorVertices[12];
+		
+		floorVertices[0] = 0.0; floorVertices[1] = 0.0; floorVertices[2] = 0.0;
+		floorVertices[3] = 0.0; floorVertices[4] = 0.0; floorVertices[5] = [project.height doubleValue];
+		floorVertices[6] = [project.width doubleValue]; floorVertices[7] = 0.0; floorVertices[8] = [project.height doubleValue];
+		floorVertices[9] = [project.width doubleValue]; floorVertices[10] = 0.0; floorVertices[11] = 0.0;
+		
+		
+		glBindTexture(GL_TEXTURE_2D, floorTexture[0]);
+		glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+		glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+		glEnable(GL_TEXTURE_2D);
+		glTexCoordPointer(2, GL_SHORT, 0, squareTextureCoords);
+		glEnableClientState(GL_TEXTURE_COORD_ARRAY);
+		
+		[self drawQuad:floorVertices red:1.0 green:1.0 blue:1.0];
+	
+		glDisableClientState(GL_TEXTURE_COORD_ARRAY);
+	}
+}
+
+- (void)createVertices:(GLfloat *)vertices forShape:(Shape*)shape {
+	float tlx = [shape.tlx doubleValue];
+	float tly = [shape.tly doubleValue];
+	float tlz = [shape.tlz doubleValue];
+	float brx = [shape.brx doubleValue];
+	float bry = [shape.bry doubleValue];
+	float brz = [shape.brz doubleValue];
+	
+	if([shape.type intValue] == SHAPETYPELEVEL) {
+		vertices[0] = tlx; vertices[1] = tlz; vertices[2] = tly;
+		vertices[3] = tlx; vertices[4] = tlz; vertices[5] = bry;
+		vertices[6] = brx; vertices[7] = tlz; vertices[8] = bry;
+		vertices[9] = brx; vertices[10] = tlz; vertices[11] = tly;
+	} else if ([shape.type intValue] == SHAPETYPEWALL) {
+		vertices[0] = tlx; vertices[1] = tlz; vertices[2] = tly;
+		vertices[3] = tlx; vertices[4] = brz; vertices[5] = tly;
+		vertices[6] = brx; vertices[7] = brz; vertices[8] = bry;
+		vertices[9] = brx; vertices[10] = tlz; vertices[11] = bry;
+	} else if ([shape.type intValue] == SHAPETYPEBILLBOARD) {
+		float radius = sqrt((tlx - brx) * (tlx - brx) + (tly - bry) * (tly - bry))/2;
+		float centerX = (tlx + brx)/2;
+		float centerY = (tly + bry)/2;
+		float psi = 0;
+		if(centerX - 1 < posX && centerX + 1 > posX) psi = centerY > posY ? 90 : -90;
+		else psi = d_atan((posY - centerY)/(centerX - posX));
+		float leftX = centerX + radius * d_cos(psi + 90);
+		float leftY = centerY - radius * d_sin(psi + 90);
+		float rightX = centerX - radius * d_cos(psi + 90);
+		float rightY = centerY + radius * d_sin(psi + 90);
+		vertices[0] = leftX; vertices[1] = tlz; vertices[2] = leftY;
+		vertices[3] = leftX; vertices[4] = brz; vertices[5] = leftY;
+		vertices[6] = rightX; vertices[7] = brz; vertices[8] = rightY;
+		vertices[9] = rightX; vertices[10] = tlz; vertices[11] = rightY;
+	}
+	
+}
+
+- (void)drawShape:(int)index {
+	GLfloat vertices[12];
+	[self createVertices:&vertices[0] forShape:shapes[index]];
+	
+	if([shapes[index].hasTexture boolValue]) {
+		glBindTexture(GL_TEXTURE_2D, textures[index]);
+		glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+		glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+		glEnable(GL_TEXTURE_2D);
+		glTexCoordPointer(2, GL_SHORT, 0, squareTextureCoords);
+		glEnableClientState(GL_TEXTURE_COORD_ARRAY);
+		
+		[self drawQuad:vertices red:1.0 green:1.0 blue:1.0];
+		
+		glDisableClientState(GL_TEXTURE_COORD_ARRAY);
+	} else {
+		
+		int colornum = [shapes[index].color intValue];
+		int red = (colornum & 0xFF000000) >> 24;
+		int green = (colornum & 0x00FF0000) >> 16;
+		int blue = (colornum & 0x0000FF00) >> 8;
+		float r = 1.f/255 * red;
+		float g = 1.f/255 * green;
+		float b = 1.f/255 * blue;
+		
+		[self drawQuad:vertices red:r green:g blue:b];
+	}
+}
+
 - (void)drawFrame
 {
-	NSLog(@"drawing frame");
     [(EAGLView *)self.view setFramebuffer];
 	
-	const GLfloat zNear = 0.1, zFar = 100.0, fieldOfView = 45.0;
-	GLfloat size = zNear * tanf
-    
-    // Replace the implementation of this method to do your own custom drawing.
-    static const GLfloat floorVertices[] = {
-        -10.0, 0.0, 10.0,
-        10.0, 0.0, 10.0,
-        10.0, 0.0, -10.0,
-        -10.0, 0.0, -10.0
-    };
-    
-    static const GLubyte squareColors[] = {
-        255,   255,   255,   255,
-        255,   255,   255,   255,
-        255,   255,   255,   255,
-        255,   255,   255,   255,
-    };
-    
-    static float transY = 0.0f;
+	glEnable(GL_DEPTH_TEST);
+	
+	// perform initialization
+	if(!hasRun) {
+		float wid = [project.width doubleValue];
+		float ht = [project.height doubleValue];
+		const GLfloat zNear = 0.1, zFar = wid < ht ? ht : wid, fieldOfView = 45.0;
+		GLfloat size = zNear * tanf(3.1415926535 * fieldOfView / 360.0);
+		
+		glEnable(GL_DEPTH_TEST);
+		glMatrixMode(GL_PROJECTION);
+		
+		CGRect rect = self.view.bounds;
+		glFrustumf(-size, size, -size / (rect.size.width / rect.size.height), size / (rect.size.width / rect.size.height), zNear, zFar);
+		glViewport(0, 0, rect.size.width, rect.size.height);
+		hasRun = YES;
+		glMatrixMode(GL_MODELVIEW);
+		
+		[self loadTextures];
+	}
     
     glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     
-	glMatrixMode(GL_PROJECTION);
-	glLoadIdentity();
-	glMatrixMode(GL_MODELVIEW);
-	glLoadIdentity();
-	glTranslatef(0.0f, (GLfloat)(sinf(transY)/2.0f), 0.0f);
-	transY += 0.075f;
-	
-	glVertexPointer(3, GL_FLOAT, 0, floorVertices);
 	glEnableClientState(GL_VERTEX_ARRAY);
-	glColorPointer(4, GL_UNSIGNED_BYTE, 0, squareColors);
-	glEnableClientState(GL_COLOR_ARRAY);
-    
-    glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+	
+	glLoadIdentity();
+	
+//	NSLog(@"gluLookAt(%f, %f, %f, %f, %f, %f, %f, %f, %f", posX, 6.0f, posY, posX + 100 * d_cos(theta) * d_cos(phi), 6.f + 100.0 * d_sin(phi), posY - 100 * sin(phi) * cos(phi), 0.f, 1.f, 0.f);
+	
+	gluLookAt(posX, heightAboveGround, posY, posX + 100 * d_cos(theta) * d_cos(phi), heightAboveGround + 100.0 * d_sin(phi), posY - 100 * d_sin(theta) * d_cos(phi), 0.f, 1.f, 0.f);
+
+	[self drawFloor];
+	
+	for(int i = 0; i < shapeCount; ++i) {
+		[self drawShape:i];
+	}
+
+	glDisableClientState(GL_VERTEX_ARRAY);
     
     [(EAGLView *)self.view presentFramebuffer];
 }

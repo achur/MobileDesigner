@@ -19,6 +19,8 @@
 
 @dynamic context;
 
+@synthesize defaultFramebuffer;
+
 // You must implement this method
 + (Class)layerClass
 {

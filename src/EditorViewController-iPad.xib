@@ -59,15 +59,15 @@
 					<object class="IBUIButton" id="973602782">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{20, 888}, {131, 37}}</string>
+						<string key="NSFrame">{{20, 860}, {131, 74}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<object class="NSFont" key="IBUIFont" id="1021284957">
-							<string key="NSName">Helvetica-Bold</string>
-							<double key="NSSize">15</double>
+						<object class="NSFont" key="IBUIFont" id="185262581">
+							<string key="NSName">Georgia-Bold</string>
+							<double key="NSSize">18</double>
 							<int key="NSfFlags">16</int>
 						</object>
 						<int key="IBUIButtonType">1</int>
@@ -88,13 +88,13 @@
 					<object class="IBUIButton" id="768082210">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{579, 888}, {169, 37}}</string>
+						<string key="NSFrame">{{579, 860}, {169, 74}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<reference key="IBUIFont" ref="1021284957"/>
+						<reference key="IBUIFont" ref="185262581"/>
 						<int key="IBUIButtonType">1</int>
 						<string key="IBUINormalTitle"> Add A Shape</string>
 						<reference key="IBUIHighlightedTitleColor" ref="459489342"/>
@@ -107,13 +107,13 @@
 					<object class="IBUIButton" id="781254297">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{402, 888}, {169, 37}}</string>
+						<string key="NSFrame">{{402, 860}, {169, 74}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<reference key="IBUIFont" ref="1021284957"/>
+						<reference key="IBUIFont" ref="185262581"/>
 						<int key="IBUIButtonType">1</int>
 						<string key="IBUINormalTitle">Inspect Shape</string>
 						<reference key="IBUIHighlightedTitleColor" ref="459489342"/>
@@ -227,9 +227,9 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="1007572946"/>
-							<reference ref="973602782"/>
 							<reference ref="768082210"/>
 							<reference ref="781254297"/>
+							<reference ref="973602782"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -277,7 +277,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>EditorViewController</string>
 					<string>UIResponder</string>
-					<string>{{1628, -328}, {768, 1024}}</string>
+					<string>{{1683, -328}, {768, 1024}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>EditorView</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -286,7 +286,7 @@
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABBoAAAxHiAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABBoAAAxG4AAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">

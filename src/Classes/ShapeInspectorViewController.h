@@ -20,6 +20,7 @@
 	UISlider* blueSlider;
 	UILabel* textureSelectedLabel;
 	UIButton* removeTextureButton;
+	UILabel* noTextureSelectedLabel;
 	Shape* shape;
 	id <ShapeInspectorDelegate> delegate;
 }
@@ -29,6 +30,7 @@
 @property (retain) IBOutlet UISlider *blueSlider;
 @property (retain) IBOutlet UILabel *textureSelectedLabel;
 @property (retain) IBOutlet UIButton *removeTextureButton;
+@property (retain) IBOutlet UILabel *noTextureSelectedLabel;
 
 @property (assign) Shape *shape;
 

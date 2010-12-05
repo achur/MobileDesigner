@@ -12,8 +12,18 @@
 #import <OpenGLES/ES2/gl.h>
 #import <OpenGLES/ES2/glext.h>
 
+#import "Project.h"
+#import "Shape.h"
+
 @interface PreviewViewController : UIViewController
 {
+	
+	float posX;
+	float posY;
+	float theta;
+	float phi;
+	float heightAboveGround;
+	
     EAGLContext *context;
     GLuint program;
     
@@ -27,10 +37,33 @@
 	 */
     id displayLink;
     NSTimer *animationTimer;
+	
+	BOOL hasRun;
+	
+	Project *project;
+	
+	GLuint floorTexture[1];
+	GLuint *textures;
+	Shape **shapes;
+	int shapeCount;
+//	GLuint textures[2];
 }
+
+// top left
+// bottom left
+// bottom right
+// top right
+static const GLshort squareTextureCoords[] = {
+	0, 0,		
+	0, 1,		
+	1, 1,		
+	1, 0,		
+};
 
 @property (readonly, nonatomic, getter=isAnimating) BOOL animating;
 @property (nonatomic) NSInteger animationFrameInterval;
+
+- (id)initWithProject:(Project *)proj;
 
 - (void)startAnimation;
 - (void)stopAnimation;

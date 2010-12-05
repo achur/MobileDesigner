@@ -27,7 +27,7 @@
 
 - (IBAction)previewView:(UIButton*)sender
 {
-	PreviewViewController *pvc = [[PreviewViewController alloc] initWithNibName:@"PreviewViewController" bundle:nil];
+	PreviewViewController *pvc = [[PreviewViewController alloc] initWithProject:self.project];
 	[self.navigationController pushViewController:pvc animated:YES];
 	[pvc startAnimation];
 	NSLog(@"Show a 3D preview");

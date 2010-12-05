@@ -70,9 +70,9 @@
 	baseTextField.text = [NSString stringWithFormat:@"%.2f", h1 < h2 ? h1 : h2];
 	heightTextField.text = [NSString stringWithFormat:@"%.2f", h1 < h2 ? h2 - h1 : h1 - h2];
 	startX.text = [NSString stringWithFormat:@"%.2f", tlx < brx ? tlx : brx];
-	startY.text = [NSString stringWithFormat:@"%.2f", tly < bry ? tly : bry];
+	startY.text = [NSString stringWithFormat:@"%.2f", tlx < brx ? tly : bry];
 	endX.text = [NSString stringWithFormat:@"%.2f", tlx < brx ? brx : tlx];
-	endY.text = [NSString stringWithFormat:@"%.2f", tly < bry ? bry : tly];}
+	endY.text = [NSString stringWithFormat:@"%.2f", tlx < brx ? bry : tly];}
 
 /*
 // Override to allow orientations other than the default portrait orientation.

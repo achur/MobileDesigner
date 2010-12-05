@@ -17,7 +17,7 @@
 @synthesize removeTextureButton;
 @synthesize shape;
 @synthesize delegate;
-
+@synthesize noTextureSelectedLabel;
 
 
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -41,6 +41,7 @@
 	self.shape.texture = UIImagePNGRepresentation(img);
 	[self.textureSelectedLabel setHidden:NO];
 	[self.removeTextureButton setHidden:NO];
+	[self.noTextureSelectedLabel setHidden:YES];
 }
 
 - (IBAction)removeTexturePressed:(UIButton*)sender
@@ -49,6 +50,7 @@
 	self.shape.texture = nil;
 	[self.textureSelectedLabel setHidden:YES];
 	[self.removeTextureButton setHidden:YES];
+	[self.noTextureSelectedLabel setHidden:NO];
 }
 
 - (IBAction)deleteShapePressed:(UIButton*)sender
@@ -81,9 +83,11 @@
 	if([self.shape.hasTexture boolValue]) {
 		[self.textureSelectedLabel setHidden:NO];
 		[self.removeTextureButton setHidden:NO];
+		[self.noTextureSelectedLabel setHidden:YES];
 	} else {
 		[self.textureSelectedLabel setHidden:YES];
 		[self.removeTextureButton setHidden:YES];
+		[self.noTextureSelectedLabel setHidden:NO];
 	}
 }
 
