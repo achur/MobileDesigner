@@ -10,7 +10,7 @@
 @implementation Slide 
 
 @dynamic image;
-@dynamic horizontal;
+@dynamic number;
 @dynamic text;
 @dynamic project;
 
@@ -23,6 +23,8 @@
 	slide.text = @"";
 	slide.project = proj;
 	slide.number = proj.curSlideNumber;
+	
+	return slide;
 }
 
 @end

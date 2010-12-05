@@ -1022,6 +1022,18 @@
 			9F74608312AB1672003D4F75 /* PBXTextBookmark */ = 9F74608312AB1672003D4F75 /* PBXTextBookmark */;
 			9F74608612AB1672003D4F75 /* XDModelBookmark */ = 9F74608612AB1672003D4F75 /* XDModelBookmark */;
 			9F74608712AB1672003D4F75 /* PBXTextBookmark */ = 9F74608712AB1672003D4F75 /* PBXTextBookmark */;
+			9F74609312AB1931003D4F75 /* PBXTextBookmark */ = 9F74609312AB1931003D4F75 /* PBXTextBookmark */;
+			9F74609412AB1931003D4F75 /* PBXTextBookmark */ = 9F74609412AB1931003D4F75 /* PBXTextBookmark */;
+			9F74609512AB1931003D4F75 /* PBXTextBookmark */ = 9F74609512AB1931003D4F75 /* PBXTextBookmark */;
+			9F74609612AB1931003D4F75 /* PBXTextBookmark */ = 9F74609612AB1931003D4F75 /* PBXTextBookmark */;
+			9F74609712AB1931003D4F75 /* PBXTextBookmark */ = 9F74609712AB1931003D4F75 /* PBXTextBookmark */;
+			9F74609812AB1931003D4F75 /* PBXTextBookmark */ = 9F74609812AB1931003D4F75 /* PBXTextBookmark */;
+			9F74609912AB1931003D4F75 /* PBXTextBookmark */ = 9F74609912AB1931003D4F75 /* PBXTextBookmark */;
+			9F74609A12AB1931003D4F75 /* PBXTextBookmark */ = 9F74609A12AB1931003D4F75 /* PBXTextBookmark */;
+			9F74609B12AB1931003D4F75 /* PBXTextBookmark */ = 9F74609B12AB1931003D4F75 /* PBXTextBookmark */;
+			9F74609C12AB1931003D4F75 /* PBXTextBookmark */ = 9F74609C12AB1931003D4F75 /* PBXTextBookmark */;
+			9F74609D12AB1931003D4F75 /* XDModelBookmark */ = 9F74609D12AB1931003D4F75 /* XDModelBookmark */;
+			9F74609E12AB1931003D4F75 /* PBXTextBookmark */ = 9F74609E12AB1931003D4F75 /* PBXTextBookmark */;
 			9F8A738312A9DFB600AD46A6 = 9F8A738312A9DFB600AD46A6 /* PBXTextBookmark */;
 			9F8A738412A9DFB600AD46A6 = 9F8A738412A9DFB600AD46A6 /* PBXTextBookmark */;
 			9F941CED12A8A3E500E2EACE = 9F941CED12A8A3E500E2EACE /* PBXTextBookmark */;
@@ -1092,7 +1104,7 @@
 						isCollapsed = yes;
 						sizes = (
 							"{{0, 0}, {1156, 220}}",
-							"{{0, 225}, {1156, 293}}",
+							"{{0, 225}, {1156, 270}}",
 						);
 					};
 					tableSplitGeometry = {
@@ -1199,7 +1211,7 @@
 					);
 				};
 				"xdesign model browser state key - shown/hidden" = 1;
-				"xdesign model diagram view visible rect key" = "{{0, 78}, {1141, 278}}";
+				"xdesign model diagram view visible rect key" = "{{0, 78}, {1141, 255}}";
 			};
 			sepNavWindowFrame = "{{15, 142}, {1156, 631}}";
 		};
@@ -1214,8 +1226,8 @@
 	379A5C3112A857EA007CC256 /* Project.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1125, 1144}}";
-			sepNavSelRange = "{1202, 0}";
-			sepNavVisRange = "{186, 2462}";
+			sepNavSelRange = "{2409, 0}";
+			sepNavVisRange = "{1203, 1448}";
 			sepNavWindowFrame = "{{15, 142}, {1156, 631}}";
 		};
 	};
@@ -1237,16 +1249,17 @@
 	};
 	379A5C3412A857EA007CC256 /* Slide.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {741, 827}}";
-			sepNavSelRange = "{227, 0}";
-			sepNavVisRange = "{0, 333}";
+			sepNavIntBoundsRect = "{{0, 0}, {852, 804}}";
+			sepNavSelRange = "{222, 0}";
+			sepNavVisRange = "{0, 451}";
 		};
 	};
 	379A5C3512A857EA007CC256 /* Slide.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {845, 827}}";
-			sepNavSelRange = "{213, 0}";
-			sepNavVisRange = "{0, 529}";
+			sepNavSelRange = "{133, 0}";
+			sepNavVisRange = "{0, 542}";
+			sepNavWindowFrame = "{{15, 142}, {1156, 631}}";
 		};
 	};
 	379A5CA612A86B29007CC256 /* NewProjectViewController.h */ = {
@@ -6226,7 +6239,7 @@
 		fRef = 379A5C3512A857EA007CC256 /* Slide.m */;
 		name = "Slide.m: 15";
 		rLen = 0;
-		rLoc = 172;
+		rLoc = 168;
 		rType = 0;
 		vrLen = 179;
 		vrLoc = 0;
@@ -8841,9 +8854,9 @@
 	};
 	9F745F7812AAF327003D4F75 /* ShapeInspectorBillboardViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1146, 1352}}";
-			sepNavSelRange = "{1136, 0}";
-			sepNavVisRange = "{813, 2509}";
+			sepNavIntBoundsRect = "{{0, 0}, {1146, 1287}}";
+			sepNavSelRange = "{729, 82}";
+			sepNavVisRange = "{120, 2259}";
 		};
 	};
 	9F745F7C12AAF364003D4F75 /* ShapeInspectorLevelViewController.h */ = {
@@ -8864,14 +8877,14 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1097, 559}}";
 			sepNavSelRange = "{908, 104}";
-			sepNavVisRange = "{0, 1013}";
+			sepNavVisRange = "{0, 909}";
 		};
 	};
 	9F745F8712AAF387003D4F75 /* ShapeInspectorViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1146, 1534}}";
-			sepNavSelRange = "{369, 0}";
-			sepNavVisRange = "{0, 1560}";
+			sepNavIntBoundsRect = "{{0, 0}, {1146, 1664}}";
+			sepNavSelRange = "{1040, 0}";
+			sepNavVisRange = "{0, 1757}";
 		};
 	};
 	9F745F8912AAF618003D4F75 /* PBXBookmark */ = {
@@ -9003,7 +9016,7 @@
 		fRef = 9F745F8712AAF387003D4F75 /* ShapeInspectorViewController.m */;
 		name = "ShapeInspectorViewController.m: 87";
 		rLen = 0;
-		rLoc = 2436;
+		rLoc = 2633;
 		rType = 0;
 		vrLen = 1599;
 		vrLoc = 1192;
@@ -9262,7 +9275,7 @@
 		fRef = 9F745F8712AAF387003D4F75 /* ShapeInspectorViewController.m */;
 		name = "ShapeInspectorViewController.m: 87";
 		rLen = 0;
-		rLoc = 2436;
+		rLoc = 2633;
 		rType = 0;
 		vrLen = 1548;
 		vrLoc = 1242;
@@ -9272,7 +9285,7 @@
 		fRef = 9F745F8712AAF387003D4F75 /* ShapeInspectorViewController.m */;
 		name = "ShapeInspectorViewController.m: 33";
 		rLen = 0;
-		rLoc = 734;
+		rLoc = 782;
 		rType = 0;
 		vrLen = 1629;
 		vrLoc = 258;
@@ -9351,7 +9364,7 @@
 		fRef = 9F745F8712AAF387003D4F75 /* ShapeInspectorViewController.m */;
 		name = "ShapeInspectorViewController.m: 33";
 		rLen = 0;
-		rLoc = 734;
+		rLoc = 782;
 		rType = 0;
 		vrLen = 1629;
 		vrLoc = 258;
@@ -9421,7 +9434,7 @@
 		fRef = 9F745F8712AAF387003D4F75 /* ShapeInspectorViewController.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 89;
+		rLoc = 91;
 		rType = 1;
 	};
 	9F745FEF12AB05BE003D4F75 /* PBXTextBookmark */ = {
@@ -9608,7 +9621,7 @@
 		fRef = 9F745F8712AAF387003D4F75 /* ShapeInspectorViewController.m */;
 		name = "ShapeInspectorViewController.m: 31";
 		rLen = 0;
-		rLoc = 734;
+		rLoc = 782;
 		rType = 0;
 		vrLen = 1666;
 		vrLoc = 238;
@@ -9618,7 +9631,7 @@
 		fRef = 9F745F8712AAF387003D4F75 /* ShapeInspectorViewController.m */;
 		name = "ShapeInspectorViewController.m: 69";
 		rLen = 0;
-		rLoc = 1954;
+		rLoc = 2151;
 		rType = 0;
 		vrLen = 1704;
 		vrLoc = 793;
@@ -9648,7 +9661,7 @@
 		fRef = 9F745F8712AAF387003D4F75 /* ShapeInspectorViewController.m */;
 		name = "ShapeInspectorViewController.m: 68";
 		rLen = 0;
-		rLoc = 1954;
+		rLoc = 2151;
 		rType = 0;
 		vrLen = 1678;
 		vrLoc = 822;
@@ -9678,7 +9691,7 @@
 		fRef = 9F745F8712AAF387003D4F75 /* ShapeInspectorViewController.m */;
 		name = "ShapeInspectorViewController.m: 68";
 		rLen = 0;
-		rLoc = 1954;
+		rLoc = 2151;
 		rType = 0;
 		vrLen = 1713;
 		vrLoc = 822;
@@ -9688,7 +9701,7 @@
 		fRef = 9F745F8712AAF387003D4F75 /* ShapeInspectorViewController.m */;
 		name = "ShapeInspectorViewController.m: 67";
 		rLen = 0;
-		rLoc = 1916;
+		rLoc = 2113;
 		rType = 0;
 		vrLen = 1745;
 		vrLoc = 825;
@@ -9718,7 +9731,7 @@
 		fRef = 9F745F8712AAF387003D4F75 /* ShapeInspectorViewController.m */;
 		name = "ShapeInspectorViewController.m: 67";
 		rLen = 0;
-		rLoc = 1916;
+		rLoc = 2113;
 		rType = 0;
 		vrLen = 1786;
 		vrLoc = 878;
@@ -9748,7 +9761,7 @@
 		fRef = 9F745F8712AAF387003D4F75 /* ShapeInspectorViewController.m */;
 		name = "ShapeInspectorViewController.m: 43";
 		rLen = 0;
-		rLoc = 1129;
+		rLoc = 1326;
 		rType = 0;
 		vrLen = 1626;
 		vrLoc = 348;
@@ -9808,7 +9821,7 @@
 		fRef = 9F745F8712AAF387003D4F75 /* ShapeInspectorViewController.m */;
 		name = "ShapeInspectorViewController.m: 18";
 		rLen = 0;
-		rLoc = 369;
+		rLoc = 417;
 		rType = 0;
 		vrLen = 1530;
 		vrLoc = 0;
@@ -9908,7 +9921,7 @@
 		fRef = 9F745F8712AAF387003D4F75 /* ShapeInspectorViewController.m */;
 		name = "ShapeInspectorViewController.m: 44";
 		rLen = 0;
-		rLoc = 1129;
+		rLoc = 1326;
 		rType = 0;
 		vrLen = 284;
 		vrLoc = 900;
@@ -9977,7 +9990,7 @@
 		fRef = 9F745F8712AAF387003D4F75 /* ShapeInspectorViewController.m */;
 		name = "ShapeInspectorViewController.m: 91";
 		rLen = 0;
-		rLoc = 2434;
+		rLoc = 2631;
 		rType = 0;
 		vrLen = 1554;
 		vrLoc = 741;
@@ -10017,7 +10030,7 @@
 		fRef = 9F745F8712AAF387003D4F75 /* ShapeInspectorViewController.m */;
 		name = "ShapeInspectorViewController.m: 91";
 		rLen = 0;
-		rLoc = 2434;
+		rLoc = 2631;
 		rType = 0;
 		vrLen = 1554;
 		vrLoc = 741;
@@ -10047,7 +10060,7 @@
 		fRef = 9F745F8712AAF387003D4F75 /* ShapeInspectorViewController.m */;
 		name = "ShapeInspectorViewController.m: 91";
 		rLen = 0;
-		rLoc = 2434;
+		rLoc = 2631;
 		rType = 0;
 		vrLen = 1771;
 		vrLoc = 1036;
@@ -10057,7 +10070,7 @@
 		fRef = 9F745F8712AAF387003D4F75 /* ShapeInspectorViewController.m */;
 		name = "ShapeInspectorViewController.m: 91";
 		rLen = 0;
-		rLoc = 2434;
+		rLoc = 2631;
 		rType = 0;
 		vrLen = 1771;
 		vrLoc = 1036;
@@ -10087,7 +10100,7 @@
 		fRef = 9F745F8712AAF387003D4F75 /* ShapeInspectorViewController.m */;
 		name = "ShapeInspectorViewController.m: 91";
 		rLen = 0;
-		rLoc = 2434;
+		rLoc = 2631;
 		rType = 0;
 		vrLen = 1771;
 		vrLoc = 1036;
@@ -10127,7 +10140,7 @@
 		fRef = 9F745F8712AAF387003D4F75 /* ShapeInspectorViewController.m */;
 		name = "ShapeInspectorViewController.m: 44";
 		rLen = 0;
-		rLoc = 1069;
+		rLoc = 1266;
 		rType = 0;
 		vrLen = 1623;
 		vrLoc = 815;
@@ -10148,9 +10161,16 @@
 	};
 	9F74606B12AB1642003D4F75 /* OnlineTextureSelectorViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {742, 802}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 276}";
+			sepNavIntBoundsRect = "{{0, 0}, {741, 827}}";
+			sepNavSelRange = "{219, 0}";
+			sepNavVisRange = "{0, 226}";
+		};
+	};
+	9F74606C12AB1642003D4F75 /* OnlineTextureSelectorViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1146, 897}}";
+			sepNavSelRange = "{359, 22}";
+			sepNavVisRange = "{3, 1724}";
 		};
 	};
 	9F74607512AB1672003D4F75 /* PBXTextBookmark */ = {
@@ -10168,7 +10188,7 @@
 		fRef = 379A5C3412A857EA007CC256 /* Slide.h */;
 		name = "Slide.h: 19";
 		rLen = 0;
-		rLoc = 324;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 382;
 		vrLoc = 0;
@@ -10218,7 +10238,7 @@
 		fRef = 9F745F8712AAF387003D4F75 /* ShapeInspectorViewController.m */;
 		name = "ShapeInspectorViewController.m: 18";
 		rLen = 0;
-		rLoc = 369;
+		rLoc = 417;
 		rType = 0;
 		vrLen = 1560;
 		vrLoc = 0;
@@ -10258,7 +10278,7 @@
 		fRef = 9F745F8712AAF387003D4F75 /* ShapeInspectorViewController.m */;
 		name = "ShapeInspectorViewController.m: 65";
 		rLen = 0;
-		rLoc = 1637;
+		rLoc = 1834;
 		rType = 0;
 		vrLen = 1705;
 		vrLoc = 815;
@@ -10278,7 +10298,7 @@
 		fRef = 379A5C3412A857EA007CC256 /* Slide.h */;
 		name = "Slide.h: 15";
 		rLen = 0;
-		rLoc = 227;
+		rLoc = 223;
 		rType = 0;
 		vrLen = 333;
 		vrLoc = 0;
@@ -10298,7 +10318,7 @@
 		fRef = 379A5C3512A857EA007CC256 /* Slide.m */;
 		name = "Slide.m: 17";
 		rLen = 0;
-		rLoc = 213;
+		rLoc = 209;
 		rType = 0;
 		vrLen = 529;
 		vrLoc = 0;
@@ -10476,6 +10496,281 @@
 		rLoc = 908;
 		rType = 0;
 		vrLen = 1013;
+		vrLoc = 0;
+	};
+	9F74609312AB1931003D4F75 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9F74606B12AB1642003D4F75 /* OnlineTextureSelectorViewController.h */;
+		name = "OnlineTextureSelectorViewController.h: 3";
+		rLen = 0;
+		rLoc = 63;
+		rType = 0;
+		vrLen = 171;
+		vrLoc = 0;
+	};
+	9F74609412AB1931003D4F75 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9F745F8712AAF387003D4F75 /* ShapeInspectorViewController.m */;
+		name = "ShapeInspectorViewController.m: 18";
+		rLen = 0;
+		rLoc = 417;
+		rType = 0;
+		vrLen = 1560;
+		vrLoc = 0;
+	};
+	9F74609512AB1931003D4F75 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9F745F7812AAF327003D4F75 /* ShapeInspectorBillboardViewController.m */;
+		name = "ShapeInspectorBillboardViewController.m: 25";
+		rLen = 82;
+		rLoc = 729;
+		rType = 0;
+		vrLen = 2259;
+		vrLoc = 120;
+	};
+	9F74609612AB1931003D4F75 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9F74606C12AB1642003D4F75 /* OnlineTextureSelectorViewController.m */;
+		name = "OnlineTextureSelectorViewController.m: 12";
+		rLen = 0;
+		rLoc = 357;
+		rType = 0;
+		vrLen = 1590;
+		vrLoc = 0;
+	};
+	9F74609712AB1931003D4F75 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9F74606C12AB1642003D4F75 /* OnlineTextureSelectorViewController.m */;
+		name = "OnlineTextureSelectorViewController.m: 20";
+		rLen = 22;
+		rLoc = 359;
+		rType = 0;
+		vrLen = 1724;
+		vrLoc = 3;
+	};
+	9F74609812AB1931003D4F75 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9F74606B12AB1642003D4F75 /* OnlineTextureSelectorViewController.h */;
+		name = "OnlineTextureSelectorViewController.h: 13";
+		rLen = 0;
+		rLoc = 219;
+		rType = 0;
+		vrLen = 226;
+		vrLoc = 0;
+	};
+	9F74609912AB1931003D4F75 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9F745F8712AAF387003D4F75 /* ShapeInspectorViewController.m */;
+		name = "ShapeInspectorViewController.m: 35";
+		rLen = 0;
+		rLoc = 1040;
+		rType = 0;
+		vrLen = 1757;
+		vrLoc = 0;
+	};
+	9F74609A12AB1931003D4F75 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 379A5C3512A857EA007CC256 /* Slide.m */;
+		name = "Slide.m: 13";
+		rLen = 0;
+		rLoc = 133;
+		rType = 0;
+		vrLen = 542;
+		vrLoc = 0;
+	};
+	9F74609B12AB1931003D4F75 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 379A5C3412A857EA007CC256 /* Slide.h */;
+		name = "Slide.h: 20";
+		rLen = 0;
+		rLoc = 442;
+		rType = 0;
+		vrLen = 455;
+		vrLoc = 0;
+	};
+	9F74609C12AB1931003D4F75 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 379A5C3412A857EA007CC256 /* Slide.h */;
+		name = "Slide.h: 15";
+		rLen = 0;
+		rLoc = 222;
+		rType = 0;
+		vrLen = 451;
+		vrLoc = 0;
+	};
+	9F74609D12AB1931003D4F75 /* XDModelBookmark */ = {
+		isa = XDModelBookmark;
+		fRef = 379A5C0D12A8548D007CC256 /* MobileDesigner.xcdatamodel */;
+		fallbackIsa = PBXBookmark;
+		uiCtxt = {
+			UIContextForDetailArea = {
+				_indexOfSelectedPane = 0;
+				_indexOfSelectedView = 1;
+			};
+			UIContextForEntityArea = {
+				_indexOfSelectedView = 0;
+				chosenTableColumnns = (
+					"ET Entity",
+					"ET Abstract",
+					"ET Class",
+				);
+				chosenTableColumnns_sortDirections = (
+					YES,
+				);
+				chosenTableColumnns_sortKeys = (
+					name,
+				);
+				chosenTableColumnns_sortSelectors = (
+					"_xdcaseInsensitiveNumericCompare:",
+				);
+				chosenTableWidths = (
+					103.000000,
+					22.000000,
+					95.080078,
+				);
+			};
+			UIContextForLayoutManager = {
+				detailSplitGeometry = {
+					_collapsingFrameDimension = 0;
+					_indexOfCollapsedView = 0;
+					_percentageOfCollapsedView = 0;
+					isCollapsed = yes;
+					sizes = (
+						"{{0, 0}, {754, 218}}",
+						"{{759, 0}, {397, 218}}",
+					);
+				};
+				diagramSplitGeometry = {
+					_collapsingFrameDimension = 0;
+					_indexOfCollapsedView = 0;
+					_percentageOfCollapsedView = 0;
+					isCollapsed = yes;
+					sizes = (
+						"{{0, 0}, {1156, 220}}",
+						"{{0, 225}, {1156, 270}}",
+					);
+				};
+				tableSplitGeometry = {
+					_collapsingFrameDimension = 0;
+					_indexOfCollapsedView = 0;
+					_percentageOfCollapsedView = 0;
+					isCollapsed = yes;
+					sizes = (
+						"{{0, 0}, {245, 218}}",
+						"{{250, 0}, {502, 218}}",
+					);
+				};
+			};
+			UIContextForPropertyArea = {
+				_indexOfSelectedView = 0;
+				chosenTableColumnnFRTs = (
+					"FT Fetch Request",
+					"FT Predicate",
+				);
+				chosenTableColumnnFRTs_sortDirections = (
+					YES,
+				);
+				chosenTableColumnnFRTs_sortKeys = (
+					name,
+				);
+				chosenTableColumnnFRTs_sortSelectors = (
+					"_xdcaseInsensitiveNumericCompare:",
+				);
+				chosenTableColumnnsAT = (
+					"AT Attribute",
+					"AT Type",
+				);
+				chosenTableColumnnsAT_sortDirections = (
+					YES,
+				);
+				chosenTableColumnnsAT_sortKeys = (
+					name,
+				);
+				chosenTableColumnnsAT_sortSelectors = (
+					"_xdcaseInsensitiveNumericCompare:",
+				);
+				chosenTableColumnnsFPT = (
+					"FP FetchedProperty",
+					"FP Destination",
+					"FP Predicate",
+				);
+				chosenTableColumnnsFPT_sortDirections = (
+					YES,
+				);
+				chosenTableColumnnsFPT_sortKeys = (
+					name,
+				);
+				chosenTableColumnnsFPT_sortSelectors = (
+					"_xdcaseInsensitiveNumericCompare:",
+				);
+				chosenTableColumnnsPT = (
+					"PT Property",
+					"PT Kind",
+					"PT SharedKeyOne",
+				);
+				chosenTableColumnnsPT_sortDirections = (
+					YES,
+				);
+				chosenTableColumnnsPT_sortKeys = (
+					name,
+				);
+				chosenTableColumnnsPT_sortSelectors = (
+					"_xdcaseInsensitiveNumericCompare:",
+				);
+				chosenTableColumnnsRT = (
+					"RT Relationship",
+					"RT Destination",
+				);
+				chosenTableColumnnsRT_sortDirections = (
+					YES,
+				);
+				chosenTableColumnnsRT_sortKeys = (
+					name,
+				);
+				chosenTableColumnnsRT_sortSelectors = (
+					"_xdcaseInsensitiveNumericCompare:",
+				);
+				chosenTableWidthsAT = (
+					128.000000,
+					64.000000,
+				);
+				chosenTableWidthsFPT = (
+					128.000000,
+					64.000000,
+					144.764160,
+				);
+				chosenTableWidthsFRT = (
+					128.000000,
+					249.764160,
+				);
+				chosenTableWidthsPT = (
+					128.000000,
+					108.110840,
+					239.570801,
+				);
+				chosenTableWidthsRT = (
+					128.000000,
+					64.000000,
+				);
+			};
+			"xdesign model browser state key - shown/hidden" = 1;
+			"xdesign model diagram view visible rect key" = "{{0, 78}, {1141, 255}}";
+			"xdesign model selected entities key" = (
+				"<XDPMEntity: 0x2045774c0>{name=Slide, package=}",
+			);
+			"xdesign model selected properties key" = (
+				"<XDPMAttribute: 0x202beff80>{name=image, type=(null)}",
+			);
+		};
+	};
+	9F74609E12AB1931003D4F75 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9F745F8612AAF387003D4F75 /* ShapeInspectorViewController.h */;
+		name = "ShapeInspectorViewController.h: 37";
+		rLen = 104;
+		rLoc = 908;
+		rType = 0;
+		vrLen = 909;
 		vrLoc = 0;
 	};
 	9F8A738312A9DFB600AD46A6 /* PBXTextBookmark */ = {

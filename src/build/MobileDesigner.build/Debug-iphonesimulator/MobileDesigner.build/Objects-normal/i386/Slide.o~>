@@ -1,3 +1,6 @@
+/Users/manoli/Desktop/MobileDesigner/src/Classes/../Slide.m:13: error: no declaration of property 'number' found in the interface
 /Users/manoli/Desktop/MobileDesigner/src/Classes/../Slide.m: In function '+[Slide slideWithImage:project:inManagedObjectContext:]':
 /Users/manoli/Desktop/MobileDesigner/src/Classes/../Slide.m:25: error: request for member 'number' in something not a structure or union
-/Users/manoli/Desktop/MobileDesigner/src/Classes/../Slide.m:26: warning: control reaches end of non-void function
+/Users/manoli/Desktop/MobileDesigner/src/Classes/../Slide.m: At top level:
+/Users/manoli/Desktop/MobileDesigner/src/Classes/../Slide.m:30: warning: property 'horizontal' requires method '-horizontal' to be defined - use @synthesize, @dynamic or provide a method implementation
+/Users/manoli/Desktop/MobileDesigner/src/Classes/../Slide.m:30: warning: property 'horizontal' requires the method 'setHorizontal:' to be defined - use @synthesize, @dynamic or provide a method implementation

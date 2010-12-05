@@ -5,6 +5,7 @@
 
 #import "ShapeInspectorViewController.h"
 #import "MobileDesignerUtilities.h"
+#import "OnlineTextureSelectorViewController.h"
 
 
 @implementation ShapeInspectorViewController
@@ -30,7 +31,8 @@
 
 - (IBAction)selectTexturePressed:(UIButton*)sender
 {
-	NSLog(@"Getting an image");
+	OnlineTextureSelectorViewController *otsvc = [[OnlineTextureSelectorViewController alloc] initWithDelegate];
+	[self.navigationController pushViewController:otsvc animated:YES];
 }
 
 - (IBAction)removeTexturePressed:(UIButton*)sender

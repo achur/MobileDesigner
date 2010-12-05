@@ -11,6 +11,22 @@
 
 @implementation OnlineTextureSelectorViewController
 
+
+- (BOOL)iPad
+{
+	return (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad);
+}
+
+- (id)initWithDelegate { // need to change this declaration.
+	NSString *nibname = @"";
+	if([self iPad]) nibname = @"OnlineTextureSelectorViewController-iPad";
+	else nibname = @"OnlineTextureSelectorViewController";
+	if((self = [super initWithNibName:nibname bundle:nil])) {
+		// do stuff
+	}
+	return self;
+}
+
 /*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
