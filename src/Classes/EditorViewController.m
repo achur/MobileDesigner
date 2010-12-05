@@ -4,7 +4,8 @@
 //
 
 #import "EditorViewController.h"
-
+#import "MobileDesignerUtilities.h"
+#import "ShapeInspectorBillboardViewController.h"
 
 @implementation EditorViewController
 
@@ -12,6 +13,8 @@
 @synthesize editorView;
 @synthesize managedObjectContext;
 @synthesize project;
+@synthesize selectedShape;
+@synthesize inspectButton;
 
 - (BOOL)iPad
 {
@@ -26,7 +29,7 @@
 		self.managedObjectContext = ctx;
 		self.project = proj;	
 		self.title = [@"Edit " stringByAppendingString:project.name];
-
+		selectedShape = nil;
 	}
 	return self;
 }
@@ -64,21 +67,83 @@
 
 - (void)shapeSelected:(Shape *)shape
 {
-	NSLog(@"Shape selected!");
+	self.selectedShape = shape;
+	[self.editorView update];
 }
 
 - (IBAction)addNewShape:(UIButton*)sender
 {
-	NSLog(@"Add new shape");
+	AddShapeViewController* asvc = [[AddShapeViewController alloc] initWithStyle:UITableViewStyleGrouped];
+	asvc.title = @"Add A Shape";
+	asvc.delegate = self;
+	[self.navigationController pushViewController:asvc animated:YES];
+}
+
+- (void)addShape:(int)type
+{
+	double centerX = (editorView.left + editorView.right)/2;
+	double centerY = (editorView.top + editorView.bottom)/2;
+	double width = editorView.right - editorView.left;
+	width /= 6;
+	int r = 0;
+	int g = 0;
+	int b = 0;
+	if(type == SHAPETYPELEVEL) g = 155;
+	if(type == SHAPETYPEWALL) r = 155;
+	if(type == SHAPETYPEBILLBOARD) b = 155;
+	int color = [MobileDesignerUtilities intFromR:r G:g B:b];
+	double rz = (type == SHAPETYPELEVEL) ? 0 : 10;
+	[self.project addShapeWithColor:color tlx:(centerX - width) tly:(centerY - width) tlz:0 
+								brx:(centerX + width) bry:(centerY + width) brz:rz 
+							   type:type inManagedObjectContext:self.managedObjectContext];
+	[self.editorView update];
 }
 
 - (IBAction)takeSnapshot:(UIButton*)sender
 {
-	NSLog(@"Take snapshot");
+	NSData *img = [MobileDesignerUtilities screencaptureData:self.editorView];
+	[self.project addSlideWithImage:img inManagedObjectContext:self.managedObjectContext];
 }
+
+
 - (IBAction)inspectShape:(UIButton*)sender
 {
-	NSLog(@"Inspect shape");
+	if(self.selectedShape != nil) {
+		if([self.selectedShape.type intValue] == SHAPETYPELEVEL) {
+			
+		} else if ([self.selectedShape.type intValue] == SHAPETYPEWALL) {
+			
+		} else if ([self.selectedShape.type intValue] == SHAPETYPEBILLBOARD) {
+			ShapeInspectorBillboardViewController* sibvc;
+			sibvc = [[ShapeInspectorBillboardViewController alloc] initWithShape:self.selectedShape];
+			sibvc.title = @"Inspector";
+			sibvc.delegate = self;
+			[self.navigationController pushViewController:sibvc animated:YES];
+		}
+	}
+}
+
+- (void)doneEditing:(BOOL)deleteShape
+{
+	if(deleteShape) {
+		[self.project removeShapesObject:self.selectedShape];
+		Shape *toDelete = self.selectedShape;
+		self.selectedShape = nil;
+		[self.managedObjectContext deleteObject:toDelete];
+	}
+	[self.editorView update];
+}
+
+- (void)setSelectedShape:(Shape *)shp
+{
+	[selectedShape release];
+	selectedShape = shp;
+	[selectedShape retain];
+	if(shp) {
+		self.inspectButton.enabled = YES;
+	} else {
+		self.inspectButton.enabled = NO;
+	}
 }
 
 - (int)offsetHeight

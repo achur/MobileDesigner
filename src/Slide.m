@@ -14,4 +14,15 @@
 @dynamic text;
 @dynamic project;
 
++ (Slide *)slideWithImage:(NSData *)im project:(Project *)proj inManagedObjectContext:(NSManagedObjectContext *)context
+{
+	Slide *slide = nil;
+	
+	slide = [NSEntityDescription insertNewObjectForEntityForName:@"Slide" inManagedObjectContext:context];
+	slide.image = im;
+	slide.text = @"";
+	slide.project = proj;
+	slide.number = proj.curSlideNumber;
+}
+
 @end

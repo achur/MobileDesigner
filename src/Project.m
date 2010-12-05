@@ -14,6 +14,7 @@
 @dynamic hasTexture;
 @dynamic height;
 @dynamic width;
+@dynamic curSlideNumber;
 @dynamic name;
 @dynamic shapes;
 @dynamic slides;
@@ -54,10 +55,28 @@
 			project.hasTexture = [NSNumber numberWithBool:YES];
 			project.floorTexture = tex;
 		}
+		project.curSlideNumber = [NSNumber numberWithInt:0];
 	}
 	
 	return project;
 }
+
+- (void)addShapeWithColor:(int)col tlx:(double)lx tly:(double)ly tlz:(double)lz 
+					  brx:(double)rx bry:(double)ry brz:(double)rz type:(int)t inManagedObjectContext:(NSManagedObjectContext *)context 
+{
+	Shape *shape = [Shape shapeWithColor:col tlx:lx tly:ly tlz:lz brx:rx bry:ry brz:rz type:t project:self inManagedObjectContext:context];
+	NSLog(@"Here we have (%f, %f) to (%f, %f)", [shape.tlx doubleValue], [shape.tly doubleValue], [shape.brx doubleValue], [shape.bry doubleValue]);
+	[self addShapesObject:shape];
+}
+
+- (void)addSlideWithImage:(NSData *)im inManagedObjectContext:(NSManagedObjectContext*)context
+{
+	Slide *slide = [Slide slideWithImage:im project:self inManagedObjectContext:context];
+	// advance current slide number
+	self.curSlideNumber = [NSNumber numberWithInt:(1 + [self.curSlideNumber intValue])];
+	[self addSlidesObject:slide];
+}
+
 
 
 - (NSString *)firstLetterOfName

@@ -16,12 +16,18 @@
 @property (nonatomic, retain) NSNumber * hasTexture;
 @property (nonatomic, retain) NSNumber * height;
 @property (nonatomic, retain) NSNumber * width;
+@property (nonatomic, retain) NSNumber * curSlideNumber;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSSet* shapes;
 @property (nonatomic, retain) NSSet* slides;
 
 + (Project *)projectWithName:(NSString *)name width:(int)width height:(int)height texture:(NSData*)tex inManagedObjectContext:(NSManagedObjectContext *)context;
 + (Project *)searchByName:(NSString *)name inManagedObjectContext:(NSManagedObjectContext *)context;
+
+- (void)addShapeWithColor:(int)col tlx:(double)lx tly:(double)ly tlz:(double)lz 
+					  brx:(double)rx bry:(double)ry brz:(double)rz type:(int)t inManagedObjectContext:(NSManagedObjectContext *)context;
+
+- (void)addSlideWithImage:(NSData *)im inManagedObjectContext:(NSManagedObjectContext*)context;
 
 @end
 

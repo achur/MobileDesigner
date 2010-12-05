@@ -12,6 +12,7 @@
 - (Project *)project;
 - (NSManagedObjectContext *)managedObjectContext;
 - (int)offsetHeight;
+- (Shape *)selectedShape;
 @end
 
 @interface EditorView : UIView {
@@ -23,8 +24,17 @@
 	double bottom;
 	
 	BOOL hasDrawn;
+	
+	UIImage* cachedFloorTexture;
+	
+	int selectedKnob;
 }
 
 - (void)update;
+
+@property double left;
+@property double right;
+@property double top;
+@property double bottom;
 
 @end

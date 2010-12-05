@@ -30,6 +30,20 @@
 		9F74598A12A9F371003D4F75 /* EditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F74598812A9F371003D4F75 /* EditorViewController.m */; };
 		9F74598B12A9F371003D4F75 /* EditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F74598912A9F371003D4F75 /* EditorViewController.xib */; };
 		9F74599812A9F69E003D4F75 /* EditorViewController-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F74599612A9F69E003D4F75 /* EditorViewController-iPad.xib */; };
+		9F745DC512AAB570003D4F75 /* AddShapeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F745DC412AAB570003D4F75 /* AddShapeViewController.m */; };
+		9F745F7A12AAF327003D4F75 /* ShapeInspectorBillboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F745F7812AAF327003D4F75 /* ShapeInspectorBillboardViewController.m */; };
+		9F745F7B12AAF327003D4F75 /* ShapeInspectorBillboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F745F7912AAF327003D4F75 /* ShapeInspectorBillboardViewController.xib */; };
+		9F745F7F12AAF364003D4F75 /* ShapeInspectorLevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F745F7D12AAF364003D4F75 /* ShapeInspectorLevelViewController.m */; };
+		9F745F8012AAF364003D4F75 /* ShapeInspectorLevelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F745F7E12AAF364003D4F75 /* ShapeInspectorLevelViewController.xib */; };
+		9F745F8412AAF377003D4F75 /* ShapeInspectorWallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F745F8212AAF377003D4F75 /* ShapeInspectorWallViewController.m */; };
+		9F745F8512AAF377003D4F75 /* ShapeInspectorWallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F745F8312AAF377003D4F75 /* ShapeInspectorWallViewController.xib */; };
+		9F745F8812AAF387003D4F75 /* ShapeInspectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F745F8712AAF387003D4F75 /* ShapeInspectorViewController.m */; };
+		9F745F8F12AB00FA003D4F75 /* ShapeInspectorBillboardViewController-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F745F8D12AB00FA003D4F75 /* ShapeInspectorBillboardViewController-iPad.xib */; };
+		9F745F9412AB0109003D4F75 /* ShapeInspectorLevelViewController-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F745F9212AB0109003D4F75 /* ShapeInspectorLevelViewController-iPad.xib */; };
+		9F745F9912AB0113003D4F75 /* ShapeInspectorWallViewController-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F745F9712AB0113003D4F75 /* ShapeInspectorWallViewController-iPad.xib */; };
+		9F74606E12AB1642003D4F75 /* OnlineTextureSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F74606C12AB1642003D4F75 /* OnlineTextureSelectorViewController.m */; };
+		9F74606F12AB1642003D4F75 /* OnlineTextureSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F74606D12AB1642003D4F75 /* OnlineTextureSelectorViewController.xib */; };
+		9F74607412AB1651003D4F75 /* OnlineTextureSelectorViewController-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F74607212AB1651003D4F75 /* OnlineTextureSelectorViewController-iPad.xib */; };
 		9F941D3F12A8A43300E2EACE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F941D3E12A8A43300E2EACE /* MapKit.framework */; };
 		9F941DD312A8BD8500E2EACE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F941DD212A8BD8500E2EACE /* CoreLocation.framework */; };
 		9F941E6412A8CEAC00E2EACE /* MobileDesignerUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F941E6312A8CEAC00E2EACE /* MobileDesignerUtilities.m */; };
@@ -75,6 +89,26 @@
 		9F74598812A9F371003D4F75 /* EditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditorViewController.m; sourceTree = "<group>"; };
 		9F74598912A9F371003D4F75 /* EditorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = EditorViewController.xib; path = Classes/EditorViewController.xib; sourceTree = "<group>"; };
 		9F74599612A9F69E003D4F75 /* EditorViewController-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "EditorViewController-iPad.xib"; sourceTree = "<group>"; };
+		9F745DC312AAB570003D4F75 /* AddShapeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddShapeViewController.h; sourceTree = "<group>"; };
+		9F745DC412AAB570003D4F75 /* AddShapeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddShapeViewController.m; sourceTree = "<group>"; };
+		9F745F7712AAF327003D4F75 /* ShapeInspectorBillboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeInspectorBillboardViewController.h; sourceTree = "<group>"; };
+		9F745F7812AAF327003D4F75 /* ShapeInspectorBillboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapeInspectorBillboardViewController.m; sourceTree = "<group>"; };
+		9F745F7912AAF327003D4F75 /* ShapeInspectorBillboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ShapeInspectorBillboardViewController.xib; path = Classes/ShapeInspectorBillboardViewController.xib; sourceTree = "<group>"; };
+		9F745F7C12AAF364003D4F75 /* ShapeInspectorLevelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeInspectorLevelViewController.h; sourceTree = "<group>"; };
+		9F745F7D12AAF364003D4F75 /* ShapeInspectorLevelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapeInspectorLevelViewController.m; sourceTree = "<group>"; };
+		9F745F7E12AAF364003D4F75 /* ShapeInspectorLevelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ShapeInspectorLevelViewController.xib; path = Classes/ShapeInspectorLevelViewController.xib; sourceTree = "<group>"; };
+		9F745F8112AAF377003D4F75 /* ShapeInspectorWallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeInspectorWallViewController.h; sourceTree = "<group>"; };
+		9F745F8212AAF377003D4F75 /* ShapeInspectorWallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapeInspectorWallViewController.m; sourceTree = "<group>"; };
+		9F745F8312AAF377003D4F75 /* ShapeInspectorWallViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ShapeInspectorWallViewController.xib; path = Classes/ShapeInspectorWallViewController.xib; sourceTree = "<group>"; };
+		9F745F8612AAF387003D4F75 /* ShapeInspectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeInspectorViewController.h; sourceTree = "<group>"; };
+		9F745F8712AAF387003D4F75 /* ShapeInspectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapeInspectorViewController.m; sourceTree = "<group>"; };
+		9F745F8D12AB00FA003D4F75 /* ShapeInspectorBillboardViewController-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "ShapeInspectorBillboardViewController-iPad.xib"; sourceTree = "<group>"; };
+		9F745F9212AB0109003D4F75 /* ShapeInspectorLevelViewController-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "ShapeInspectorLevelViewController-iPad.xib"; sourceTree = "<group>"; };
+		9F745F9712AB0113003D4F75 /* ShapeInspectorWallViewController-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "ShapeInspectorWallViewController-iPad.xib"; sourceTree = "<group>"; };
+		9F74606B12AB1642003D4F75 /* OnlineTextureSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlineTextureSelectorViewController.h; sourceTree = "<group>"; };
+		9F74606C12AB1642003D4F75 /* OnlineTextureSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlineTextureSelectorViewController.m; sourceTree = "<group>"; };
+		9F74606D12AB1642003D4F75 /* OnlineTextureSelectorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnlineTextureSelectorViewController.xib; sourceTree = "<group>"; };
+		9F74607212AB1651003D4F75 /* OnlineTextureSelectorViewController-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "OnlineTextureSelectorViewController-iPad.xib"; path = "Classes/OnlineTextureSelectorViewController-iPad.xib"; sourceTree = "<group>"; };
 		9F941D3E12A8A43300E2EACE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9F941DD212A8BD8500E2EACE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		9F941E6212A8CEAC00E2EACE /* MobileDesignerUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobileDesignerUtilities.h; sourceTree = "<group>"; };
@@ -112,6 +146,16 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9F74606B12AB1642003D4F75 /* OnlineTextureSelectorViewController.h */,
+				9F74606C12AB1642003D4F75 /* OnlineTextureSelectorViewController.m */,
+				9F745F7712AAF327003D4F75 /* ShapeInspectorBillboardViewController.h */,
+				9F745F7812AAF327003D4F75 /* ShapeInspectorBillboardViewController.m */,
+				9F745F7C12AAF364003D4F75 /* ShapeInspectorLevelViewController.h */,
+				9F745F7D12AAF364003D4F75 /* ShapeInspectorLevelViewController.m */,
+				9F745F8112AAF377003D4F75 /* ShapeInspectorWallViewController.h */,
+				9F745F8212AAF377003D4F75 /* ShapeInspectorWallViewController.m */,
+				9F745F8612AAF387003D4F75 /* ShapeInspectorViewController.h */,
+				9F745F8712AAF387003D4F75 /* ShapeInspectorViewController.m */,
 				9F74597612A9EB53003D4F75 /* EditorView.h */,
 				9F74597712A9EB53003D4F75 /* EditorView.m */,
 				9F74598712A9F371003D4F75 /* EditorViewController.h */,
@@ -135,6 +179,8 @@
 				379A5C3312A857EA007CC256 /* Shape.m */,
 				379A5C3412A857EA007CC256 /* Slide.h */,
 				379A5C3512A857EA007CC256 /* Slide.m */,
+				9F745DC312AAB570003D4F75 /* AddShapeViewController.h */,
+				9F745DC412AAB570003D4F75 /* AddShapeViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -176,10 +222,14 @@
 			children = (
 				9F647E5812A99FBE0008B2DB /* MobileDesigner.xcdatamodeld */,
 				379A5CA812A86B29007CC256 /* NewProjectViewController.xib */,
+				9F74606D12AB1642003D4F75 /* OnlineTextureSelectorViewController.xib */,
 				9F74598912A9F371003D4F75 /* EditorViewController.xib */,
 				9F647E7912A9C9410008B2DB /* ProjectMenu.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				9FBA3AF412A97F6B00F56D56 /* MainMenuViewController.xib */,
+				9F745F7912AAF327003D4F75 /* ShapeInspectorBillboardViewController.xib */,
+				9F745F7E12AAF364003D4F75 /* ShapeInspectorLevelViewController.xib */,
+				9F745F8312AAF377003D4F75 /* ShapeInspectorWallViewController.xib */,
 				8D1107310486CEB800E47090 /* MobileDesigner-Info.plist */,
 			);
 			name = Resources;
@@ -202,6 +252,10 @@
 		379A5C7312A86223007CC256 /* Resources-iPad */ = {
 			isa = PBXGroup;
 			children = (
+				9F74607212AB1651003D4F75 /* OnlineTextureSelectorViewController-iPad.xib */,
+				9F745F8D12AB00FA003D4F75 /* ShapeInspectorBillboardViewController-iPad.xib */,
+				9F745F9212AB0109003D4F75 /* ShapeInspectorLevelViewController-iPad.xib */,
+				9F745F9712AB0113003D4F75 /* ShapeInspectorWallViewController-iPad.xib */,
 				379A5CAF12A86B59007CC256 /* NewProjectViewController-iPad.xib */,
 				379A5C7412A86224007CC256 /* MainWindow-iPad.xib */,
 				9FBA3B0512A97FA900F56D56 /* MainMenuViewController-iPad.xib */,
@@ -270,6 +324,14 @@
 				9F647E8012A9C95A0008B2DB /* ProjectMenu-iPad.xib in Resources */,
 				9F74598B12A9F371003D4F75 /* EditorViewController.xib in Resources */,
 				9F74599812A9F69E003D4F75 /* EditorViewController-iPad.xib in Resources */,
+				9F745F7B12AAF327003D4F75 /* ShapeInspectorBillboardViewController.xib in Resources */,
+				9F745F8012AAF364003D4F75 /* ShapeInspectorLevelViewController.xib in Resources */,
+				9F745F8512AAF377003D4F75 /* ShapeInspectorWallViewController.xib in Resources */,
+				9F745F8F12AB00FA003D4F75 /* ShapeInspectorBillboardViewController-iPad.xib in Resources */,
+				9F745F9412AB0109003D4F75 /* ShapeInspectorLevelViewController-iPad.xib in Resources */,
+				9F745F9912AB0113003D4F75 /* ShapeInspectorWallViewController-iPad.xib in Resources */,
+				9F74606F12AB1642003D4F75 /* OnlineTextureSelectorViewController.xib in Resources */,
+				9F74607412AB1651003D4F75 /* OnlineTextureSelectorViewController-iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +357,12 @@
 				9F647E7A12A9C9410008B2DB /* ProjectMenuViewController.m in Sources */,
 				9F74597812A9EB53003D4F75 /* EditorView.m in Sources */,
 				9F74598A12A9F371003D4F75 /* EditorViewController.m in Sources */,
+				9F745DC512AAB570003D4F75 /* AddShapeViewController.m in Sources */,
+				9F745F7A12AAF327003D4F75 /* ShapeInspectorBillboardViewController.m in Sources */,
+				9F745F7F12AAF364003D4F75 /* ShapeInspectorLevelViewController.m in Sources */,
+				9F745F8412AAF377003D4F75 /* ShapeInspectorWallViewController.m in Sources */,
+				9F745F8812AAF387003D4F75 /* ShapeInspectorViewController.m in Sources */,
+				9F74606E12AB1642003D4F75 /* OnlineTextureSelectorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
