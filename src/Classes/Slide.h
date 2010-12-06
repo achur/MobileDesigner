@@ -18,6 +18,9 @@
 
 + (Slide *)slideWithImage:(NSData *)im project:(Project *)proj inManagedObjectContext:(NSManagedObjectContext *)context;
 
+- (Slide *)nextSlide;
+
+
 @end
 
 

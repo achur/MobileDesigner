@@ -46,6 +46,8 @@
 	GLuint *textures;
 	Shape **shapes;
 	int shapeCount;
+	
+	NSManagedObjectContext* managedObjectContext;
 //	GLuint textures[2];
 }
 
@@ -63,7 +65,7 @@ static const GLshort squareTextureCoords[] = {
 @property (readonly, nonatomic, getter=isAnimating) BOOL animating;
 @property (nonatomic) NSInteger animationFrameInterval;
 
-- (id)initWithProject:(Project *)proj;
+- (id)initWithProject:(Project *)proj inManagedObjectContext:(NSManagedObjectContext*)contex;
 
 - (void)startAnimation;
 - (void)stopAnimation;

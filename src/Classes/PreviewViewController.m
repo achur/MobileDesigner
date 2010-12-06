@@ -17,6 +17,7 @@
 #import "PreviewViewController.h"
 #import "EAGLView.h"
 #import "gluLookAt.h"
+#import "MobileDesignerUtilities.h"
 
 // Uniform index.
 enum {
@@ -47,8 +48,9 @@ enum {
 
 
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
- - (id)initWithProject:(Project *)proj {
+- (id)initWithProject:(Project *)proj inManagedObjectContext:(NSManagedObjectContext*)contex {
  if ((self = [super initWithNibName:@"PreviewViewController" bundle:nil])) {
+	 managedObjectContext = contex;
 	 project = proj;
  }
  return self;
@@ -274,11 +276,82 @@ float d_atan(float tanval) {
 	}
 }
 
+// Thanks to John Carter for explaining how to take a snapshot in eaglview
+- (UIImage *) snapshot:(EAGLView *)eaglview
+{
+    NSInteger x = 0;
+    NSInteger y = 0;
+    NSInteger width = eaglview.bounds.size.width;
+    NSInteger height = eaglview.bounds.size.height;
+    NSInteger dataLength = width * height * 4;
+	
+	// Need to do this to get it to flush before taking the snapshit
+	//
+    NSUInteger i;
+    for ( i=0; i<100; i++ )
+	{
+        glFlush();
+        CFRunLoopRunInMode(kCFRunLoopDefaultMode, (float)1.0/(float)60.0, FALSE);
+	}
+	
+    GLubyte *data = (GLubyte*)malloc(dataLength * sizeof(GLubyte));
+	
+    // Read pixel data from the framebuffer
+    //
+    glPixelStorei(GL_PACK_ALIGNMENT, 4);
+    glReadPixels(x, y, width, height, GL_RGBA, GL_UNSIGNED_BYTE, data);
+	
+    // Create a CGImage with the pixel data
+    // If your OpenGL ES content is opaque, use kCGImageAlphaNoneSkipLast to ignore the alpha channel
+    // otherwise, use kCGImageAlphaPremultipliedLast
+    //
+    CGDataProviderRef ref = CGDataProviderCreateWithData(NULL, data, dataLength, NULL);
+    CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceRGB();
+    CGImageRef iref = CGImageCreate(width, height, 8, 32, width * 4, colorspace, kCGBitmapByteOrder32Big | kCGImageAlphaPremultipliedLast, ref, NULL, true, kCGRenderingIntentDefault);
+	
+    // OpenGL ES measures data in PIXELS
+    // Create a graphics context with the target size measured in POINTS
+    //
+    NSInteger widthInPoints;
+    NSInteger heightInPoints;
+	
+	widthInPoints = width;
+	heightInPoints = height;
+	UIGraphicsBeginImageContext(CGSizeMake(widthInPoints, heightInPoints));
+	
+    CGContextRef cgcontext = UIGraphicsGetCurrentContext();
+	
+    // UIKit coordinate system is upside down to GL/Quartz coordinate system
+    // Flip the CGImage by rendering it to the flipped bitmap context
+    // The size of the destination area is measured in POINTS
+    //
+    CGContextSetBlendMode(cgcontext, kCGBlendModeCopy);
+    CGContextDrawImage(cgcontext, CGRectMake(0.0, 0.0, widthInPoints, heightInPoints), iref);
+	
+    // Retrieve the UIImage from the current context
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();   // autoreleased image
+	
+    UIGraphicsEndImageContext();
+	
+    // Clean up
+    free(data);
+    CFRelease(ref);
+    CFRelease(colorspace);
+    CGImageRelease(iref);
+	
+    return image;
+}
+
 - (void)tap:(UITapGestureRecognizer *)gesture
 {
 	if ((gesture.state == UIGestureRecognizerStateChanged) ||
 		(gesture.state == UIGestureRecognizerStateEnded)) {
-		NSLog(@"double tap");
+		
+//		int padding = [[UIScreen mainScreen] applicationFrame].size.height - [self.view bounds].size.height;
+//		if([self iPad]) padding += 44;
+//		else padding += 24;
+		NSData *img = UIImagePNGRepresentation([self snapshot:(EAGLView*)self.view]);
+		[project addSlideWithImage:img inManagedObjectContext:managedObjectContext];
 	}
 }
 

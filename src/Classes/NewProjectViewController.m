@@ -105,7 +105,7 @@
 	}
 	int inputwidth = [widthField.text intValue];
 	int inputheight = [heightField.text intValue];
-    NSData* im = [MobileDesignerUtilities screencaptureData:mapView];	
+    NSData* im = [MobileDesignerUtilities screencaptureData:mapView withPadding:64];	
 	[self.navigationController popViewControllerAnimated:NO];
 	[delegate shouldCreateProject:projectTitleField.text withWidth:inputwidth height:inputheight andTexture:im];	
 }

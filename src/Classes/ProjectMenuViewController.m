@@ -7,7 +7,10 @@
 #import "EditorViewController.h"
 #import "PreviewViewController.h"
 #import "EAGLView.h"
-
+#import "EditSlidesTableViewController.h"
+#import "PresentationTableViewController.h"
+#import "Project.h"
+#import "Slide.h"
 
 @implementation ProjectMenuViewController
 
@@ -27,20 +30,34 @@
 
 - (IBAction)previewView:(UIButton*)sender
 {
-	PreviewViewController *pvc = [[PreviewViewController alloc] initWithProject:self.project];
+	PreviewViewController *pvc = [[PreviewViewController alloc] initWithProject:self.project inManagedObjectContext:self.managedObjectContext];
 	[self.navigationController pushViewController:pvc animated:YES];
 	[pvc startAnimation];
-	NSLog(@"Show a 3D preview");
 }
 
 - (IBAction)playlistView:(UIButton*)sender
 {
-	NSLog(@"Show the slideshow/playlist");
+	PresentationTableViewController *ptvc = [[PresentationTableViewController alloc] initInManagedObjectContext:self.managedObjectContext forProject:self.project];
+	[self.navigationController pushViewController:ptvc animated:YES];
+}
+
+- (IBAction)editSlidesView:(UIButton*)sender
+{
+	EditSlidesTableViewController *estvc = [[EditSlidesTableViewController alloc] initInManagedObjectContext:self.managedObjectContext forProject:self.project];
+	[self.navigationController pushViewController:estvc animated:YES];
 }
 
 - (IBAction)deleteProject:(UIButton*)sender
 {
-	NSLog(@"Delete the project and pop off this view");
+	for(Slide *slide in self.project.slides) {
+		[self.managedObjectContext deleteObject:slide];
+	}
+	for(Shape *shape in self.project.shapes) {
+		[self.managedObjectContext deleteObject:shape];
+	}
+	[self.managedObjectContext deleteObject:project];
+	
+	[self.navigationController popViewControllerAnimated:YES];
 }
 
 /*

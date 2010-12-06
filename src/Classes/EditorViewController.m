@@ -105,7 +105,10 @@
 
 - (IBAction)takeSnapshot:(UIButton*)sender
 {
-	NSData *img = [MobileDesignerUtilities screencaptureData:self.editorView];
+	int padding = [[UIScreen mainScreen] applicationFrame].size.height - [self.editorView bounds].size.height;
+	if([self iPad]) padding += 44;
+	else padding += 24;
+	NSData *img = [MobileDesignerUtilities screencaptureData:self.editorView withPadding:padding];
 	[self.project addSlideWithImage:img inManagedObjectContext:self.managedObjectContext];
 }
 

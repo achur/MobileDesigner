@@ -10,11 +10,11 @@
 @implementation MobileDesignerUtilities
 
 
-+ (UIImage *)screencapture:(UIView *)view {
++ (UIImage *)screencapture:(UIView *)view withPadding:(int)padding {
 	
 	CGRect screenRect = [[UIScreen mainScreen] bounds];
-	screenRect.origin.y = 64; // padding for the navigation controller
-	screenRect.size.height -= 64;
+	//screenRect.origin.y = padding; // padding for the navigation controller
+	screenRect.size.height -= padding;
 	
 	UIGraphicsBeginImageContext(screenRect.size);
 	
@@ -31,10 +31,8 @@
 	return newImage;
 }
 
-+ (NSData *)screencaptureData:(UIView *)view {
-	UIImage *newImage = [MobileDesignerUtilities screencapture:view];
-	
-	UIGraphicsEndImageContext();
++ (NSData *)screencaptureData:(UIView *)view withPadding:(int)padding {
+	UIImage *newImage = [MobileDesignerUtilities screencapture:view withPadding:padding];
 	
 	return UIImagePNGRepresentation(newImage);
 }
